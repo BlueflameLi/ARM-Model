@@ -1,0 +1,411 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Apr 13 20:58:41 2021
+# Process ID: 5196
+# Current directory: D:/vivado/02_Shift/02_Shift.runs/synth_1
+# Command line: vivado.exe -log Board.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Board.tcl
+# Log file: D:/vivado/02_Shift/02_Shift.runs/synth_1/Board.vds
+# Journal file: D:/vivado/02_Shift/02_Shift.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Board.tcl -notrace
+Command: synth_design -top Board -part xc7a100tfgg484-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17704 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 338.797 ; gain = 71.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Board' [D:/vivado/02_Shift/Board.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Shift' [D:/vivado/02_Shift/Shift.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Shift' (1#1) [D:/vivado/02_Shift/Shift.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Display' [D:/vivado/02_Shift/Display.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Display' (2#1) [D:/vivado/02_Shift/Display.v:3]
+WARNING: [Synth 8-350] instance 'Display_Instance' of module 'Display' requires 6 connections, but only 4 given [D:/vivado/02_Shift/Board.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'Board' (3#1) [D:/vivado/02_Shift/Board.v:3]
+WARNING: [Synth 8-3917] design Board has port led[2] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[3] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[15] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[16] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[17] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[18] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[19] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[20] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[21] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[22] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[23] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[24] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[25] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[26] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[27] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[28] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[29] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[30] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[31] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[32] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port enable driven by constant 1
+WARNING: [Synth 8-3331] design Board has unconnected port swb[3]
+WARNING: [Synth 8-3331] design Board has unconnected port swb[4]
+WARNING: [Synth 8-3331] design Board has unconnected port swb[5]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 394.656 ; gain = 127.559
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 394.656 ; gain = 127.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 394.656 ; gain = 127.559
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/vivado/02_Shift/Board.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [D:/vivado/02_Shift/Board.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/02_Shift/Board.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[1]'. [D:/vivado/02_Shift/Board.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/02_Shift/Board.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[2]'. [D:/vivado/02_Shift/Board.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/02_Shift/Board.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[3]'. [D:/vivado/02_Shift/Board.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/02_Shift/Board.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[4]'. [D:/vivado/02_Shift/Board.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/02_Shift/Board.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[5]'. [D:/vivado/02_Shift/Board.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/02_Shift/Board.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [D:/vivado/02_Shift/Board.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/02_Shift/Board.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/vivado/02_Shift/Board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/02_Shift/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Board_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Board_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 709.312 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 709.312 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 709.312 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 709.312 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 709.312 ; gain = 442.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 709.312 ; gain = 442.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 709.312 ; gain = 442.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 709.312 ; gain = 442.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Board 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Shift 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design Board has port led[2] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[3] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[15] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[16] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[17] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[18] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[19] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[20] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[21] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[22] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[23] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[24] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[25] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[26] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[27] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[28] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[29] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[30] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[31] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port led[32] driven by constant 0
+WARNING: [Synth 8-3917] design Board has port enable driven by constant 1
+WARNING: [Synth 8-3331] design Board has unconnected port swb[3]
+WARNING: [Synth 8-3331] design Board has unconnected port swb[4]
+WARNING: [Synth 8-3331] design Board has unconnected port swb[5]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 709.312 ; gain = 442.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 739.484 ; gain = 472.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 739.930 ; gain = 472.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     4|
+|2     |LUT1  |     2|
+|3     |LUT2  |     3|
+|4     |LUT3  |   101|
+|5     |LUT4  |    39|
+|6     |LUT5  |   309|
+|7     |LUT6  |   262|
+|8     |MUXF7 |    12|
+|9     |MUXF8 |     4|
+|10    |FDRE  |    96|
+|11    |IBUF  |    36|
+|12    |OBUF  |    44|
++------+------+------+
+
+Report Instance Areas: 
++------+-------------------+--------+------+
+|      |Instance           |Module  |Cells |
++------+-------------------+--------+------+
+|1     |top                |        |   912|
+|2     |  Display_Instance |Display |    30|
+|3     |  Shift_Instance   |Shift   |   748|
++------+-------------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 753.281 ; gain = 171.527
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 753.281 ; gain = 486.184
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 761.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 78 Warnings, 7 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 761.426 ; gain = 494.328
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.426 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/vivado/02_Shift/02_Shift.runs/synth_1/Board.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Board_utilization_synth.rpt -pb Board_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 13 20:59:16 2021...

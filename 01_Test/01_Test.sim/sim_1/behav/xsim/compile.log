@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/01_Test/Display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/01_Test/Display_Test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Display_Test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/01_Test/01_Test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
