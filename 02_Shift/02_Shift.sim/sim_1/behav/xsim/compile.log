@@ -1,6 +1,4 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/02_Shift/Shift.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Shift
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/02_Shift/02_Shift.srcs/sim_1/new/Shift_test.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/02_Shift/Shift_test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Shift_Test
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/02_Shift/02_Shift.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

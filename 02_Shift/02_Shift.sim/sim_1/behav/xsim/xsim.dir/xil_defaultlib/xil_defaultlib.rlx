@@ -3,5 +3,6 @@
 Dec  7 2018
 00:33:28
 D:/vivado/02_Shift/02_Shift.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-D:/vivado/02_Shift/02_Shift.srcs/sim_1/new/Shift_test.v,1618134038,verilog,,,,Shift_Test,,,,,,,,
-D:/vivado/02_Shift/Shift.v,1618127432,verilog,,D:/vivado/02_Shift/02_Shift.srcs/sim_1/new/Shift_test.v,,Shift,,,,,,,,
+,,,,,,,,,,,,,,
+D:/vivado/02_Shift/Shift.v,1618317740,verilog,,D:/vivado/02_Shift/Shift_test.v,,Shift,,,,,,,,
+,,,,,,Shift_Test,,,,,,,,
