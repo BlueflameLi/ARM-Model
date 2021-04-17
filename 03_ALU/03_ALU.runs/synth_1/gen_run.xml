@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1618667973">
-  <File Type="PA-TCL" Name="ALU.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ALU_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="ALU_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ALU.vds"/>
-  <File Type="RDS-UTIL" Name="ALU_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ALU_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="ALU.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ALU_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="ALU_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1618671844">
+  <File Type="PA-TCL" Name="ALU_Board.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ALU_Board_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ALU_Board_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ALU_Board.vds"/>
+  <File Type="RDS-UTIL" Name="ALU_Board_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ALU_Board_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ALU_Board.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ALU_Board_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ALU_Board_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/ALU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Display.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/ALU_Board.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -26,7 +40,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/Display.v">
+    <File Path="$PPRDIR/Shift_ALU.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -36,7 +50,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ALU"/>
+      <Option Name="TopModule" Val="ALU_Board"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

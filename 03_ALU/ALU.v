@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
-module ALU(ALU_OP,
+module ALU(clk,
+           ALU_OP,
            A,
            B,
            Shift_Carry_Out,
@@ -8,6 +9,7 @@ module ALU(ALU_OP,
            VF,
            NZCV,
            F);
+    input clk;
     input [4:1] ALU_OP;
     input [32:1] A,B;
     input Shift_Carry_Out;
@@ -17,7 +19,7 @@ module ALU(ALU_OP,
     
     reg C;
     
-    always@(*)
+    always@(negedge clk)
         begin
             C = 0;
             NZCV = {2'b00,Shift_Carry_Out,VF};

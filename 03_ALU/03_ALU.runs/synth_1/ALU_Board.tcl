@@ -28,7 +28,11 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/vivado/03_ALU/03_ALU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib D:/vivado/03_ALU/ALU.v
+read_verilog -library xil_defaultlib {
+  D:/vivado/03_ALU/ALU.v
+  D:/vivado/03_ALU/Display.v
+  D:/vivado/03_ALU/ALU_Board.v
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -43,12 +47,12 @@ set_property used_in_implementation false [get_files D:/vivado/03_ALU/Board.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top ALU -part xc7a100tfgg484-2L
+synth_design -top ALU_Board -part xc7a100tfgg484-2L
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef ALU.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file ALU_utilization_synth.rpt -pb ALU_utilization_synth.pb"
+write_checkpoint -force -noxdef ALU_Board.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file ALU_Board_utilization_synth.rpt -pb ALU_Board_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

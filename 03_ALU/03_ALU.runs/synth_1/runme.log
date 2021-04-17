@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log ALU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+    with args -log ALU_Board.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU_Board.tcl
 
 
 ****** Vivado v2018.3 (64-bit)
@@ -8,21 +8,19 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source ALU.tcl -notrace
-Command: synth_design -top ALU -part xc7a100tfgg484-2L
+source ALU_Board.tcl -notrace
+Command: synth_design -top ALU_Board -part xc7a100tfgg484-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3932 
+INFO: Helper process launched with PID 1436 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 339.426 ; gain = 69.941
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 338.664 ; gain = 71.457
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ALU_Board' [D:/vivado/03_ALU/ALU_Board.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/03_ALU/ALU_Board.v:31]
 INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/vivado/03_ALU/ALU.v:3]
-WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:27]
-WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:27]
-WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:28]
-WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:28]
 WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:29]
 WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:29]
 WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:30]
@@ -31,12 +29,51 @@ WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-bloc
 WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:31]
 WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:32]
 WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:32]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/03_ALU/ALU.v:24]
-WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:40]
-WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:41]
+WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:33]
+WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:33]
+WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:34]
+WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:34]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/03_ALU/ALU.v:26]
+WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:42]
+WARNING: [Synth 8-6090] variable 'NZCV' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivado/03_ALU/ALU.v:43]
+WARNING: [Synth 8-6014] Unused sequential element C_reg was removed.  [D:/vivado/03_ALU/ALU.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (1#1) [D:/vivado/03_ALU/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Display' [D:/vivado/03_ALU/Display.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Display' (2#1) [D:/vivado/03_ALU/Display.v:3]
+WARNING: [Synth 8-350] instance 'Display_Instance' of module 'Display' requires 6 connections, but only 4 given [D:/vivado/03_ALU/ALU_Board.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Board' (3#1) [D:/vivado/03_ALU/ALU_Board.v:3]
+WARNING: [Synth 8-3917] design ALU_Board has port enable driven by constant 1
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[6]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[7]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[8]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[9]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[10]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[11]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[12]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[13]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[14]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[15]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[16]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[17]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[18]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[19]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[20]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[21]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[22]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[23]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[24]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[25]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[26]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[27]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[28]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[29]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[30]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[3]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[4]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[5]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[6]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 394.633 ; gain = 125.148
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 394.359 ; gain = 127.152
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,10 +86,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.633 ; gain = 125.148
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 394.359 ; gain = 127.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.633 ; gain = 125.148
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 394.359 ; gain = 127.152
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -60,273 +97,6 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [D:/vivado/03_ALU/Board.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw'. [D:/vivado/03_ALU/Board.xdc:5]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:5]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw'. [D:/vivado/03_ALU/Board.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:6]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [D:/vivado/03_ALU/Board.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:7]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [D:/vivado/03_ALU/Board.xdc:8]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:8]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [D:/vivado/03_ALU/Board.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:9]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [D:/vivado/03_ALU/Board.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [D:/vivado/03_ALU/Board.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [D:/vivado/03_ALU/Board.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [D:/vivado/03_ALU/Board.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [D:/vivado/03_ALU/Board.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [D:/vivado/03_ALU/Board.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [D:/vivado/03_ALU/Board.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [D:/vivado/03_ALU/Board.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [D:/vivado/03_ALU/Board.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [D:/vivado/03_ALU/Board.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [D:/vivado/03_ALU/Board.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [D:/vivado/03_ALU/Board.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[16]'. [D:/vivado/03_ALU/Board.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[17]'. [D:/vivado/03_ALU/Board.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[18]'. [D:/vivado/03_ALU/Board.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[19]'. [D:/vivado/03_ALU/Board.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[20]'. [D:/vivado/03_ALU/Board.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[21]'. [D:/vivado/03_ALU/Board.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[22]'. [D:/vivado/03_ALU/Board.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[23]'. [D:/vivado/03_ALU/Board.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[24]'. [D:/vivado/03_ALU/Board.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[25]'. [D:/vivado/03_ALU/Board.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[26]'. [D:/vivado/03_ALU/Board.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[27]'. [D:/vivado/03_ALU/Board.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[28]'. [D:/vivado/03_ALU/Board.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[29]'. [D:/vivado/03_ALU/Board.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[30]'. [D:/vivado/03_ALU/Board.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[31]'. [D:/vivado/03_ALU/Board.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[32]'. [D:/vivado/03_ALU/Board.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'swb'. [D:/vivado/03_ALU/Board.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'swb[1]'. [D:/vivado/03_ALU/Board.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'swb[2]'. [D:/vivado/03_ALU/Board.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'swb[3]'. [D:/vivado/03_ALU/Board.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:44]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'swb[4]'. [D:/vivado/03_ALU/Board.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'swb[5]'. [D:/vivado/03_ALU/Board.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'swb[6]'. [D:/vivado/03_ALU/Board.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:47]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led'. [D:/vivado/03_ALU/Board.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [D:/vivado/03_ALU/Board.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:51]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[2]'. [D:/vivado/03_ALU/Board.xdc:52]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:52]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[3]'. [D:/vivado/03_ALU/Board.xdc:53]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:53]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[4]'. [D:/vivado/03_ALU/Board.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:54]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[5]'. [D:/vivado/03_ALU/Board.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:55]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[6]'. [D:/vivado/03_ALU/Board.xdc:56]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:56]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[7]'. [D:/vivado/03_ALU/Board.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:57]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [D:/vivado/03_ALU/Board.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:58]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [D:/vivado/03_ALU/Board.xdc:59]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:59]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [D:/vivado/03_ALU/Board.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:60]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [D:/vivado/03_ALU/Board.xdc:61]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:61]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [D:/vivado/03_ALU/Board.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:62]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [D:/vivado/03_ALU/Board.xdc:63]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:63]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [D:/vivado/03_ALU/Board.xdc:64]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:64]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [D:/vivado/03_ALU/Board.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:65]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[16]'. [D:/vivado/03_ALU/Board.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:66]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[17]'. [D:/vivado/03_ALU/Board.xdc:67]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:67]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[18]'. [D:/vivado/03_ALU/Board.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[19]'. [D:/vivado/03_ALU/Board.xdc:69]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:69]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[20]'. [D:/vivado/03_ALU/Board.xdc:70]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:70]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[21]'. [D:/vivado/03_ALU/Board.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:71]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[22]'. [D:/vivado/03_ALU/Board.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:72]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[23]'. [D:/vivado/03_ALU/Board.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:73]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[24]'. [D:/vivado/03_ALU/Board.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:74]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[25]'. [D:/vivado/03_ALU/Board.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:75]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[26]'. [D:/vivado/03_ALU/Board.xdc:76]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:76]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[27]'. [D:/vivado/03_ALU/Board.xdc:77]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:77]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[28]'. [D:/vivado/03_ALU/Board.xdc:78]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:78]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[29]'. [D:/vivado/03_ALU/Board.xdc:79]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:79]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[30]'. [D:/vivado/03_ALU/Board.xdc:80]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:80]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[31]'. [D:/vivado/03_ALU/Board.xdc:81]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:81]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[32]'. [D:/vivado/03_ALU/Board.xdc:82]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:82]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg'. [D:/vivado/03_ALU/Board.xdc:85]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:85]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [D:/vivado/03_ALU/Board.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:86]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [D:/vivado/03_ALU/Board.xdc:87]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:87]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [D:/vivado/03_ALU/Board.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:88]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [D:/vivado/03_ALU/Board.xdc:89]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:89]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [D:/vivado/03_ALU/Board.xdc:90]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:90]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [D:/vivado/03_ALU/Board.xdc:91]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:91]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [D:/vivado/03_ALU/Board.xdc:92]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:92]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [D:/vivado/03_ALU/Board.xdc:93]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:93]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'which'. [D:/vivado/03_ALU/Board.xdc:94]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:94]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'which[0]'. [D:/vivado/03_ALU/Board.xdc:95]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:95]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'which[1]'. [D:/vivado/03_ALU/Board.xdc:96]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:96]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'which[2]'. [D:/vivado/03_ALU/Board.xdc:97]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:97]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'enable'. [D:/vivado/03_ALU/Board.xdc:98]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:98]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/vivado/03_ALU/Board.xdc:99]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:99]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [D:/vivado/03_ALU/Board.xdc:105]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:105]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -349,33 +119,35 @@ WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [D:/vivado/03_ALU/Board.
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/03_ALU/Board.xdc:111]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [D:/vivado/03_ALU/Board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/03_ALU/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ALU_Board_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ALU_Board_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 715.812 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 703.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 715.812 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 703.766 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 703.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 715.812 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 715.812 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 703.766 ; gain = 434.281
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 715.812 ; gain = 448.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 703.766 ; gain = 434.281
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 715.812 ; gain = 448.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 703.766 ; gain = 434.281
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 715.812 ; gain = 448.605
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'F_reg' [D:/vivado/03_ALU/ALU.v:25]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 703.766 ; gain = 434.281
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 715.812 ; gain = 448.605
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -392,12 +164,22 @@ Detailed RTL Component Info :
 	   2 Input     33 Bit       Adders := 2     
 	   4 Input     33 Bit       Adders := 2     
 	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
 	   3 Input      1 Bit         XORs := 6     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	  15 Input      1 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -405,6 +187,18 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module ALU_Board 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
 Module ALU 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -416,8 +210,17 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
 	   3 Input      1 Bit         XORs := 6     
-+---Muxes : 
-	  15 Input      1 Bit        Muxes := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+Module Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -434,8 +237,38 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design ALU_Board has port enable driven by constant 1
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[6]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[7]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[8]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[9]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[10]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[11]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[12]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[13]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[14]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[15]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[16]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[17]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[18]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[19]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[20]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[21]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[22]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[23]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[24]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[25]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[26]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[27]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[28]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[29]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port led[30]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[3]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[4]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[5]
+WARNING: [Synth 8-3331] design ALU_Board has unconnected port swb[6]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 703.766 ; gain = 434.281
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 715.812 ; gain = 448.605
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -447,13 +280,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 734.414 ; gain = 464.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 734.973 ; gain = 467.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 734.934 ; gain = 465.449
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 735.492 ; gain = 468.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -465,7 +298,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -489,7 +322,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -502,7 +335,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -514,25 +347,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -548,48 +381,51 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
+|1     |BUFG   |     2|
 |2     |CARRY4 |    62|
-|3     |LUT1   |     3|
-|4     |LUT2   |   193|
-|5     |LUT3   |     5|
-|6     |LUT4   |    37|
-|7     |LUT5   |    16|
-|8     |LUT6   |   208|
-|9     |LD     |    32|
-|10    |IBUF   |    71|
-|11    |OBUF   |    36|
+|3     |LUT1   |     4|
+|4     |LUT2   |   197|
+|5     |LUT3   |    45|
+|6     |LUT4   |    46|
+|7     |LUT5   |    14|
+|8     |LUT6   |   225|
+|9     |MUXF7  |     4|
+|10    |FDRE   |   155|
+|11    |IBUF   |    35|
+|12    |OBUF   |    19|
+|13    |OBUFT  |    25|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   664|
-+------+---------+-------+------+
++------+-------------------+--------+------+
+|      |Instance           |Module  |Cells |
++------+-------------------+--------+------+
+|1     |top                |        |   833|
+|2     |  ALU_Instance     |ALU     |   592|
+|3     |  Display_Instance |Display |    49|
++------+-------------------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 756.355 ; gain = 177.738
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 756.355 ; gain = 486.871
+Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 767.039 ; gain = 178.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 767.039 ; gain = 499.832
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 94 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 756.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 767.039 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
-  LD => LDCE: 32 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-14 Infos, 111 Warnings, 96 Critical Warnings and 0 Errors encountered.
+20 Infos, 83 Warnings, 7 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 756.355 ; gain = 486.871
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 756.355 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 767.039 ; gain = 499.832
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 767.039 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/vivado/03_ALU/03_ALU.runs/synth_1/ALU.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file ALU_utilization_synth.rpt -pb ALU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 17 22:00:17 2021...
+INFO: [Common 17-1381] The checkpoint 'D:/vivado/03_ALU/03_ALU.runs/synth_1/ALU_Board.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ALU_Board_utilization_synth.rpt -pb ALU_Board_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 17 23:04:38 2021...
