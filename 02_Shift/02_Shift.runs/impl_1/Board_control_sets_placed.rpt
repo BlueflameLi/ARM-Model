@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Apr 13 21:08:32 2021
+| Date         : Sat Apr 17 13:59:41 2021
 | Host         : Blueflame running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Board_control_sets_placed.rpt
 | Design       : Board
@@ -46,7 +46,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              96 |           62 |
+| No           | No                    | No                     |              96 |           66 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -63,9 +63,9 @@ Table of Contents
 +-------------------+---------------+------------------+------------------+----------------+
 |  swb_IBUF_BUFG[6] |               |                  |                1 |              1 |
 |  clk_IBUF_BUFG    |               |                  |                3 |             11 |
-|  swb_IBUF_BUFG[2] |               |                  |                6 |             16 |
+|  swb_IBUF_BUFG[2] |               |                  |                8 |             16 |
 |  swb_IBUF_BUFG[1] |               |                  |               20 |             32 |
-| ~clk_IBUF_BUFG    |               |                  |               32 |             36 |
+| ~clk_IBUF_BUFG    |               |                  |               34 |             36 |
 +-------------------+---------------+------------------+------------------+----------------+
 
 

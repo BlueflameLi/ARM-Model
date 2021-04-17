@@ -30,7 +30,7 @@ module Board(sw,
     
     Shift Shift_Instance(.clk(clk),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.Carry_flag(Carry_flag),.Shift_Out(Shift_Out),.Shift_Carry_Out(Shift_Carry_Out));
     
-    assign led = {Shift_Carry_Out,31'h00000000}; //第一个led灯显示移位进位
+    assign led = {Shift_Carry_Out,30'h00000000,Carry_flag}; //第一个led灯显示移位进位,最后一个led灯显示Carry_flag
     
     
     Display Display_Instance(.clk(clk), .data(Shift_Out),

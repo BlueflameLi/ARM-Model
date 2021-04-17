@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Tue Apr 13 21:09:21 2021
+| Date             : Sat Apr 17 14:00:26 2021
 | Host             : Blueflame running 64-bit major release  (build 9200)
 | Command          : report_power -file Board_power_routed.rpt -pb Board_power_summary_routed.pb -rpx Board_power_routed.rpx
 | Design           : Board
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 11.170       |
+| Total On-Chip Power (W)  | 13.077       |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 11.038       |
-| Device Static (W)        | 0.132        |
+| Dynamic (W)              | 12.931       |
+| Device Static (W)        | 0.146        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 70.1         |
-| Junction Temperature (C) | 54.9         |
+| Max Ambient (C)          | 65.0         |
+| Junction Temperature (C) | 60.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     3.564 |      838 |       --- |             --- |
-|   LUT as Logic |     3.498 |      606 |     63400 |            0.96 |
+| Slice Logic    |     3.545 |      838 |       --- |             --- |
+|   LUT as Logic |     3.478 |      606 |     63400 |            0.96 |
 |   Register     |     0.035 |       96 |    126800 |            0.08 |
 |   BUFG         |     0.023 |        4 |        32 |           12.50 |
 |   F7/F8 Muxes  |     0.008 |       16 |     63400 |            0.03 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |     3.504 |      788 |       --- |             --- |
-| I/O            |     3.970 |       80 |       285 |           28.07 |
-| Static Power   |     0.132 |          |           |                 |
-| Total          |    11.170 |          |           |                 |
+| Signals        |     3.516 |      788 |       --- |             --- |
+| I/O            |     5.870 |       80 |       285 |           28.07 |
+| Static Power   |     0.146 |          |           |                 |
+| Total          |    13.077 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,11 +71,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     7.261 |       7.213 |      0.048 |
-| Vccaux    |       1.800 |     0.335 |       0.313 |      0.022 |
+| Vccint    |       1.000 |     7.265 |       7.205 |      0.059 |
+| Vccaux    |       1.800 |     0.492 |       0.469 |      0.023 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     1.816 |       1.812 |      0.004 |
+| Vcco18    |       1.800 |     2.716 |       2.712 |      0.004 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -138,9 +138,9 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| Board              |    11.038 |
-|   Display_Instance |     0.100 |
-|   Shift_Instance   |     5.517 |
+| Board              |    12.931 |
+|   Display_Instance |     0.090 |
+|   Shift_Instance   |     5.467 |
 +--------------------+-----------+
 
 
