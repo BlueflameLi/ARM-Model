@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr 17 21:56:21 2021
+# Process ID: 232
+# Current directory: D:/vivado/03_ALU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5848 D:\vivado\03_ALU\03_ALU.xpr
+# Log file: D:/vivado/03_ALU/vivado.log
+# Journal file: D:/vivado/03_ALU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vivado/03_ALU/03_ALU.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 682.160 ; gain = 77.207
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 17 21:58:19 2021...
+.v D:/vivado/03_ALU/Shift.v}
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse D:/vivado/03_ALU/Board.xdc
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/vivado/03_ALU/03_ALU.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Sat Apr 17 21:58:01 2021] Launched synth_1...
+Run output will be captured here: D:/vivado/03_ALU/03_ALU.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files D:/vivado/03_ALU/Display.v] -no_script -reset -force -quiet
+remove_files  D:/vivado/03_ALU/Display.v
+add_files -norecurse D:/vivado/03_ALU/Display.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Sat Apr 17 21:59:33 2021] Launched synth_1...
+Run output will be captured here: D:/vivado/03_ALU/03_ALU.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 17 22:00:42 2021...
