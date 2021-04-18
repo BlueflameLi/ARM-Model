@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ALU_Board.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU_Board.tcl" );
+         "-log Board.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Board.tcl" );
 
 
 

@@ -1,12 +1,10 @@
 `timescale 1ns / 1ps
-module Shift(clk,
-             SHIFT_OP,
+module Shift(SHIFT_OP,
              Shift_Data,
              Shift_Num,
              Carry_flag,
              Shift_Out,
              Shift_Carry_Out);
-    input clk;
     input [32:1] Shift_Data;
     input [8:1] Shift_Num;
     input [3:1] SHIFT_OP;
@@ -14,7 +12,7 @@ module Shift(clk,
     output reg [32:1] Shift_Out;
     output reg Shift_Carry_Out;
     
-    always@(negedge clk)
+    always@(*)
     begin
         case(SHIFT_OP[3:2])
             2'b00://lsl

@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Apr 17 23:04:46 2021
-# Process ID: 5572
+# Start of session at: Sun Apr 18 21:29:36 2021
+# Process ID: 13548
 # Current directory: D:/vivado/03_ALU/03_ALU.runs/impl_1
-# Command line: vivado.exe -log ALU_Board.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ALU_Board.tcl -notrace
-# Log file: D:/vivado/03_ALU/03_ALU.runs/impl_1/ALU_Board.vdi
+# Command line: vivado.exe -log Board.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Board.tcl -notrace
+# Log file: D:/vivado/03_ALU/03_ALU.runs/impl_1/Board.vdi
 # Journal file: D:/vivado/03_ALU/03_ALU.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source ALU_Board.tcl -notrace
+source Board.tcl -notrace
