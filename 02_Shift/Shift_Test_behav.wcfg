@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Shift_Test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Shift_Test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="129800001fs"></ZoomEndTime>
+      <Cursor1Time time="8900000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/Shift_Test/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Shift_Test/Shift_Data" type="array">
+      <obj_property name="ElementShortName">Shift_Data[32:1]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Data[32:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Shift_Test/Shift_Num" type="array">
+      <obj_property name="ElementShortName">Shift_Num[8:1]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Num[8:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Shift_Test/SHIFT_OP" type="array">
+      <obj_property name="ElementShortName">SHIFT_OP[3:1]</obj_property>
+      <obj_property name="ObjectShortName">SHIFT_OP[3:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Shift_Test/Carry_flag" type="logic">
+      <obj_property name="ElementShortName">Carry_flag</obj_property>
+      <obj_property name="ObjectShortName">Carry_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Shift_Test/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Shift_Test/Shift_Out" type="array">
+      <obj_property name="ElementShortName">Shift_Out[32:1]</obj_property>
+      <obj_property name="ObjectShortName">Shift_Out[32:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Shift_Test/Shift_Carry_Out" type="logic">
+      <obj_property name="ElementShortName">Shift_Carry_Out</obj_property>
+      <obj_property name="ObjectShortName">Shift_Carry_Out</obj_property>
+   </wvobject>
+</wave_config>
