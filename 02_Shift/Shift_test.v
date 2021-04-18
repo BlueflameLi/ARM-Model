@@ -8,7 +8,6 @@ module Shift_Test();
     wire enable;
     wire [32:1] Shift_Out;
     wire Shift_Carry_Out;
-    always #0.01 clk = ~clk; // 0.01ns == 10ps
     initial begin
         Carry_flag = 0; SHIFT_OP = 3'b000; Shift_Num = 8'd0; 
         Shift_Data = 32'h773d8f5c;
@@ -75,5 +74,5 @@ module Shift_Test();
         //Shift_Data     = 32'haaaaff00;
         
     end
-    Shift u(.clk(clk), .SHIFT_OP(SHIFT_OP), .Shift_Data(Shift_Data), .Shift_Num(Shift_Num),.Carry_flag(Carry_flag), .Shift_Out(Shift_Out), .Shift_Carry_Out(Shift_Carry_Out));
+    Shift u(.SHIFT_OP(SHIFT_OP), .Shift_Data(Shift_Data), .Shift_Num(Shift_Num),.Carry_flag(Carry_flag), .Shift_Out(Shift_Out), .Shift_Carry_Out(Shift_Carry_Out));
 endmodule

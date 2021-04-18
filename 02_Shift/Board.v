@@ -28,7 +28,7 @@ module Board(sw,
     always @(posedge swb[2]) {Shift_Num,SHIFT_OP} <= sw[1:11];      //按第二个按钮输入Shift_Num(前8位)和SHIFT_OP(后3位)
     always @(posedge swb[6]) Carry_flag           <= ~Carry_flag;   //按第六个按钮切换Carry_flag
     
-    Shift Shift_Instance(.clk(clk),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.Carry_flag(Carry_flag),.Shift_Out(Shift_Out),.Shift_Carry_Out(Shift_Carry_Out));
+    Shift Shift_Instance(.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.Carry_flag(Carry_flag),.Shift_Out(Shift_Out),.Shift_Carry_Out(Shift_Carry_Out));
     
     assign led = {Shift_Carry_Out,30'h00000000,Carry_flag}; //第一个led灯显示移位进位,最后一个led灯显示Carry_flag
     

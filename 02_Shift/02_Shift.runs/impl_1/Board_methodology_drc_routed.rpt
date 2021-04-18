@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Apr 17 14:00:25 2021
+| Date         : Sun Apr 18 14:50:49 2021
 | Host         : Blueflame running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Board_methodology_drc_routed.rpt -pb Board_methodology_drc_routed.pb -rpx Board_methodology_drc_routed.rpx
 | Design       : Board
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 96
+             Violations found: 60
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 96         |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 60         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -284,230 +284,50 @@ Related violations: <none>
 
 TIMING-17#51 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Carry_Out_reg/C is not reached by a timing clock
+The clock pin Shift_Num_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[10]/C is not reached by a timing clock
+The clock pin Shift_Num_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[11]/C is not reached by a timing clock
+The clock pin Shift_Num_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[12]/C is not reached by a timing clock
+The clock pin Shift_Num_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[13]/C is not reached by a timing clock
+The clock pin Shift_Num_reg[4]_rep/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[14]/C is not reached by a timing clock
+The clock pin Shift_Num_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[15]/C is not reached by a timing clock
+The clock pin Shift_Num_reg[5]_rep/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[16]/C is not reached by a timing clock
+The clock pin Shift_Num_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Warning
 Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#60 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#61 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#62 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#63 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#64 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#65 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#66 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#67 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#68 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#69 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#70 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#71 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#72 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#73 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#74 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#75 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#76 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[32]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#77 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#78 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#79 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#80 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#81 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#82 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#83 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Instance/Shift_Out_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#84 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#85 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[1]_rep/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#86 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[1]_rep__0/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#87 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#88 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#89 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[3]_rep/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#90 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[3]_rep__0/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#91 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#92 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[4]_rep/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#93 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#94 Warning
-Non-clocked sequential cell  
-The clock pin Shift_Num_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#95 Warning
-Non-clocked sequential cell  
 The clock pin Shift_Num_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#96 Warning
+TIMING-17#60 Warning
 Non-clocked sequential cell  
 The clock pin Shift_Num_reg[8]/C is not reached by a timing clock
 Related violations: <none>
