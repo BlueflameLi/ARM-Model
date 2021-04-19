@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1618752270">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1618804014">
   <File Type="PA-TCL" Name="Board.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Board_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Board_reports.tcl"/>
@@ -46,6 +46,17 @@
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
+    </File>
+    <File Path="$PPRDIR/ALU_Shift.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/IP/component.xml">
+      <FileInfo SFType="IPXACT"/>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
