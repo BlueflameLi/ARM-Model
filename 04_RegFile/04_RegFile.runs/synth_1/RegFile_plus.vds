@@ -1,0 +1,677 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr 24 19:34:46 2021
+# Process ID: 17940
+# Current directory: D:/vivado/04_RegFile/04_RegFile.runs/synth_1
+# Command line: vivado.exe -log RegFile_plus.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RegFile_plus.tcl
+# Log file: D:/vivado/04_RegFile/04_RegFile.runs/synth_1/RegFile_plus.vds
+# Journal file: D:/vivado/04_RegFile/04_RegFile.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source RegFile_plus.tcl -notrace
+Command: synth_design -top RegFile_plus -part xc7a100tfgg484-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18908 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 339.164 ; gain = 72.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'RegFile_plus' [D:/vivado/04_RegFile/RegFile_plus.v:3]
+	Parameter ADDR bound to: 4 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:58]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:70]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:95]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:107]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:128]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:140]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:161]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile_plus' (1#1) [D:/vivado/04_RegFile/RegFile_plus.v:3]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[32]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[31]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[30]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[29]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[28]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[27]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[26]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[25]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[24]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[23]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[22]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[21]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[20]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[19]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[18]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[17]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[16]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[15]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[14]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[13]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[12]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[11]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[10]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[9]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[8]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[7]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[6]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[5]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[4]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[3]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 395.121 ; gain = 128.898
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 395.121 ; gain = 128.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 395.121 ; gain = 128.898
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/vivado/04_RegFile/Board.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw'. [D:/vivado/04_RegFile/Board.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw'. [D:/vivado/04_RegFile/Board.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [D:/vivado/04_RegFile/Board.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [D:/vivado/04_RegFile/Board.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [D:/vivado/04_RegFile/Board.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [D:/vivado/04_RegFile/Board.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [D:/vivado/04_RegFile/Board.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [D:/vivado/04_RegFile/Board.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [D:/vivado/04_RegFile/Board.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [D:/vivado/04_RegFile/Board.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [D:/vivado/04_RegFile/Board.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [D:/vivado/04_RegFile/Board.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [D:/vivado/04_RegFile/Board.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [D:/vivado/04_RegFile/Board.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [D:/vivado/04_RegFile/Board.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [D:/vivado/04_RegFile/Board.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [D:/vivado/04_RegFile/Board.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[16]'. [D:/vivado/04_RegFile/Board.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[17]'. [D:/vivado/04_RegFile/Board.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[18]'. [D:/vivado/04_RegFile/Board.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[19]'. [D:/vivado/04_RegFile/Board.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[20]'. [D:/vivado/04_RegFile/Board.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[21]'. [D:/vivado/04_RegFile/Board.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[22]'. [D:/vivado/04_RegFile/Board.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[23]'. [D:/vivado/04_RegFile/Board.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[24]'. [D:/vivado/04_RegFile/Board.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[25]'. [D:/vivado/04_RegFile/Board.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[26]'. [D:/vivado/04_RegFile/Board.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[27]'. [D:/vivado/04_RegFile/Board.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[28]'. [D:/vivado/04_RegFile/Board.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[29]'. [D:/vivado/04_RegFile/Board.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[30]'. [D:/vivado/04_RegFile/Board.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[31]'. [D:/vivado/04_RegFile/Board.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[32]'. [D:/vivado/04_RegFile/Board.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb'. [D:/vivado/04_RegFile/Board.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[1]'. [D:/vivado/04_RegFile/Board.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[2]'. [D:/vivado/04_RegFile/Board.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[3]'. [D:/vivado/04_RegFile/Board.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[4]'. [D:/vivado/04_RegFile/Board.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[5]'. [D:/vivado/04_RegFile/Board.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[6]'. [D:/vivado/04_RegFile/Board.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led'. [D:/vivado/04_RegFile/Board.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led'. [D:/vivado/04_RegFile/Board.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [D:/vivado/04_RegFile/Board.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [D:/vivado/04_RegFile/Board.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [D:/vivado/04_RegFile/Board.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [D:/vivado/04_RegFile/Board.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [D:/vivado/04_RegFile/Board.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [D:/vivado/04_RegFile/Board.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [D:/vivado/04_RegFile/Board.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [D:/vivado/04_RegFile/Board.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [D:/vivado/04_RegFile/Board.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [D:/vivado/04_RegFile/Board.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [D:/vivado/04_RegFile/Board.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [D:/vivado/04_RegFile/Board.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [D:/vivado/04_RegFile/Board.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [D:/vivado/04_RegFile/Board.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [D:/vivado/04_RegFile/Board.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[16]'. [D:/vivado/04_RegFile/Board.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[17]'. [D:/vivado/04_RegFile/Board.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[18]'. [D:/vivado/04_RegFile/Board.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[19]'. [D:/vivado/04_RegFile/Board.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[20]'. [D:/vivado/04_RegFile/Board.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[21]'. [D:/vivado/04_RegFile/Board.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[22]'. [D:/vivado/04_RegFile/Board.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[23]'. [D:/vivado/04_RegFile/Board.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[24]'. [D:/vivado/04_RegFile/Board.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[25]'. [D:/vivado/04_RegFile/Board.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[26]'. [D:/vivado/04_RegFile/Board.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[27]'. [D:/vivado/04_RegFile/Board.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[28]'. [D:/vivado/04_RegFile/Board.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[29]'. [D:/vivado/04_RegFile/Board.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[30]'. [D:/vivado/04_RegFile/Board.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[31]'. [D:/vivado/04_RegFile/Board.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[32]'. [D:/vivado/04_RegFile/Board.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg'. [D:/vivado/04_RegFile/Board.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [D:/vivado/04_RegFile/Board.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [D:/vivado/04_RegFile/Board.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [D:/vivado/04_RegFile/Board.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [D:/vivado/04_RegFile/Board.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [D:/vivado/04_RegFile/Board.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [D:/vivado/04_RegFile/Board.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [D:/vivado/04_RegFile/Board.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [D:/vivado/04_RegFile/Board.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which'. [D:/vivado/04_RegFile/Board.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which[0]'. [D:/vivado/04_RegFile/Board.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which[1]'. [D:/vivado/04_RegFile/Board.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which[2]'. [D:/vivado/04_RegFile/Board.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enable'. [D:/vivado/04_RegFile/Board.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [D:/vivado/04_RegFile/Board.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[1]'. [D:/vivado/04_RegFile/Board.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[2]'. [D:/vivado/04_RegFile/Board.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[3]'. [D:/vivado/04_RegFile/Board.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[4]'. [D:/vivado/04_RegFile/Board.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[5]'. [D:/vivado/04_RegFile/Board.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [D:/vivado/04_RegFile/Board.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/vivado/04_RegFile/Board.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/vivado/04_RegFile/Board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/04_RegFile/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RegFile_plus_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/RegFile_plus_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 745.793 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 745.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 745.793 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 745.793 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 745.793 ; gain = 479.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 745.793 ; gain = 479.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 745.793 ; gain = 479.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "R_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "R_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'R_Data_A_reg' [D:/vivado/04_RegFile/RegFile_plus.v:96]
+WARNING: [Synth 8-327] inferring latch for variable 'R_Data_B_reg' [D:/vivado/04_RegFile/RegFile_plus.v:129]
+WARNING: [Synth 8-327] inferring latch for variable 'R_Data_C_reg' [D:/vivado/04_RegFile/RegFile_plus.v:162]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 745.793 ; gain = 479.570
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 33    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   4 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 74    
+	   3 Input      1 Bit        Muxes := 21    
+	  12 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 13    
+	   9 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module RegFile_plus 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 33    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   4 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 74    
+	   3 Input      1 Bit        Muxes := 21    
+	  12 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 13    
+	   9 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[32]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[31]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[30]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[29]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[28]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[27]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[26]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[25]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[24]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[23]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[22]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[21]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[20]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[19]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[18]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[17]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[16]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[15]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[14]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[13]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[12]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[11]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[10]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[9]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[8]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[7]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[6]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[5]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[4]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[3]
+WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[2]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 745.793 ; gain = 479.570
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 745.793 ; gain = 479.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 745.793 ; gain = 479.570
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     4|
+|2     |LUT2  |    17|
+|3     |LUT3  |    38|
+|4     |LUT4  |    20|
+|5     |LUT5  |   143|
+|6     |LUT6  |   836|
+|7     |MUXF7 |    96|
+|8     |FDCE  |  1057|
+|9     |LD    |     3|
+|10    |LDC   |    93|
+|11    |IBUF  |    58|
+|12    |OBUF  |    97|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  2462|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 763.457 ; gain = 146.562
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 763.457 ; gain = 497.234
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 192 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'RegFile_plus' is not ideal for floorplanning, since the cellview 'RegFile_plus' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.816 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 96 instances were transformed.
+  LD => LDCE: 3 instances
+  LDC => LDCE: 93 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 162 Warnings, 96 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 769.816 ; gain = 503.594
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.816 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/vivado/04_RegFile/04_RegFile.runs/synth_1/RegFile_plus.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RegFile_plus_utilization_synth.rpt -pb RegFile_plus_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 24 19:35:27 2021...

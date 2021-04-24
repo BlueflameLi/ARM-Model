@@ -1,0 +1,105 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Apr 24 19:36:28 2021
+| Host         : Blueflame running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file RegFile_plus_control_sets_placed.rpt
+| Design       : RegFile_plus
+| Device       : xc7a100t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    40 |
+| Unused register locations in slices containing registers |    31 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            4 |
+|    16+ |           36 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              93 |           28 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1057 |          420 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------+--------------------------+------------------+----------------+
+|  Clock Signal  |     Enable Signal     |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------+-----------------------+--------------------------+------------------+----------------+
+| ~clk_IBUF_BUFG | Write_PC_IBUF         | Rst_IBUF                 |                1 |              1 |
+|  n_2_159_BUFG  |                       |                          |                1 |              1 |
+|  n_0_160_BUFG  |                       |                          |                1 |              1 |
+|  n_1_161_BUFG  |                       |                          |                1 |              1 |
+|  n_1_161_BUFG  |                       | R_Data_A_reg[32]_i_2_n_3 |               10 |             31 |
+|  n_2_159_BUFG  |                       | R_Data_C_reg[32]_i_2_n_3 |                9 |             31 |
+|  n_0_160_BUFG  |                       | R_Data_B_reg[32]_i_2_n_3 |                9 |             31 |
+| ~clk_IBUF_BUFG | R[5][32]_i_1_n_3      | Rst_IBUF                 |               20 |             32 |
+| ~clk_IBUF_BUFG | R[8][32]_i_1_n_3      | Rst_IBUF                 |                6 |             32 |
+| ~clk_IBUF_BUFG | R[0][32]_i_1_n_3      | Rst_IBUF                 |               12 |             32 |
+| ~clk_IBUF_BUFG | R[13][32]_i_1_n_3     | Rst_IBUF                 |                8 |             32 |
+| ~clk_IBUF_BUFG | R[1][32]_i_1_n_3      | Rst_IBUF                 |               10 |             32 |
+| ~clk_IBUF_BUFG | R[3][32]_i_1_n_3      | Rst_IBUF                 |               17 |             32 |
+| ~clk_IBUF_BUFG | R[9][32]_i_1_n_3      | Rst_IBUF                 |                9 |             32 |
+| ~clk_IBUF_BUFG | R[7][32]_i_1_n_3      | Rst_IBUF                 |               26 |             32 |
+| ~clk_IBUF_BUFG | R[2][32]_i_1_n_3      | Rst_IBUF                 |               10 |             32 |
+| ~clk_IBUF_BUFG | R_fiq[12][32]_i_1_n_3 | Rst_IBUF                 |               19 |             32 |
+| ~clk_IBUF_BUFG | R_fiq[13][32]_i_1_n_3 | Rst_IBUF                 |                8 |             32 |
+| ~clk_IBUF_BUFG | R_abt                 | Rst_IBUF                 |                5 |             32 |
+| ~clk_IBUF_BUFG | R_abt[14][32]_i_1_n_3 | Rst_IBUF                 |                7 |             32 |
+| ~clk_IBUF_BUFG | R13_hyp               | Rst_IBUF                 |               11 |             32 |
+| ~clk_IBUF_BUFG | R_fiq[10][32]_i_1_n_3 | Rst_IBUF                 |                7 |             32 |
+| ~clk_IBUF_BUFG | R_fiq[14][32]_i_1_n_3 | Rst_IBUF                 |               11 |             32 |
+| ~clk_IBUF_BUFG | R_fiq[11][32]_i_1_n_3 | Rst_IBUF                 |               31 |             32 |
+| ~clk_IBUF_BUFG | R_fiq[9][32]_i_1_n_3  | Rst_IBUF                 |               10 |             32 |
+| ~clk_IBUF_BUFG | R_svc[14][32]_i_1_n_3 | Rst_IBUF                 |                9 |             32 |
+| ~clk_IBUF_BUFG | R_mon                 | Rst_IBUF                 |                6 |             32 |
+| ~clk_IBUF_BUFG | R_mon[14][32]_i_1_n_3 | Rst_IBUF                 |                6 |             32 |
+| ~clk_IBUF_BUFG | R_irq[14][32]_i_1_n_3 | Rst_IBUF                 |                9 |             32 |
+| ~clk_IBUF_BUFG | R_svc                 | Rst_IBUF                 |                8 |             32 |
+| ~clk_IBUF_BUFG | R_und[14][32]_i_1_n_3 | Rst_IBUF                 |               19 |             32 |
+| ~clk_IBUF_BUFG | R_und                 | Rst_IBUF                 |               13 |             32 |
+| ~clk_IBUF_BUFG | R_irq                 | Rst_IBUF                 |                6 |             32 |
+| ~clk_IBUF_BUFG | R[14][32]_i_1_n_3     | Rst_IBUF                 |                9 |             32 |
+| ~clk_IBUF_BUFG | R[11][32]_i_1_n_3     | Rst_IBUF                 |               28 |             32 |
+| ~clk_IBUF_BUFG | R[10][32]_i_1_n_3     | Rst_IBUF                 |                9 |             32 |
+| ~clk_IBUF_BUFG | R[6][32]_i_1_n_3      | Rst_IBUF                 |               27 |             32 |
+| ~clk_IBUF_BUFG | R[12][32]_i_1_n_3     | Rst_IBUF                 |               20 |             32 |
+| ~clk_IBUF_BUFG | R[4][32]_i_1_n_3      | Rst_IBUF                 |               14 |             32 |
+| ~clk_IBUF_BUFG | R_fiq                 | Rst_IBUF                 |                9 |             32 |
++----------------+-----------------------+--------------------------+------------------+----------------+
+
+
