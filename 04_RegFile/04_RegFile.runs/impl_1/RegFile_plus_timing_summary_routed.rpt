@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Apr 24 19:37:23 2021
+| Date         : Mon Apr 26 12:10:20 2021
 | Host         : Blueflame running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file RegFile_plus_timing_summary_routed.rpt -pb RegFile_plus_timing_summary_routed.pb -rpx RegFile_plus_timing_summary_routed.rpx -warn_on_violation
 | Design       : RegFile_plus
@@ -60,6 +60,8 @@ Table of Contents
 
  There are 96 register/latch pins with no clock driven by root clock pin: M[4] (HIGH)
 
+ There are 96 register/latch pins with no clock driven by root clock pin: M[5] (HIGH)
+
  There are 32 register/latch pins with no clock driven by root clock pin: R_Addr_A[1] (HIGH)
 
  There are 32 register/latch pins with no clock driven by root clock pin: R_Addr_A[2] (HIGH)
@@ -84,7 +86,7 @@ Table of Contents
 
  There are 32 register/latch pins with no clock driven by root clock pin: R_Addr_C[4] (HIGH)
 
- There are 1057 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 1088 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock
@@ -106,14 +108,14 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 57 input ports with no input delay specified. (HIGH)
+ There are 88 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 97 ports with no output delay specified. (HIGH)
+ There are 128 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

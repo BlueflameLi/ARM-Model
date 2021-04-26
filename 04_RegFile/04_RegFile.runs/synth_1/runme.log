@@ -14,55 +14,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18908 
+INFO: Helper process launched with PID 22396 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 339.164 ; gain = 72.941
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 339.328 ; gain = 71.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'RegFile_plus' [D:/vivado/04_RegFile/RegFile_plus.v:3]
 	Parameter ADDR bound to: 4 - type: integer 
 	Parameter SIZE bound to: 32 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:58]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:70]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:95]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:107]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:128]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:140]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:161]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/04_RegFile/RegFile_plus.v:173]
+WARNING: [Synth 8-6014] Unused sequential element Error_reg was removed.  [D:/vivado/04_RegFile/RegFile_plus.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'RegFile_plus' (1#1) [D:/vivado/04_RegFile/RegFile_plus.v:3]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[32]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[31]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[30]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[29]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[28]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[27]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[26]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[25]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[24]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[23]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[22]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[21]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[20]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[19]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[18]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[17]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[16]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[15]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[14]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[13]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[12]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[11]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[10]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[9]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[8]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[7]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[6]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[5]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[4]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[3]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 395.121 ; gain = 128.898
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 395.043 ; gain = 127.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -75,10 +37,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 395.121 ; gain = 128.898
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 395.043 ; gain = 127.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 395.121 ; gain = 128.898
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 395.043 ; gain = 127.141
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -377,30 +339,30 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 Finished Parsing XDC File [D:/vivado/04_RegFile/Board.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/04_RegFile/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RegFile_plus_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/RegFile_plus_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 745.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 747.043 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 745.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 747.043 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 745.793 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 745.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 747.043 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 747.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 745.793 ; gain = 479.570
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 747.043 ; gain = 479.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 745.793 ; gain = 479.570
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 747.043 ; gain = 479.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 745.793 ; gain = 479.570
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 747.043 ; gain = 479.141
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "R_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "R_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -416,11 +378,14 @@ INFO: [Synth 8-5544] ROM "R_reg[10]" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "R_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "R_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "R_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'R_Data_A_reg' [D:/vivado/04_RegFile/RegFile_plus.v:96]
-WARNING: [Synth 8-327] inferring latch for variable 'R_Data_B_reg' [D:/vivado/04_RegFile/RegFile_plus.v:129]
-WARNING: [Synth 8-327] inferring latch for variable 'R_Data_C_reg' [D:/vivado/04_RegFile/RegFile_plus.v:162]
+INFO: [Synth 8-5544] ROM "R_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "R_Data_A" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "R_Data_A" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'R_Data_A_reg' [D:/vivado/04_RegFile/RegFile_plus.v:119]
+WARNING: [Synth 8-327] inferring latch for variable 'R_Data_B_reg' [D:/vivado/04_RegFile/RegFile_plus.v:155]
+WARNING: [Synth 8-327] inferring latch for variable 'R_Data_C_reg' [D:/vivado/04_RegFile/RegFile_plus.v:190]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 745.793 ; gain = 479.570
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 747.043 ; gain = 479.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -433,17 +398,14 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 33    
-	                1 Bit    Registers := 1     
+	               32 Bit    Registers := 34    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 9     
-	   4 Input     32 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 74    
-	   3 Input      1 Bit        Muxes := 21    
-	  12 Input      1 Bit        Muxes := 2     
-	  11 Input      1 Bit        Muxes := 13    
-	   9 Input      1 Bit        Muxes := 3     
-	  10 Input      1 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 48    
+	   3 Input      1 Bit        Muxes := 17    
+	  10 Input      1 Bit        Muxes := 19    
+	   9 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -454,17 +416,14 @@ Hierarchical RTL Component report
 Module RegFile_plus 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 33    
-	                1 Bit    Registers := 1     
+	               32 Bit    Registers := 34    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 9     
-	   4 Input     32 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 74    
-	   3 Input      1 Bit        Muxes := 21    
-	  12 Input      1 Bit        Muxes := 2     
-	  11 Input      1 Bit        Muxes := 13    
-	   9 Input      1 Bit        Muxes := 3     
-	  10 Input      1 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 48    
+	   3 Input      1 Bit        Muxes := 17    
+	  10 Input      1 Bit        Muxes := 19    
+	   9 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -481,39 +440,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[32]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[31]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[30]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[29]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[28]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[27]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[26]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[25]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[24]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[23]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[22]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[21]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[20]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[19]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[18]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[17]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[16]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[15]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[14]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[13]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[12]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[11]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[10]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[9]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[8]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[7]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[6]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[5]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[4]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[3]
-WARNING: [Synth 8-3331] design RegFile_plus has unconnected port PC_New[2]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 745.793 ; gain = 479.570
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 747.043 ; gain = 479.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -525,13 +453,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 745.793 ; gain = 479.570
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 747.043 ; gain = 479.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 745.793 ; gain = 479.570
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 747.043 ; gain = 479.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -543,7 +471,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -567,7 +495,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -580,7 +508,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -592,25 +520,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -627,50 +555,49 @@ Report Cell Usage:
 |      |Cell  |Count |
 +------+------+------+
 |1     |BUFG  |     4|
-|2     |LUT2  |    17|
-|3     |LUT3  |    38|
-|4     |LUT4  |    20|
-|5     |LUT5  |   143|
-|6     |LUT6  |   836|
-|7     |MUXF7 |    96|
-|8     |FDCE  |  1057|
-|9     |LD    |     3|
-|10    |LDC   |    93|
-|11    |IBUF  |    58|
-|12    |OBUF  |    97|
+|2     |LUT2  |    13|
+|3     |LUT3  |    98|
+|4     |LUT4  |    13|
+|5     |LUT5  |   111|
+|6     |LUT6  |   644|
+|7     |MUXF7 |   192|
+|8     |MUXF8 |    96|
+|9     |FDCE  |  1088|
+|10    |LD    |    96|
+|11    |IBUF  |    89|
+|12    |OBUF  |   128|
 +------+------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |  2462|
+|1     |top      |       |  2572|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 763.457 ; gain = 497.234
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 759.230 ; gain = 491.328
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 763.457 ; gain = 146.562
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 763.457 ; gain = 497.234
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 759.230 ; gain = 139.328
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 759.230 ; gain = 491.328
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 192 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 384 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'RegFile_plus' is not ideal for floorplanning, since the cellview 'RegFile_plus' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 770.285 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 96 instances were transformed.
-  LD => LDCE: 3 instances
-  LDC => LDCE: 93 instances
+  LD => LDCE: 96 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-36 Infos, 162 Warnings, 96 Critical Warnings and 0 Errors encountered.
+31 Infos, 101 Warnings, 96 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 769.816 ; gain = 503.594
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.816 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 770.285 ; gain = 502.383
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 770.285 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/vivado/04_RegFile/04_RegFile.runs/synth_1/RegFile_plus.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RegFile_plus_utilization_synth.rpt -pb RegFile_plus_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 24 19:35:27 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 26 12:09:01 2021...
