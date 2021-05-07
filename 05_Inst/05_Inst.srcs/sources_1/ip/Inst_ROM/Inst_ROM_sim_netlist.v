@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Fri May  7 19:12:29 2021
+// Date        : Fri May  7 20:14:47 2021
 // Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM_sim_netlist.v
@@ -16,18 +16,15 @@
 (* NotValidForBitStream *)
 module Inst_ROM
    (clka,
-    ena,
     addra,
     douta);
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *) input clka;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *) input ena;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [5:0]addra;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *) output [31:0]douta;
 
   wire [5:0]addra;
   wire clka;
   wire [31:0]douta;
-  wire ena;
   wire NLW_U0_dbiterr_UNCONNECTED;
   wire NLW_U0_rsta_busy_UNCONNECTED;
   wire NLW_U0_rstb_busy_UNCONNECTED;
@@ -75,7 +72,7 @@ module Inst_ROM
   (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     3.375199 mW" *) 
   (* C_FAMILY = "artix7" *) 
   (* C_HAS_AXI_ID = "0" *) 
-  (* C_HAS_ENA = "1" *) 
+  (* C_HAS_ENA = "0" *) 
   (* C_HAS_ENB = "0" *) 
   (* C_HAS_INJECTERR = "0" *) 
   (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
@@ -137,7 +134,7 @@ module Inst_ROM
         .douta(douta),
         .doutb(NLW_U0_doutb_UNCONNECTED[31:0]),
         .eccpipece(1'b0),
-        .ena(ena),
+        .ena(1'b0),
         .enb(1'b0),
         .injectdbiterr(1'b0),
         .injectsbiterr(1'b0),
@@ -195,57 +192,47 @@ endmodule
 module Inst_ROM_blk_mem_gen_generic_cstr
    (douta,
     clka,
-    ena,
     addra);
   output [31:0]douta;
   input clka;
-  input ena;
   input [5:0]addra;
 
   wire [5:0]addra;
   wire clka;
   wire [31:0]douta;
-  wire ena;
 
   Inst_ROM_blk_mem_gen_prim_width \ramloop[0].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta),
-        .ena(ena));
+        .douta(douta));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Inst_ROM_blk_mem_gen_prim_width
    (douta,
     clka,
-    ena,
     addra);
   output [31:0]douta;
   input clka;
-  input ena;
   input [5:0]addra;
 
   wire [5:0]addra;
   wire clka;
   wire [31:0]douta;
-  wire ena;
 
   Inst_ROM_blk_mem_gen_prim_wrapper_init \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta),
-        .ena(ena));
+        .douta(douta));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module Inst_ROM_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
-    ena,
     addra);
   output [31:0]douta;
   input clka;
-  input ena;
   input [5:0]addra;
 
   wire \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_32 ;
@@ -255,7 +242,6 @@ module Inst_ROM_blk_mem_gen_prim_wrapper_init
   wire [5:0]addra;
   wire clka;
   wire [31:0]douta;
-  wire ena;
 
   (* box_type = "PRIMITIVE" *) 
   RAMB18E1 #(
@@ -371,10 +357,10 @@ module Inst_ROM_blk_mem_gen_prim_wrapper_init
         .DOBDO(douta[31:16]),
         .DOPADOP({\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_32 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_33 }),
         .DOPBDOP({\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_34 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35 }),
-        .ENARDEN(ena),
-        .ENBWREN(ena),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .ENARDEN(1'b1),
+        .ENBWREN(1'b1),
+        .REGCEAREGCE(1'b1),
+        .REGCEB(1'b1),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -387,23 +373,19 @@ endmodule
 module Inst_ROM_blk_mem_gen_top
    (douta,
     clka,
-    ena,
     addra);
   output [31:0]douta;
   input clka;
-  input ena;
   input [5:0]addra;
 
   wire [5:0]addra;
   wire clka;
   wire [31:0]douta;
-  wire ena;
 
   Inst_ROM_blk_mem_gen_generic_cstr \valid.cstr 
        (.addra(addra),
         .clka(clka),
-        .douta(douta),
-        .ena(ena));
+        .douta(douta));
 endmodule
 
 (* C_ADDRA_WIDTH = "6" *) (* C_ADDRB_WIDTH = "6" *) (* C_ALGORITHM = "1" *) 
@@ -414,7 +396,7 @@ endmodule
 (* C_ENABLE_32BIT_ADDRESS = "0" *) (* C_EN_DEEPSLEEP_PIN = "0" *) (* C_EN_ECC_PIPE = "0" *) 
 (* C_EN_RDADDRA_CHG = "0" *) (* C_EN_RDADDRB_CHG = "0" *) (* C_EN_SAFETY_CKT = "0" *) 
 (* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     3.375199 mW" *) 
-(* C_FAMILY = "artix7" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "1" *) 
+(* C_FAMILY = "artix7" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) 
 (* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
 (* C_HAS_MEM_OUTPUT_REGS_B = "0" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
 (* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
@@ -564,7 +546,6 @@ module Inst_ROM_blk_mem_gen_v8_4_2
   wire [5:0]addra;
   wire clka;
   wire [31:0]douta;
-  wire ena;
 
   assign dbiterr = \<const0> ;
   assign doutb[31] = \<const0> ;
@@ -671,31 +652,26 @@ module Inst_ROM_blk_mem_gen_v8_4_2
   Inst_ROM_blk_mem_gen_v8_4_2_synth inst_blk_mem_gen
        (.addra(addra),
         .clka(clka),
-        .douta(douta),
-        .ena(ena));
+        .douta(douta));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
 module Inst_ROM_blk_mem_gen_v8_4_2_synth
    (douta,
     clka,
-    ena,
     addra);
   output [31:0]douta;
   input clka;
-  input ena;
   input [5:0]addra;
 
   wire [5:0]addra;
   wire clka;
   wire [31:0]douta;
-  wire ena;
 
   Inst_ROM_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
        (.addra(addra),
         .clka(clka),
-        .douta(douta),
-        .ena(ena));
+        .douta(douta));
 endmodule
 `ifndef GLBL
 `define GLBL

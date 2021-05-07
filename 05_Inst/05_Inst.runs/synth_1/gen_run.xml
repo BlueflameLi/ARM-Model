@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1620385908">
-  <File Type="PA-TCL" Name="Inst.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Inst_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="Inst_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Inst.vds"/>
-  <File Type="RDS-UTIL" Name="Inst_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Inst_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Inst.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Inst_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Inst_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1620389653">
+  <File Type="PA-TCL" Name="Inst_Board.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Inst_Board_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Inst_Board_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Inst_Board.vds"/>
+  <File Type="RDS-UTIL" Name="Inst_Board_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Inst_Board_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Inst_Board.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Inst_Board_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Inst_Board_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../IR/Inst.v">
+    <File Path="$PPRDIR/Display.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../IR/test.coe">
+    <File Path="$PPRDIR/Inst.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Inst_Board.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/test.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -26,12 +40,18 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Inst"/>
+      <Option Name="TopModule" Val="Inst_Board"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/Board.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

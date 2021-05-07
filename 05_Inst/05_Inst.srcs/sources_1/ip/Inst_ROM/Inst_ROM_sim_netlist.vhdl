@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri May  7 19:12:29 2021
+-- Date        : Fri May  7 20:14:47 2021
 -- Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM_sim_netlist.vhdl
@@ -18,7 +18,6 @@ entity Inst_ROM_blk_mem_gen_prim_wrapper_init is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -154,10 +153,10 @@ begin
       DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_33\,
       DOPBDOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_34\,
       DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35\,
-      ENARDEN => ena,
-      ENBWREN => ena,
-      REGCEAREGCE => ena,
-      REGCEB => ena,
+      ENARDEN => '1',
+      ENBWREN => '1',
+      REGCEAREGCE => '1',
+      REGCEB => '1',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -174,7 +173,6 @@ entity Inst_ROM_blk_mem_gen_prim_width is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -187,8 +185,7 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0),
-      ena => ena
+      douta(31 downto 0) => douta(31 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -199,7 +196,6 @@ entity Inst_ROM_blk_mem_gen_generic_cstr is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -212,8 +208,7 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0),
-      ena => ena
+      douta(31 downto 0) => douta(31 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -224,7 +219,6 @@ entity Inst_ROM_blk_mem_gen_top is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -237,8 +231,7 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0),
-      ena => ena
+      douta(31 downto 0) => douta(31 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -249,7 +242,6 @@ entity Inst_ROM_blk_mem_gen_v8_4_2_synth is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -262,8 +254,7 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0),
-      ena => ena
+      douta(31 downto 0) => douta(31 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -389,7 +380,7 @@ entity Inst_ROM_blk_mem_gen_v8_4_2 is
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 1;
+  attribute C_HAS_ENA of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_ENB : integer;
   attribute C_HAS_ENB of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_INJECTERR : integer;
@@ -603,8 +594,7 @@ inst_blk_mem_gen: entity work.Inst_ROM_blk_mem_gen_v8_4_2_synth
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0),
-      ena => ena
+      douta(31 downto 0) => douta(31 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -614,7 +604,6 @@ use UNISIM.VCOMPONENTS.ALL;
 entity Inst_ROM is
   port (
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 );
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
@@ -702,7 +691,7 @@ architecture STRUCTURE of Inst_ROM is
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of U0 : label is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of U0 : label is 1;
+  attribute C_HAS_ENA of U0 : label is 0;
   attribute C_HAS_ENB : integer;
   attribute C_HAS_ENB of U0 : label is 0;
   attribute C_HAS_INJECTERR : integer;
@@ -804,7 +793,6 @@ architecture STRUCTURE of Inst_ROM is
   attribute x_interface_info of clka : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clka : signal is "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1";
-  attribute x_interface_info of ena : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA EN";
   attribute x_interface_info of addra : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
   attribute x_interface_info of douta : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
 begin
@@ -821,7 +809,7 @@ U0: entity work.Inst_ROM_blk_mem_gen_v8_4_2
       douta(31 downto 0) => douta(31 downto 0),
       doutb(31 downto 0) => NLW_U0_doutb_UNCONNECTED(31 downto 0),
       eccpipece => '0',
-      ena => ena,
+      ena => '0',
       enb => '0',
       injectdbiterr => '0',
       injectsbiterr => '0',
