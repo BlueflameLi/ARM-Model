@@ -3,7 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Fri May  7 21:27:02 2021
 -- Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub d:/vivado/05_RAM/05_RAM.srcs/sources_1/ip/RAM_B/RAM_B_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top RAM_B -prefix
+--               RAM_B_ RAM_B_stub.vhdl
 -- Design      : RAM_B
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-2L
