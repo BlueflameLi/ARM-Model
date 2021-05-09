@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri May  7 20:14:47 2021
+-- Date        : Sun May  9 19:23:18 2021
 -- Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM_sim_netlist.vhdl
+--               D:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM_sim_netlist.vhdl
 -- Design      : Inst_ROM
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,8 +34,8 @@ architecture STRUCTURE of Inst_ROM_blk_mem_gen_prim_wrapper_init is
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -44,8 +44,8 @@ begin
       INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"E5803004E0533212E3A03014E3A02002E3A01001E3A05000E3A01004E3A0000C",
-      INIT_01 => X"00000000000000000000000000000000E1016090E7905005E49010042AFFFFFC",
+      INIT_00 => X"E5803004A0533212D3A03014C3A0200233A0100163A0500083A01004E3A0000C",
+      INIT_01 => X"00000000000000000000000000000000E101609057905005E49010042AFFFFFC",
       INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -155,8 +155,8 @@ begin
       DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35\,
       ENARDEN => '1',
       ENBWREN => '1',
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => '0',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -386,7 +386,7 @@ entity Inst_ROM_blk_mem_gen_v8_4_2 is
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
@@ -697,7 +697,7 @@ architecture STRUCTURE of Inst_ROM is
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;

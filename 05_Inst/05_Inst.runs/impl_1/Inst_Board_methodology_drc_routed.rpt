@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri May  7 20:16:10 2021
+| Date         : Sun May  9 19:24:40 2021
 | Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Inst_Board_methodology_drc_routed.rpt -pb Inst_Board_methodology_drc_routed.pb -rpx Inst_Board_methodology_drc_routed.rpx
 | Design       : Inst_Board
@@ -23,12 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 46
+             Violations found: 50
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 45         |
-| TIMING-20 | Warning  | Non-clocked latch           | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 50         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -255,12 +254,32 @@ Related violations: <none>
 
 TIMING-17#45 Warning
 Non-clocked sequential cell  
-The clock pin I/Inst_ROM_Instance/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/I/Inst_ROM_Instance/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_cooolgate_en_gate_1_cooolDelFlop/C is not reached by a timing clock
+The clock pin I/PC_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch I/flag_reg cannot be properly analyzed as its control pin I/flag_reg/G is not reached by a timing clock
+TIMING-17#46 Warning
+Non-clocked sequential cell  
+The clock pin I/PC_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Warning
+Non-clocked sequential cell  
+The clock pin I/PC_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Warning
+Non-clocked sequential cell  
+The clock pin I/PC_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Warning
+Non-clocked sequential cell  
+The clock pin I/PC_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Warning
+Non-clocked sequential cell  
+The clock pin I/PC_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 

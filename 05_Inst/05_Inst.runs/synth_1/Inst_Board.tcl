@@ -30,13 +30,13 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/vivado/05_Inst/05_Inst.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files d:/vivado/05_Inst/test.coe
+add_files D:/vivado/05_Inst/test.coe
 read_verilog -library xil_defaultlib {
   D:/vivado/05_Inst/Display.v
   D:/vivado/05_Inst/Inst.v
   D:/vivado/05_Inst/Inst_Board.v
 }
-read_ip -quiet d:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci
+read_ip -quiet D:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci
 set_property used_in_implementation false [get_files -all d:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

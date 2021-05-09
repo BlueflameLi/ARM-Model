@@ -74,7 +74,7 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet D:/vivado/05_Inst/05_Inst.runs/synth_1/Inst_Board.dcp
-  read_ip -quiet d:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci
+  read_ip -quiet D:/vivado/05_Inst/05_Inst.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci
   read_xdc D:/vivado/05_Inst/Board.xdc
   link_design -top Inst_Board -part xc7a100tfgg484-2L
   close_msg_db -file init_design.pb

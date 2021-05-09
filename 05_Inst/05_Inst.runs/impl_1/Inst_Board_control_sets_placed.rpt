@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri May  7 20:15:41 2021
+| Date         : Sun May  9 19:24:11 2021
 | Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Inst_Board_control_sets_placed.rpt
 | Design       : Inst_Board
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     5 |
-| Unused register locations in slices containing registers |    28 |
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |    16 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            2 |
 |      3 |            1 |
+|      6 |            1 |
 |     11 |            1 |
 |    16+ |            1 |
 +--------+--------------+
@@ -47,11 +47,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            6 |
+| No           | No                    | No                     |              14 |            5 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |              28 |            6 |
-| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | No                    | Yes                    |               6 |            2 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -59,14 +59,13 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------+---------------+------------------+------------------+----------------+
-|     Clock Signal    | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+---------------------+---------------+------------------+------------------+----------------+
-|  I/flag_reg_i_2_n_0 |               |                  |                1 |              1 |
-|  swb_IBUF_BUFG[1]   |               |                  |                1 |              1 |
-| ~clk_IBUF_BUFG      |               |                  |                1 |              3 |
-|  clk_IBUF_BUFG      |               |                  |                3 |             11 |
-| ~swb_IBUF_BUFG[1]   | I/IR0         |                  |                6 |             28 |
-+---------------------+---------------+------------------+------------------+----------------+
++-------------------+---------------+------------------+------------------+----------------+
+|    Clock Signal   | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------+---------------+------------------+------------------+----------------+
+| ~clk_IBUF_BUFG    |               |                  |                1 |              3 |
+| ~swb_IBUF_BUFG[1] | sw_IBUF[32]   | swb_IBUF[2]      |                2 |              6 |
+|  clk_IBUF_BUFG    |               |                  |                4 |             11 |
+| ~swb_IBUF_BUFG[1] | I/IR0         |                  |                6 |             28 |
++-------------------+---------------+------------------+------------------+----------------+
 
 
