@@ -17,15 +17,7 @@ module RAM_test();
         repeat(10) #50  Mem_Addr = Mem_Addr+3'b100;
         
     end
-    
-    initial
-    begin
-      #800
-        Mem_Write = 0;
-        Mem_Addr  = 0;
-        repeat(10) #50  Mem_Addr = Mem_Addr+3'b100;
-    end
-    
+       
     initial
     begin
         
@@ -57,7 +49,11 @@ module RAM_test();
         
         Mem_Write = 1;
         Mem_Addr  = 8'b00110000;
-        R_data_B = 32'h65432121; 
+        R_data_B = 32'h65432121; #50
+
+        Mem_Write = 0;
+        Mem_Addr  = 0;
+        repeat(10) #50  Mem_Addr = Mem_Addr+3'b100;
         
     end
     

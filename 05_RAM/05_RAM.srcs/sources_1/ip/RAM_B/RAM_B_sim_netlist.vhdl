@@ -1,10 +1,9 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri May  7 21:27:02 2021
+-- Date        : Sun May  9 18:35:58 2021
 -- Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top RAM_B -prefix
---               RAM_B_ RAM_B_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim D:/vivado/05_RAM/05_RAM.srcs/sources_1/ip/RAM_B/RAM_B_sim_netlist.vhdl
 -- Design      : RAM_B
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +21,8 @@ entity RAM_B_blk_mem_gen_prim_wrapper_init is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of RAM_B_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end RAM_B_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of RAM_B_blk_mem_gen_prim_wrapper_init is
@@ -34,8 +35,8 @@ architecture STRUCTURE of RAM_B_blk_mem_gen_prim_wrapper_init is
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -129,8 +130,8 @@ begin
       SIM_DEVICE => "7SERIES",
       SRVAL_A => X"00000",
       SRVAL_B => X"00000",
-      WRITE_MODE_A => "WRITE_FIRST",
-      WRITE_MODE_B => "WRITE_FIRST",
+      WRITE_MODE_A => "READ_FIRST",
+      WRITE_MODE_B => "READ_FIRST",
       WRITE_WIDTH_A => 18,
       WRITE_WIDTH_B => 18
     )
@@ -155,8 +156,8 @@ begin
       DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35\,
       ENARDEN => '1',
       ENBWREN => '1',
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => '0',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -180,6 +181,8 @@ entity RAM_B_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of RAM_B_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end RAM_B_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of RAM_B_blk_mem_gen_prim_width is
@@ -205,6 +208,8 @@ entity RAM_B_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of RAM_B_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end RAM_B_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of RAM_B_blk_mem_gen_generic_cstr is
@@ -230,6 +235,8 @@ entity RAM_B_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of RAM_B_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end RAM_B_blk_mem_gen_top;
 
 architecture STRUCTURE of RAM_B_blk_mem_gen_top is
@@ -255,6 +262,8 @@ entity RAM_B_blk_mem_gen_v8_4_2_synth is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of RAM_B_blk_mem_gen_v8_4_2_synth : entity is "blk_mem_gen_v8_4_2_synth";
 end RAM_B_blk_mem_gen_v8_4_2_synth;
 
 architecture STRUCTURE of RAM_B_blk_mem_gen_v8_4_2_synth is
@@ -385,7 +394,7 @@ entity RAM_B_blk_mem_gen_v8_4_2 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of RAM_B_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of RAM_B_blk_mem_gen_v8_4_2 : entity is "Estimated Power for IP     :     3.53845 mW";
+  attribute C_EST_POWER_SUMMARY of RAM_B_blk_mem_gen_v8_4_2 : entity is "Estimated Power for IP     :     3.64395 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of RAM_B_blk_mem_gen_v8_4_2 : entity is "artix7";
   attribute C_HAS_AXI_ID : integer;
@@ -397,7 +406,7 @@ entity RAM_B_blk_mem_gen_v8_4_2 is
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of RAM_B_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of RAM_B_blk_mem_gen_v8_4_2 : entity is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of RAM_B_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of RAM_B_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
@@ -479,7 +488,7 @@ entity RAM_B_blk_mem_gen_v8_4_2 is
   attribute C_WRITE_DEPTH_B : integer;
   attribute C_WRITE_DEPTH_B of RAM_B_blk_mem_gen_v8_4_2 : entity is 64;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of RAM_B_blk_mem_gen_v8_4_2 : entity is "WRITE_FIRST";
+  attribute C_WRITE_MODE_A of RAM_B_blk_mem_gen_v8_4_2 : entity is "READ_FIRST";
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of RAM_B_blk_mem_gen_v8_4_2 : entity is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
@@ -488,6 +497,8 @@ entity RAM_B_blk_mem_gen_v8_4_2 is
   attribute C_WRITE_WIDTH_B of RAM_B_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of RAM_B_blk_mem_gen_v8_4_2 : entity is "artix7";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of RAM_B_blk_mem_gen_v8_4_2 : entity is "blk_mem_gen_v8_4_2";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of RAM_B_blk_mem_gen_v8_4_2 : entity is "yes";
 end RAM_B_blk_mem_gen_v8_4_2;
@@ -698,7 +709,7 @@ architecture STRUCTURE of RAM_B is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     3.53845 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     3.64395 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "artix7";
   attribute C_HAS_AXI_ID : integer;
@@ -710,7 +721,7 @@ architecture STRUCTURE of RAM_B is
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
@@ -792,7 +803,7 @@ architecture STRUCTURE of RAM_B is
   attribute C_WRITE_DEPTH_B : integer;
   attribute C_WRITE_DEPTH_B of U0 : label is 64;
   attribute C_WRITE_MODE_A : string;
-  attribute C_WRITE_MODE_A of U0 : label is "WRITE_FIRST";
+  attribute C_WRITE_MODE_A of U0 : label is "READ_FIRST";
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of U0 : label is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;

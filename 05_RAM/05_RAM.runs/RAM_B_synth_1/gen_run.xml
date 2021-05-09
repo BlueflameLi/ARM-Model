@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="RAM_B_synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1620401826">
+<GenRun Id="RAM_B_synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1620556489">
   <File Type="PA-TCL" Name="RAM_B.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="RAM_B_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="RAM_B_reports.tcl"/>
