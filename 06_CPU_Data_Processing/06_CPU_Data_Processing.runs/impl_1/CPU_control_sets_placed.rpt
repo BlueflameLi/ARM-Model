@@ -1,0 +1,94 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun May 16 00:07:19 2021
+| Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CPU_control_sets_placed.rpt
+| Design       : CPU
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    25 |
+| Unused register locations in slices containing registers |    17 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      5 |            1 |
+|      6 |            1 |
+|      7 |            1 |
+|      9 |            1 |
+|    16+ |           20 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              36 |           26 |
+| No           | No                    | Yes                    |               5 |            2 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             295 |          138 |
+| Yes          | No                    | Yes                    |             527 |          258 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------+------------------+------------------+----------------+
+|  Clock Signal  |           Enable Signal           | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                   |                  |                2 |              4 |
+|  clk_IBUF_BUFG |                                   | Rst_IBUF         |                2 |              5 |
+| ~clk_IBUF_BUFG | Write_IR_OBUF                     | Rst_IBUF         |                2 |              6 |
+| ~clk_IBUF_BUFG | S_OBUF                            |                  |                4 |              7 |
+|  clk_IBUF_BUFG | LA_i_1_n_1                        | Rst_IBUF         |                3 |              9 |
+| ~clk_IBUF_BUFG | Inst_Instance/E[0]                | Rst_IBUF         |               15 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_10[0] | Rst_IBUF         |               12 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_11[0] | Rst_IBUF         |               15 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_9[0]  | Rst_IBUF         |               14 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_5[0]  | Rst_IBUF         |               17 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_2[0]  | Rst_IBUF         |               15 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_12[0] | Rst_IBUF         |                9 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_13[0] | Rst_IBUF         |                9 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_4[0]  | Rst_IBUF         |               18 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg[0]    | Rst_IBUF         |               14 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_1[0]  | Rst_IBUF         |               14 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_7[0]  | Rst_IBUF         |               28 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_3[0]  | Rst_IBUF         |               17 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_8[0]  | Rst_IBUF         |               15 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_6[0]  | Rst_IBUF         |               30 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/Write_Reg_reg_0[0]  | Rst_IBUF         |               11 |             32 |
+|  n_0_1791_BUFG |                                   |                  |               24 |             32 |
+| ~clk_IBUF_BUFG | Inst_Instance/IR0                 |                  |               21 |             56 |
+| ~clk_IBUF_BUFG | LF                                |                  |               20 |             64 |
+| ~clk_IBUF_BUFG | LA_reg_n_1                        |                  |               93 |            168 |
++----------------+-----------------------------------+------------------+------------------+----------------+
+
+
