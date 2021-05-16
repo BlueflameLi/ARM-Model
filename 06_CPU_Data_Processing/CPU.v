@@ -12,6 +12,10 @@ module CPU(clk,       //时钟信号
            Write_PC,
            Write_IR,
            Write_Reg,
+           LA,
+           LB,
+           LC,
+           LF,
            rm_imm_s,
            rs_imm_s,
            ALU_OP,
@@ -28,6 +32,7 @@ module CPU(clk,       //时钟信号
     output reg [1:0] rs_imm_s;
     output reg [3:0] ALU_OP;
     output [2:0] SHIFT_OP;
+    output reg LA,LB,LC,LF;
     
     //取指令
     wire flag;//条件判断结果
@@ -85,7 +90,6 @@ module CPU(clk,       //时钟信号
     wire [31:0] R_Data_A,R_Data_B,R_Data_C;
     RegFile RegFile_Instance(.clk(clk),.Rst(Rst),.Write_Reg(Write_Reg),.R_Addr_A(rn),.R_Addr_B(rm),.R_Addr_C(rs),.W_Addr(rd),.W_Data(F),.R_Data_A(R_Data_A),.R_Data_B(R_Data_B),.R_Data_C(R_Data_C));
     
-    reg LA,LB,LC,LF;
     
     always@(negedge clk)
         if (LA) A <= R_Data_A;
