@@ -110,14 +110,10 @@ module CPU(clk,       //时钟信号
     
     always@(*)
     begin
-        if (OP<4'b1011)
-            ALU_OP = {1'b0,OP[2:0]};
-        else if (OP == 4'b1011)
-            ALU_OP = 4'b0100;
-        else if (OP == 4'b1100)
-            ALU_OP = 4'b1000;
+        if (OP[3] & !OP[2])
+            ALU_OP = 4'b1000>>(4-OP[1:0]);
         else
-            ALU_OP = {2'b10,OP[1:0]};
+            ALU_OP = OP;
     end
     
     ALU_Shift ALU_Shift_Instance(.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A(A),.CF(NZCV[1]),.VF(NZCV[0]),.NZCV(NZCV_New),.F(F_New));
@@ -168,6 +164,13 @@ module CPU(clk,       //时钟信号
             LC        <= 1'b0;
             LF        <= 1'b0;
             S         <= 1'b0;
+            NZCV      <= 4'b0000;
+            rm_imm_s  <= 1'b0;
+            rs_imm_s  <= 2'b00;
+            A         <= 0;
+            B         <= 0;
+            C         <= 0;
+            F         <= 0;
         end
         else
         begin
@@ -208,7 +211,7 @@ module CPU(clk,       //时钟信号
                 S3:begin
                     Write_PC  <= 1'b0;
                     Write_IR  <= 1'b0;
-                    Write_Reg <= 1'b1;
+                    Write_Reg <= !OP[3] | OP[2];//1000-1011四个指令不写入rd
                     LA        <= 1'b0;
                     LB        <= 1'b0;
                     LC        <= 1'b0;
