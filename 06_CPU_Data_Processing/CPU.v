@@ -64,20 +64,20 @@ module CPU(clk,       //时钟信号
     
     always@(*)
     begin
-        if (rd == 4'b1111)
+        if (&rd)
             DP = Und;
         else
         begin
-            if (IR[27:25] == 3'b000)
+            if (~|IR[27:25])
             begin
-                if (IR[4] == 1'b0)
+                if (!IR[4])
                     DP = DP0;
-                else if (IR[7] == 1'b0)
+                else if (!IR[7])
                     DP = DP1;
                 else
                     DP = Und;
             end
-            else if (IR[27:25] == 3'b001)
+            else if (IR[27:25] ^~ 3'b001)
                 DP = DP2;
             else
                 DP = Und;

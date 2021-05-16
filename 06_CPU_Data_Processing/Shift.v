@@ -17,7 +17,7 @@ module Shift(SHIFT_OP,
         case(SHIFT_OP[3:2])
             2'b00://lsl
             begin
-                if (Shift_Num == 0)
+                if (~|Shift_Num)
                 begin
                     Shift_Out       = Shift_Data;
                     Shift_Carry_Out = 1'bx;
@@ -35,7 +35,7 @@ module Shift(SHIFT_OP,
             end
             2'b01://lsr
             begin
-                if (Shift_Num == 0)
+                if (~|Shift_Num)
                     if (SHIFT_OP[1])
                     begin
                         Shift_Out       = Shift_Data;
@@ -59,7 +59,7 @@ module Shift(SHIFT_OP,
             end
             2'b10://asr
             begin
-                if (Shift_Num == 0)
+                if (~|Shift_Num)
                     if (SHIFT_OP[1])
                     begin
                         Shift_Out       = Shift_Data;
@@ -83,7 +83,7 @@ module Shift(SHIFT_OP,
             end
             2'b11://ror
             begin
-                if (Shift_Num == 0)
+                if (~|Shift_Num)
                     if (SHIFT_OP[1])
                     begin
                         Shift_Out       = Shift_Data;
@@ -102,7 +102,7 @@ module Shift(SHIFT_OP,
                 else
                 begin
                     Shift_Out <= ({{32{Shift_Data}},Shift_Data}>>Shift_Num[5:1]);
-                    if (Shift_Num[5:1] == 0)
+                    if (~|Shift_Num[5:1])
                         Shift_Carry_Out = Shift_Data[32];
                     else
                         Shift_Carry_Out = Shift_Data[Shift_Num[5:1]];

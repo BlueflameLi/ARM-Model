@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18568 
+INFO: Helper process launched with PID 1324 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 367.684 ; gain = 99.309
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 367.527 ; gain = 99.094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'board_cpu' [D:/vivado/06_CPU_Data_Processing/board_cpu.v:2]
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/06_CPU_Data_Processing/CPU.v:3]
@@ -30,8 +30,8 @@ INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/06_CPU_Data_Processing
 	Parameter S2 bound to: 3'b011 
 	Parameter S3 bound to: 3'b100 
 INFO: [Synth 8-6157] synthesizing module 'Inst' [D:/vivado/06_CPU_Data_Processing/Inst.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-17096-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-17096-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-22312-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-22312-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'Inst' (2#1) [D:/vivado/06_CPU_Data_Processing/Inst.v:3]
 INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/vivado/06_CPU_Data_Processing/RegFile.v:3]
 	Parameter ADDR bound to: 4 - type: integer 
@@ -94,7 +94,7 @@ WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[3]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.836 ; gain = 155.461
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.539 ; gain = 155.105
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -107,10 +107,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.836 ; gain = 155.461
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.539 ; gain = 155.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.836 ; gain = 155.461
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.539 ; gain = 155.105
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -131,31 +131,31 @@ Finished Parsing XDC File [D:/vivado/06_CPU_Data_Processing/Board.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/vivado/06_CPU_Data_Processing/Board.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/board_cpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/06_CPU_Data_Processing/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/board_cpu_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/board_cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 767.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.059 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 767.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 767.789 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 767.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 769.059 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 769.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 767.789 ; gain = 499.414
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 769.059 ; gain = 500.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 767.789 ; gain = 499.414
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 769.059 ; gain = 500.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for cpu/Inst_Instance/Inst_ROM_Instance. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 767.789 ; gain = 499.414
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 769.059 ; gain = 500.625
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "REG_Files_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_Files_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -191,7 +191,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'F_reg' [D:/vivado/06_CPU_Da
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ST_reg' using encoding 'one-hot' in module 'CPU'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 767.789 ; gain = 499.414
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 769.059 ; gain = 500.625
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -213,6 +213,7 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit       Adders := 3     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
+	   2 Input      3 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 3     
 	   3 Input      1 Bit         XORs := 6     
 +---Registers : 
@@ -225,7 +226,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 6     
 +---Muxes : 
 	   4 Input     33 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 8     
+	   2 Input     32 Bit        Muxes := 12    
 	   4 Input     32 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   5 Input      5 Bit        Muxes := 1     
@@ -233,8 +234,9 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 19    
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 22    
 	   4 Input      1 Bit        Muxes := 1     
 	  15 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 7     
@@ -271,9 +273,9 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      5 Bit       Adders := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 11    
 	   4 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
 	   4 Input      1 Bit        Muxes := 1     
 Module ALU 
 Detailed RTL Component Info : 
@@ -292,6 +294,8 @@ Module CPU
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      3 Bit         XORs := 1     
 +---Registers : 
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 6     
@@ -303,7 +307,8 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 7     
 Module Display 
 Detailed RTL Component Info : 
@@ -371,70 +376,70 @@ WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\data_reg[0] )
 INFO: [Synth 8-3886] merging instance 'cpu/rm_imm_s_reg' (FDCE) to 'cpu/rs_imm_s_reg[1]'
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[32]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[31]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[30]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[29]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[28]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[27]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[26]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[25]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[24]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[23]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[22]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[21]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[20]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[19]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[18]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[17]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[16]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[15]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[14]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[13]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[12]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[11]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[10]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[9]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[8]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[7]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[6]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[5]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[4]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[3]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[2]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[1]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[32]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[31]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[30]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[29]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[28]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[27]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[26]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[25]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[24]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[23]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[22]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[21]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[20]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[19]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[18]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[17]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[16]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[15]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[14]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[13]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[12]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[11]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[10]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[9]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[8]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[7]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[6]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[5]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[4]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[3]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[2]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (ALU_Instance/F_reg[1]) is unused and will be removed from module ALU_Shift.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[32]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[31]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[30]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[29]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[28]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[27]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[26]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[25]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[24]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[23]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[22]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[21]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[20]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[19]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[18]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[17]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[16]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[15]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[14]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[13]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[12]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[11]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[10]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[9]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[8]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[7]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[6]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[5]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[4]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[3]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[2]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[1]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[32]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[31]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[30]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[29]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[28]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[27]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[26]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[25]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[24]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[23]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[22]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[21]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[20]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[19]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[18]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[17]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[16]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[15]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[14]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[13]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[12]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[11]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[10]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[9]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[8]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[7]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[6]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[5]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[4]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[3]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[2]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[1]) is unused and will be removed from module board_cpu.
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[31]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
@@ -638,7 +643,7 @@ CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:173]
 INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 767.789 ; gain = 499.414
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 769.059 ; gain = 500.625
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -650,13 +655,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 767.789 ; gain = 499.414
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 769.059 ; gain = 500.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 767.789 ; gain = 499.414
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 769.059 ; gain = 500.625
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -668,7 +673,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -692,7 +697,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -705,7 +710,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -717,25 +722,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -756,11 +761,11 @@ Report Cell Usage:
 |2     |BUFG     |     3|
 |3     |CARRY4   |     2|
 |4     |LUT1     |     3|
-|5     |LUT2     |    11|
-|6     |LUT3     |     7|
-|7     |LUT4     |    18|
+|5     |LUT2     |    10|
+|6     |LUT3     |     8|
+|7     |LUT4     |    17|
 |8     |LUT5     |     8|
-|9     |LUT6     |    17|
+|9     |LUT6     |    15|
 |10    |MUXF7    |     4|
 |11    |FDCE     |    17|
 |12    |FDPE     |     1|
@@ -774,33 +779,33 @@ Report Instance Areas:
 +------+-------------------+--------+------+
 |      |Instance           |Module  |Cells |
 +------+-------------------+--------+------+
-|1     |top                |        |   247|
+|1     |top                |        |   244|
 |2     |  Display_Instance |Display |    49|
-|3     |  cpu              |CPU     |   110|
-|4     |    Inst_Instance  |Inst    |    96|
+|3     |  cpu              |CPU     |   107|
+|4     |    Inst_Instance  |Inst    |    94|
 +------+-------------------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 396 critical warnings and 106 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 784.648 ; gain = 172.320
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 784.648 ; gain = 516.273
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 783.391 ; gain = 169.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.836 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 59 Infos, 156 Warnings, 200 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 787.148 ; gain = 518.773
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.148 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 783.836 ; gain = 515.402
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.836 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/board_cpu.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file board_cpu_utilization_synth.rpt -pb board_cpu_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 16 17:28:34 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun May 16 18:57:22 2021...

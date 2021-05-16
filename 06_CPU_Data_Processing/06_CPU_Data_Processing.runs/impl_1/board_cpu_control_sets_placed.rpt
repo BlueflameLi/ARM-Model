@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun May 16 17:29:02 2021
+| Date         : Sun May 16 18:57:51 2021
 | Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file board_cpu_control_sets_placed.rpt
 | Design       : board_cpu
@@ -48,11 +48,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            5 |
-| No           | No                    | Yes                    |               6 |            1 |
-| No           | Yes                   | No                     |              32 |            7 |
-| Yes          | No                    | No                     |              28 |            7 |
-| Yes          | No                    | Yes                    |              15 |            7 |
+| No           | No                    | No                     |              16 |            6 |
+| No           | No                    | Yes                    |               6 |            2 |
+| No           | Yes                   | No                     |              32 |            8 |
+| Yes          | No                    | No                     |              28 |            6 |
+| Yes          | No                    | Yes                    |              15 |            5 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -60,18 +60,18 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+------------------------------------------+------------------+------------------+----------------+
-|    Clock Signal   |               Enable Signal              | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+-------------------+------------------------------------------+------------------+------------------+----------------+
-|  swb_IBUF_BUFG[6] |                                          |                  |                1 |              2 |
-| ~clk_IBUF_BUFG    |                                          |                  |                1 |              3 |
-|  swb_IBUF_BUFG[1] | cpu/Inst_Instance/FSM_onehot_ST_reg[3]_0 | swb_IBUF[2]      |                1 |              3 |
-|  swb_IBUF_BUFG[1] |                                          | swb_IBUF[2]      |                1 |              6 |
-|  swb_IBUF_BUFG[1] | cpu/Write_Reg_i_1_n_0                    | swb_IBUF[2]      |                4 |              6 |
-| ~swb_IBUF_BUFG[1] | cpu/led_OBUF[6]                          | swb_IBUF[2]      |                2 |              6 |
-|  clk_IBUF_BUFG    |                                          |                  |                3 |             11 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR0                    |                  |                7 |             28 |
-|  swb_IBUF_BUFG[6] |                                          | data[32]_i_1_n_0 |                7 |             32 |
-+-------------------+------------------------------------------+------------------+------------------+----------------+
++-------------------+----------------------------------------+------------------+------------------+----------------+
+|    Clock Signal   |              Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------+----------------------------------------+------------------+------------------+----------------+
+|  swb_IBUF_BUFG[6] |                                        |                  |                1 |              2 |
+| ~clk_IBUF_BUFG    |                                        |                  |                2 |              3 |
+|  swb_IBUF_BUFG[1] | cpu/Inst_Instance/FSM_onehot_ST_reg[3] | swb_IBUF[2]      |                1 |              3 |
+|  swb_IBUF_BUFG[1] |                                        | swb_IBUF[2]      |                2 |              6 |
+|  swb_IBUF_BUFG[1] | cpu/Write_Reg_i_1_n_0                  | swb_IBUF[2]      |                2 |              6 |
+| ~swb_IBUF_BUFG[1] | cpu/led_OBUF[6]                        | swb_IBUF[2]      |                2 |              6 |
+|  clk_IBUF_BUFG    |                                        |                  |                3 |             11 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR0                  |                  |                6 |             28 |
+|  swb_IBUF_BUFG[6] |                                        | data[32]_i_1_n_0 |                8 |             32 |
++-------------------+----------------------------------------+------------------+------------------+----------------+
 
 

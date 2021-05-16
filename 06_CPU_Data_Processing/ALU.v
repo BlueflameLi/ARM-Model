@@ -38,6 +38,6 @@ module ALU(ALU_OP,
             4'b1111: begin F = ~B;     end
             endcase
             NZCV[4] = F[32];
-            NZCV[3] = F == 0;
+            NZCV[3] = ~|F;
         end
 endmodule
