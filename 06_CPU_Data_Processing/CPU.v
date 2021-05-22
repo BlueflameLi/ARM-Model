@@ -24,8 +24,8 @@ module CPU(clk,       //时钟信号
     
     input clk,Rst;
     output [31:0] I;
-    output reg [31:0] A,B,C,F;
-    output reg [3:0] NZCV;
+    output [31:0] A,B,C,F;
+    output  [3:0] NZCV;
     output [5:0] Inst_addr;
     output reg Write_PC,Write_IR,Write_Reg,S;
     output reg rm_imm_s;
@@ -87,23 +87,14 @@ module CPU(clk,       //时钟信号
     wire Und_Ins;
     assign Und_Ins = DP == Und;
     
-    wire [31:0] R_Data_A,R_Data_B,R_Data_C;
-    RegFile RegFile_Instance(.clk(clk),.Rst(Rst),.Write_Reg(Write_Reg),.R_Addr_A(rn),.R_Addr_B(rm),.R_Addr_C(rs),.W_Addr(rd),.W_Data(F),.R_Data_A(R_Data_A),.R_Data_B(R_Data_B),.R_Data_C(R_Data_C));
+
+    RegFile RegFile_Instance(.clk(clk),.Rst(Rst),.Write_Reg(Write_Reg),.LA(LA),.LB(LB),.LC(LC),.R_Addr_A(rn),.R_Addr_B(rm),.R_Addr_C(rs),.W_Addr(rd),.W_Data(F),.R_Data_A(A),.R_Data_B(B),.R_Data_C(C));
     
     
-    always@(negedge clk)
-        if (LA) A <= R_Data_A;
-    
-    always@(negedge clk)
-        if (LB) B <= R_Data_B;
-    
-    always@(negedge clk)
-        if (LC) C <= R_Data_C;
     
     wire [7:0] Shift_Num;
     wire [31:0] Shift_Data;
-    wire [31:0] F_New;
-    wire [3:0] NZCV_New;
+
     assign Shift_Data = rm_imm_s?{{24{1'b0}},imm12[7:0]}:B;
     assign Shift_Num  = rs_imm_s[1]?{{3{1'b0}},imm12[11:8],1'b0}:(rs_imm_s[0]?C[7:0]:{{3{1'b0}},imm5});
     assign SHIFT_OP   = DP[1]?3'b111:{type,DP[0]};
@@ -116,13 +107,8 @@ module CPU(clk,       //时钟信号
             ALU_OP = OP;
     end
     
-    ALU_Shift ALU_Shift_Instance(.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A(A),.CF(NZCV[1]),.VF(NZCV[0]),.NZCV(NZCV_New),.F(F_New));
+    ALU_Shift ALU_Shift_Instance(.clk(clk),.Rst(Rst),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A(A),.CF(NZCV[1]),.VF(NZCV[0]),.NZCV(NZCV),.F(F),.S(S),.LF(LF));
     
-    always@(negedge clk)
-        if (S) NZCV <= NZCV_New;
-    
-    always@(negedge clk)
-        if (LF) F <= F_New;
     
     localparam Idle = 3'd0;
     localparam S0   = 3'd1;
@@ -164,13 +150,8 @@ module CPU(clk,       //时钟信号
             LC        <= 1'b0;
             LF        <= 1'b0;
             S         <= 1'b0;
-            NZCV      <= 4'b0000;
             rm_imm_s  <= 1'b0;
             rs_imm_s  <= 2'b00;
-            A         <= 0;
-            B         <= 0;
-            C         <= 0;
-            F         <= 0;
         end
         else
         begin

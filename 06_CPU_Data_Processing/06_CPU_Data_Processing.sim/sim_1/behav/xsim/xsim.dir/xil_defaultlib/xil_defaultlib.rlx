@@ -4,7 +4,7 @@ Dec  7 2018
 00:33:28
 D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
 D:/vivado/06_CPU_Data_Processing/ALU.v,1621161913,verilog,,D:/vivado/06_CPU_Data_Processing/ALU_Shift.v,,ALU,,,,,,,,
-D:/vivado/06_CPU_Data_Processing/ALU_Shift.v,1620373033,verilog,,D:/vivado/06_CPU_Data_Processing/CPU.v,,ALU_Shift,,,,,,,,
+D:/vivado/06_CPU_Data_Processing/ALU_Shift.v,1621665159,verilog,,D:/vivado/06_CPU_Data_Processing/CPU.v,,ALU_Shift,,,,,,,,
 D:/vivado/06_CPU_Data_Processing/CPU.v,1621158971,verilog,,D:/vivado/06_CPU_Data_Processing/Inst.v,,CPU,,,,,,,,
 D:/vivado/06_CPU_Data_Processing/Inst.v,1620558326,verilog,,D:/vivado/06_CPU_Data_Processing/RegFile.v,,Inst,,,,,,,,
 D:/vivado/06_CPU_Data_Processing/Inst_ROM/sim/Inst_ROM.v,1621140259,verilog,,D:/vivado/06_CPU_Data_Processing/ALU.v,,Inst_ROM,,,,,,,,

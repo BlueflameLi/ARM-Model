@@ -6,6 +6,7 @@ module board_cpu(sw,
                  which,
                  seg,
                  enable);
+
     input [1:32] sw;
     input [1:6] swb;
     output [1:32] led;
@@ -15,7 +16,7 @@ module board_cpu(sw,
     output reg enable = 1;
     wire [31:0] I,A,B,C,F;
     reg [32:0] data;
-    reg [2:1]cnt = 0;
+    reg [2:0]cnt = 0;
     wire [3:0] NZCV;
     wire [5:0] Inst_addr;
     wire LA,LB,LC,LF;
@@ -24,26 +25,32 @@ module board_cpu(sw,
     wire [1:0] rs_imm_s;
     wire [3:0] ALU_OP;
     wire [2:0] SHIFT_OP;
-    CPU cpu(swb[1],swb[2],
-           I,
-           A,
-           B,
-           C,
-           F,
-           NZCV,
-           Inst_addr,
-           Write_PC,
-           Write_IR,
-           Write_Reg,
-           LA,
-           LB,
-           LC,
-           LF,
-           rm_imm_s,
-           rs_imm_s,
-           ALU_OP,
-           SHIFT_OP,
-           S);
+
+    wire [1:0] test;
+    wire [3:0] NZCV_New;
+
+    CPU cpu(swb[1],
+            swb[2],
+            I,
+            A,
+            B,
+            C,
+            F,
+            NZCV,
+            Inst_addr,
+            Write_PC,
+            Write_IR,
+            Write_Reg,
+            LA,
+            LB,
+            LC,
+            LF,
+            rm_imm_s,
+            rs_imm_s,
+            ALU_OP,
+            SHIFT_OP,
+            S);
+
     always @(posedge swb[6])
     begin
         case(cnt)
@@ -56,6 +63,7 @@ module board_cpu(sw,
         endcase
         cnt <= (cnt+1)%6;
     end
+
     assign led[29:32] = NZCV;
     assign led[22:27] = Inst_addr;
     assign led[20] = Write_PC;
@@ -63,12 +71,13 @@ module board_cpu(sw,
     assign led[18] = Write_Reg;
     
     assign led[17] = LA;
+
     assign led[16] = LB;
     assign led[15] = LC;
     assign led[14] = LF;
     
-    assign led[12:13] = rm_imm_s;
-    assign led[9:11] = rs_imm_s;
+    assign led[11] = rm_imm_s;
+    assign led[9:10] = rs_imm_s;
     assign led[5:8] = ALU_OP;
     assign led[2:4] = SHIFT_OP;
     assign led[1] = S;

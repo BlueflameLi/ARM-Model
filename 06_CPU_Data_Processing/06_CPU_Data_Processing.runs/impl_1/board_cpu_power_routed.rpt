@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun May 16 18:58:21 2021
+| Date             : Sat May 22 15:05:02 2021
 | Host             : BLUEFLAMELEE running 64-bit major release  (build 9200)
 | Command          : report_power -file board_cpu_power_routed.rpt -pb board_cpu_power_summary_routed.pb -rpx board_cpu_power_routed.rpx
 | Design           : board_cpu
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 10.409       |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 10.282       |
-| Device Static (W)        | 0.127        |
-| Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 72.2         |
-| Junction Temperature (C) | 52.8         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 31.316 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 30.806                           |
+| Device Static (W)        | 0.510                            |
+| Effective TJA (C/W)      | 2.7                              |
+| Max Ambient (C)          | 16.2                             |
+| Junction Temperature (C) | 108.8                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.412 |      177 |       --- |             --- |
-|   LUT as Logic |     0.349 |       44 |     63400 |            0.07 |
-|   Register     |     0.038 |       97 |    126800 |            0.08 |
+| Slice Logic    |     8.626 |     2739 |       --- |             --- |
+|   LUT as Logic |     7.943 |     1500 |     63400 |            2.37 |
+|   CARRY4       |     0.385 |       56 |     15850 |            0.35 |
+|   F7/F8 Muxes  |     0.163 |      303 |     63400 |            0.48 |
+|   Register     |     0.117 |      754 |    126800 |            0.59 |
 |   BUFG         |     0.017 |        3 |        32 |            9.38 |
-|   CARRY4       |     0.005 |        2 |     15850 |            0.01 |
-|   F7/F8 Muxes  |     0.002 |        4 |     63400 |           <0.01 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.771 |      171 |       --- |             --- |
+|   Others       |     0.000 |       15 |       --- |             --- |
+| Signals        |    10.432 |     2033 |       --- |             --- |
 | Block RAM      |     0.128 |      0.5 |       135 |            0.37 |
-| I/O            |     8.971 |       48 |       285 |           16.84 |
-| Static Power   |     0.127 |          |           |                 |
-| Total          |    10.409 |          |           |                 |
+| I/O            |    11.619 |       48 |       285 |           16.84 |
+| Static Power   |     0.510 |          |           |                 |
+| Total          |    31.316 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,16 +73,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.357 |       1.313 |      0.045 |
-| Vccaux    |       1.800 |     0.755 |       0.733 |      0.021 |
+| Vccint    |       1.000 |    19.533 |      19.189 |      0.345 |
+| Vccaux    |       1.800 |     1.013 |       0.950 |      0.062 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     4.248 |       4.244 |      0.004 |
+| Vcco18    |       1.800 |     5.502 |       5.498 |      0.004 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.011 |       0.010 |      0.001 |
+| Vccbram   |       1.000 |     0.020 |       0.010 |      0.010 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -140,11 +140,14 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| board_cpu               |    10.282 |
-|   Display_Instance      |     0.354 |
-|   cpu                   |     0.754 |
-|     Inst_Instance       |     0.663 |
-|       Inst_ROM_Instance |     0.336 |
+| board_cpu               |    30.806 |
+|   Display_Instance      |     0.486 |
+|   cpu                   |    17.826 |
+|     ALU_Shift_Instance  |     3.196 |
+|       ALU_Instance      |     2.141 |
+|     Inst_Instance       |     5.770 |
+|       Inst_ROM_Instance |     0.364 |
+|     RegFile_Instance    |     8.506 |
 +-------------------------+-----------+
 
 

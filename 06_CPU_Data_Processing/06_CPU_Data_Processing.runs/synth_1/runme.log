@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1324 
+INFO: Helper process launched with PID 22712 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 367.527 ; gain = 99.094
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 367.902 ; gain = 96.961
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'board_cpu' [D:/vivado/06_CPU_Data_Processing/board_cpu.v:2]
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/06_CPU_Data_Processing/CPU.v:3]
@@ -30,8 +30,8 @@ INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/06_CPU_Data_Processing
 	Parameter S2 bound to: 3'b011 
 	Parameter S3 bound to: 3'b100 
 INFO: [Synth 8-6157] synthesizing module 'Inst' [D:/vivado/06_CPU_Data_Processing/Inst.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-22312-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-22312-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-22236-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/.Xil/Vivado-22236-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'Inst' (2#1) [D:/vivado/06_CPU_Data_Processing/Inst.v:3]
 INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/vivado/06_CPU_Data_Processing/RegFile.v:3]
 	Parameter ADDR bound to: 4 - type: integer 
@@ -45,17 +45,15 @@ INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/vivado/06_CPU_Data_Processing
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/06_CPU_Data_Processing/ALU.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [D:/vivado/06_CPU_Data_Processing/ALU.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'ALU_Shift' (6#1) [D:/vivado/06_CPU_Data_Processing/ALU_Shift.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/06_CPU_Data_Processing/CPU.v:177]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/06_CPU_Data_Processing/CPU.v:158]
 INFO: [Synth 8-6155] done synthesizing module 'CPU' (7#1) [D:/vivado/06_CPU_Data_Processing/CPU.v:3]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000100 is unreachable [D:/vivado/06_CPU_Data_Processing/board_cpu.v:54]
-INFO: [Synth 8-226] default block is never used [D:/vivado/06_CPU_Data_Processing/board_cpu.v:49]
 INFO: [Synth 8-6157] synthesizing module 'Display' [D:/vivado/06_CPU_Data_Processing/Display.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'Display' (8#1) [D:/vivado/06_CPU_Data_Processing/Display.v:3]
-WARNING: [Synth 8-350] instance 'Display_Instance' of module 'Display' requires 6 connections, but only 4 given [D:/vivado/06_CPU_Data_Processing/board_cpu.v:76]
+WARNING: [Synth 8-350] instance 'Display_Instance' of module 'Display' requires 6 connections, but only 4 given [D:/vivado/06_CPU_Data_Processing/board_cpu.v:85]
 INFO: [Synth 8-6155] done synthesizing module 'board_cpu' (9#1) [D:/vivado/06_CPU_Data_Processing/board_cpu.v:2]
-WARNING: [Synth 8-3917] design board_cpu has port led[9] driven by constant 0
-WARNING: [Synth 8-3917] design board_cpu has port led[12] driven by constant 0
 WARNING: [Synth 8-3917] design board_cpu has port enable driven by constant 1
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[12]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[13]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port led[21]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port led[28]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[1]
@@ -94,7 +92,7 @@ WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[3]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.539 ; gain = 155.105
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.996 ; gain = 153.055
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -107,10 +105,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.539 ; gain = 155.105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.996 ; gain = 153.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.539 ; gain = 155.105
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.996 ; gain = 153.055
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -131,31 +129,31 @@ Finished Parsing XDC File [D:/vivado/06_CPU_Data_Processing/Board.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/vivado/06_CPU_Data_Processing/Board.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/board_cpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/06_CPU_Data_Processing/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/board_cpu_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/board_cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 773.879 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 773.879 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 769.059 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 769.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 773.879 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 773.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 769.059 ; gain = 500.625
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 773.879 ; gain = 502.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 769.059 ; gain = 500.625
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 773.879 ; gain = 502.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for cpu/Inst_Instance/Inst_ROM_Instance. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 769.059 ; gain = 500.625
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 773.879 ; gain = 502.938
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "REG_Files_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_Files_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -174,8 +172,8 @@ INFO: [Synth 8-5544] ROM "REG_Files_reg[13]" won't be mapped to Block RAM becaus
 INFO: [Synth 8-5544] ROM "REG_Files_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_Files_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'Write_IR_reg' into 'Write_PC_reg' [D:/vivado/06_CPU_Data_Processing/CPU.v:41]
-INFO: [Synth 8-4471] merging register 'LB_reg' into 'LA_reg' [D:/vivado/06_CPU_Data_Processing/CPU.v:163]
-INFO: [Synth 8-4471] merging register 'LC_reg' into 'LA_reg' [D:/vivado/06_CPU_Data_Processing/CPU.v:164]
+INFO: [Synth 8-4471] merging register 'LB_reg' into 'LA_reg' [D:/vivado/06_CPU_Data_Processing/CPU.v:91]
+INFO: [Synth 8-4471] merging register 'LC_reg' into 'LA_reg' [D:/vivado/06_CPU_Data_Processing/CPU.v:91]
 INFO: [Synth 8-802] inferred FSM for state register 'ST_reg' in module 'CPU'
 INFO: [Synth 8-5544] ROM "Next_ST0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 WARNING: [Synth 8-327] inferring latch for variable 'Shift_Out_reg' [D:/vivado/06_CPU_Data_Processing/Shift.v:22]
@@ -191,7 +189,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'F_reg' [D:/vivado/06_CPU_Da
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ST_reg' using encoding 'one-hot' in module 'CPU'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 769.059 ; gain = 500.625
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 773.879 ; gain = 502.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,7 +208,8 @@ Detailed RTL Component Info :
 	   3 Input     32 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      3 Bit         XORs := 1     
@@ -218,14 +217,14 @@ Detailed RTL Component Info :
 	   3 Input      1 Bit         XORs := 6     
 +---Registers : 
 	               33 Bit    Registers := 1     
-	               32 Bit    Registers := 16    
+	               32 Bit    Registers := 20    
 	               28 Bit    Registers := 1     
 	               11 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 6     
 +---Muxes : 
-	   4 Input     33 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 12    
 	   4 Input     32 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
@@ -250,12 +249,10 @@ Hierarchical RTL Component report
 Module board_cpu 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
 	               33 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-+---Muxes : 
-	   4 Input     33 Bit        Muxes := 1     
+	                3 Bit    Registers := 1     
 Module Inst 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -265,7 +262,7 @@ Detailed RTL Component Info :
 Module RegFile 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 16    
+	               32 Bit    Registers := 19    
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 16    
 Module Shift 
@@ -290,6 +287,11 @@ Detailed RTL Component Info :
 	   3 Input      1 Bit         XORs := 6     
 +---Muxes : 
 	  15 Input      1 Bit        Muxes := 1     
+Module ALU_Shift 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 Module CPU 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -334,9 +336,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3917] design board_cpu has port led[9] driven by constant 0
-WARNING: [Synth 8-3917] design board_cpu has port led[12] driven by constant 0
 WARNING: [Synth 8-3917] design board_cpu has port enable driven by constant 1
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[12]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[13]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port led[21]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port led[28]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[1]
@@ -374,7 +376,6 @@ WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[32]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[3]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
 WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\data_reg[0] )
 INFO: [Synth 8-3886] merging instance 'cpu/rm_imm_s_reg' (FDCE) to 'cpu/rs_imm_s_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[32]) is unused and will be removed from module board_cpu.
 WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/Shift_Instance/Shift_Out_reg[31]) is unused and will be removed from module board_cpu.
@@ -440,210 +441,8 @@ WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/
 WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[3]) is unused and will be removed from module board_cpu.
 WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[2]) is unused and will be removed from module board_cpu.
 WARNING: [Synth 8-3332] Sequential element (cpu/ALU_Shift_Instance/ALU_Instance/F_reg[1]) is unused and will be removed from module board_cpu.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[31]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[30]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[29]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[28]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[27]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[26]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[25]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[24]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[23]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[22]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[21]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[20]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[19]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[18]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[17]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[16]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[15]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[14]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[13]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[12]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[11]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[10]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[9]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[8]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[7]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[6]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[5]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[4]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[3]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[2]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[1]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/A_reg[0]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:119]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[31]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[30]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[29]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[28]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[27]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[26]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[25]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[24]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[23]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[22]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[21]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[20]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[19]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[18]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[17]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[16]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[15]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/B_reg[14]/Q' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:107]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:108]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:173]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:173]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:173]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/06_CPU_Data_Processing/CPU.v:173]
-INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 769.059 ; gain = 500.625
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 807.328 ; gain = 536.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -655,13 +454,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 769.059 ; gain = 500.625
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 807.328 ; gain = 536.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 769.059 ; gain = 500.625
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 807.328 ; gain = 536.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -673,7 +472,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -697,7 +496,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -710,7 +509,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -722,25 +521,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -759,53 +558,57 @@ Report Cell Usage:
 +------+---------+------+
 |1     |Inst_ROM |     1|
 |2     |BUFG     |     3|
-|3     |CARRY4   |     2|
-|4     |LUT1     |     3|
-|5     |LUT2     |    10|
-|6     |LUT3     |     8|
-|7     |LUT4     |    17|
-|8     |LUT5     |     8|
-|9     |LUT6     |    15|
-|10    |MUXF7    |     4|
-|11    |FDCE     |    17|
-|12    |FDPE     |     1|
-|13    |FDRE     |    76|
-|14    |IBUF     |     4|
-|15    |OBUF     |    42|
-|16    |OBUFT    |     2|
+|3     |CARRY4   |    56|
+|4     |LUT1     |     7|
+|5     |LUT2     |   191|
+|6     |LUT3     |    82|
+|7     |LUT4     |   105|
+|8     |LUT5     |   195|
+|9     |LUT6     |  1030|
+|10    |MUXF7    |   207|
+|11    |MUXF8    |    96|
+|12    |FDCE     |   664|
+|13    |FDPE     |     1|
+|14    |FDRE     |    78|
+|15    |IBUF     |     4|
+|16    |OBUF     |    40|
+|17    |OBUFT    |     4|
 +------+---------+------+
 
 Report Instance Areas: 
-+------+-------------------+--------+------+
-|      |Instance           |Module  |Cells |
-+------+-------------------+--------+------+
-|1     |top                |        |   244|
-|2     |  Display_Instance |Display |    49|
-|3     |  cpu              |CPU     |   107|
-|4     |    Inst_Instance  |Inst    |    94|
-+------+-------------------+--------+------+
++------+-----------------------+----------+------+
+|      |Instance               |Module    |Cells |
++------+-----------------------+----------+------+
+|1     |top                    |          |  2795|
+|2     |  Display_Instance     |Display   |    49|
+|3     |  cpu                  |CPU       |  2655|
+|4     |    ALU_Shift_Instance |ALU_Shift |   183|
+|5     |      ALU_Instance     |ALU       |   102|
+|6     |    Inst_Instance      |Inst      |   455|
+|7     |    RegFile_Instance   |RegFile   |  2002|
++------+-----------------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 396 critical warnings and 106 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 783.391 ; gain = 169.438
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 783.391 ; gain = 514.957
+Synthesis finished with 0 errors, 0 critical warnings and 106 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 825.113 ; gain = 204.289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 825.113 ; gain = 554.172
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 359 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 825.113 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 156 Warnings, 200 Critical Warnings and 0 Errors encountered.
+55 Infos, 155 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 783.836 ; gain = 515.402
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.836 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 825.113 ; gain = 554.172
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 825.113 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/vivado/06_CPU_Data_Processing/06_CPU_Data_Processing.runs/synth_1/board_cpu.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file board_cpu_utilization_synth.rpt -pb board_cpu_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 16 18:57:22 2021...
+INFO: [Common 17-206] Exiting Vivado at Sat May 22 15:03:57 2021...
