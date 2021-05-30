@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log CPU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl
+    with args -log board_cpu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source board_cpu.tcl
 
 
 ****** Vivado v2018.3 (64-bit)
@@ -8,16 +8,17 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source CPU.tcl -notrace
-Command: synth_design -top CPU -part xc7a100tfgg484-2L
+source board_cpu.tcl -notrace
+Command: synth_design -top board_cpu -part xc7a100tfgg484-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15220 
+INFO: Helper process launched with PID 24840 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 367.930 ; gain = 99.555
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 368.219 ; gain = 100.324
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'board_cpu' [D:/vivado/07_CPU_Branch/board_cpu.v:2]
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/07_CPU_Branch/CPU.v:3]
 	Parameter DP0 bound to: 3'b000 
 	Parameter DP1 bound to: 3'b001 
@@ -38,8 +39,8 @@ INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/07_CPU_Branch/CPU.v:3]
 	Parameter S11 bound to: 4'b1100 
 INFO: [Synth 8-6157] synthesizing module 'Inst' [D:/vivado/07_CPU_Branch/Inst.v:3]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/07_CPU_Branch/Inst.v:38]
-INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/07_CPU_Branch/07_CPU_Branch.runs/synth_1/.Xil/Vivado-5548-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/07_CPU_Branch/07_CPU_Branch.runs/synth_1/.Xil/Vivado-5548-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/07_CPU_Branch/07_CPU_Branch.runs/synth_1/.Xil/Vivado-24140-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/07_CPU_Branch/07_CPU_Branch.runs/synth_1/.Xil/Vivado-24140-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'Inst' (2#1) [D:/vivado/07_CPU_Branch/Inst.v:3]
 INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/vivado/07_CPU_Branch/RegFile.v:3]
 	Parameter ADDR bound to: 4 - type: integer 
@@ -56,8 +57,52 @@ INFO: [Synth 8-6155] done synthesizing module 'ALU_Shift' (6#1) [D:/vivado/07_CP
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/07_CPU_Branch/CPU.v:197]
 WARNING: [Synth 8-5788] Register ALU_OP_reg in module CPU is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/07_CPU_Branch/CPU.v:126]
 INFO: [Synth 8-6155] done synthesizing module 'CPU' (7#1) [D:/vivado/07_CPU_Branch/CPU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Display' [D:/vivado/07_CPU_Branch/Display.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Display' (8#1) [D:/vivado/07_CPU_Branch/Display.v:3]
+WARNING: [Synth 8-350] instance 'Display_Instance' of module 'Display' requires 6 connections, but only 4 given [D:/vivado/07_CPU_Branch/board_cpu.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'board_cpu' (9#1) [D:/vivado/07_CPU_Branch/board_cpu.v:2]
+WARNING: [Synth 8-3917] design board_cpu has port enable driven by constant 1
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[3]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[16]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[19]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[24]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[1]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[2]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[3]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[4]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[5]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[6]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[7]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[8]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[9]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[10]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[11]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[12]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[13]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[14]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[15]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[16]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[17]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[18]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[19]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[20]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[21]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[22]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[23]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[24]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[25]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[26]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[27]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[28]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[29]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[30]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[31]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[32]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[3]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 424.223 ; gain = 155.848
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 423.812 ; gain = 155.918
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -70,42 +115,55 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 424.223 ; gain = 155.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 423.812 ; gain = 155.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 424.223 ; gain = 155.848
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 423.812 ; gain = 155.918
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/vivado/07_CPU_Branch/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'Inst_Instance/Inst_ROM_Instance'
-Finished Parsing XDC File [d:/vivado/07_CPU_Branch/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'Inst_Instance/Inst_ROM_Instance'
+Parsing XDC File [d:/vivado/07_CPU_Branch/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'cpu/Inst_Instance/Inst_ROM_Instance'
+Finished Parsing XDC File [d:/vivado/07_CPU_Branch/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'cpu/Inst_Instance/Inst_ROM_Instance'
+Parsing XDC File [D:/vivado/07_CPU_Branch/Board.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [D:/vivado/07_CPU_Branch/Board.xdc:106]
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[1]'. [D:/vivado/07_CPU_Branch/Board.xdc:107]
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[2]'. [D:/vivado/07_CPU_Branch/Board.xdc:108]
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[3]'. [D:/vivado/07_CPU_Branch/Board.xdc:109]
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[4]'. [D:/vivado/07_CPU_Branch/Board.xdc:110]
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[5]'. [D:/vivado/07_CPU_Branch/Board.xdc:111]
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [D:/vivado/07_CPU_Branch/Board.xdc:112]
+Finished Parsing XDC File [D:/vivado/07_CPU_Branch/Board.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/vivado/07_CPU_Branch/Board.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/board_cpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/07_CPU_Branch/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/board_cpu_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/board_cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 768.867 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 768.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 768.867 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 768.383 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 768.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 768.867 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 768.867 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 768.383 ; gain = 500.008
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 768.867 ; gain = 500.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 768.383 ; gain = 500.008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 768.867 ; gain = 500.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for Inst_Instance/Inst_ROM_Instance. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cpu/Inst_Instance/Inst_ROM_Instance. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 768.383 ; gain = 500.008
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 768.867 ; gain = 500.973
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "REG_Files_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_Files_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -148,7 +206,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'F_reg' [D:/vivado/07_CPU_Br
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ST_reg' using encoding 'sequential' in module 'CPU'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 768.383 ; gain = 500.008
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 768.867 ; gain = 500.973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -166,17 +224,22 @@ Detailed RTL Component Info :
 	   4 Input     33 Bit       Adders := 2     
 	   2 Input     32 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      3 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 3     
 	   3 Input      1 Bit         XORs := 6     
 +---Registers : 
+	               33 Bit    Registers := 1     
 	               32 Bit    Registers := 21    
 	               28 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 10    
 +---Muxes : 
@@ -203,29 +266,13 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module CPU 
+Module board_cpu 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      3 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      3 Bit         XORs := 1     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 10    
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 5     
-	   8 Input      4 Bit        Muxes := 2     
-	   3 Input      4 Bit        Muxes := 1     
-	  10 Input      4 Bit        Muxes := 1     
-	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   5 Input      3 Bit        Muxes := 1     
-	  10 Input      2 Bit        Muxes := 1     
-	  10 Input      1 Bit        Muxes := 12    
+	               33 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 Module Inst 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -273,6 +320,37 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 2     
+Module CPU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      3 Bit         XORs := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   8 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 12    
+Module Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -289,7 +367,47 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'rs_imm_s_reg[1]' (FDCE) to 'rm_imm_s_reg'
+WARNING: [Synth 8-3917] design board_cpu has port enable driven by constant 1
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[3]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[16]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[19]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[24]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[1]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[2]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[3]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[4]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[5]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[6]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[7]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[8]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[9]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[10]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[11]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[12]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[13]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[14]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[15]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[16]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[17]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[18]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[19]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[20]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[21]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[22]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[23]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[24]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[25]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[26]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[27]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[28]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[29]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[30]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[31]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port sw[32]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[3]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
+INFO: [Synth 8-3886] merging instance 'cpu/rm_imm_s_reg' (FDCE) to 'cpu/rs_imm_s_reg[1]'
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[32]) is unused and will be removed from module ALU_Shift.
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[31]) is unused and will be removed from module ALU_Shift.
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[30]) is unused and will be removed from module ALU_Shift.
@@ -323,7 +441,7 @@ WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[3]) is 
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[2]) is unused and will be removed from module ALU_Shift.
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[1]) is unused and will be removed from module ALU_Shift.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 768.383 ; gain = 500.008
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 768.867 ; gain = 500.973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -335,13 +453,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 768.383 ; gain = 500.008
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 770.113 ; gain = 502.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 768.383 ; gain = 500.008
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 772.090 ; gain = 504.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,7 +471,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -377,7 +495,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -390,7 +508,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -402,25 +520,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -438,56 +556,60 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |Inst_ROM |     1|
-|2     |BUFG     |     2|
+|2     |BUFG     |     4|
 |3     |CARRY4   |    70|
-|4     |LUT1     |    10|
-|5     |LUT2     |    32|
-|6     |LUT3     |   216|
-|7     |LUT4     |   255|
-|8     |LUT5     |   215|
-|9     |LUT6     |  1070|
-|10    |MUXF7    |   201|
+|4     |LUT1     |    12|
+|5     |LUT2     |    35|
+|6     |LUT3     |   223|
+|7     |LUT4     |   261|
+|8     |LUT5     |   218|
+|9     |LUT6     |  1146|
+|10    |MUXF7    |   205|
 |11    |MUXF8    |    96|
 |12    |FDCE     |   698|
-|13    |FDRE     |    32|
-|14    |LD       |    32|
-|15    |IBUF     |     2|
-|16    |OBUF     |   257|
+|13    |FDRE     |    81|
+|14    |FDSE     |     1|
+|15    |LD       |    32|
+|16    |IBUF     |     4|
+|17    |OBUF     |    40|
+|18    |OBUFT    |     4|
 +------+---------+------+
 
 Report Instance Areas: 
-+------+---------------------+----------+------+
-|      |Instance             |Module    |Cells |
-+------+---------------------+----------+------+
-|1     |top                  |          |  3220|
-|2     |  ALU_Shift_Instance |ALU_Shift |   251|
-|3     |    ALU_Instance     |ALU       |   178|
-|4     |  Inst_Instance      |Inst      |  1040|
-|5     |  RegFile_Instance   |RegFile   |  1639|
-+------+---------------------+----------+------+
++------+-----------------------+----------+------+
+|      |Instance               |Module    |Cells |
++------+-----------------------+----------+------+
+|1     |top                    |          |  3162|
+|2     |  Display_Instance     |Display   |    49|
+|3     |  cpu                  |CPU       |  3020|
+|4     |    ALU_Shift_Instance |ALU_Shift |   283|
+|5     |      ALU_Instance     |ALU       |   178|
+|6     |    Inst_Instance      |Inst      |  1038|
+|7     |    RegFile_Instance   |RegFile   |  1671|
++------+-----------------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 814.484 ; gain = 201.949
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 814.484 ; gain = 546.109
+Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 819.250 ; gain = 206.301
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 819.250 ; gain = 551.355
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 399 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 403 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 814.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 819.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   LD => LDCE: 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 814.484 ; gain = 546.109
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 814.484 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 819.250 ; gain = 551.355
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 819.250 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/vivado/07_CPU_Branch/07_CPU_Branch.runs/synth_1/CPU.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 30 18:59:01 2021...
+INFO: [Common 17-1381] The checkpoint 'D:/vivado/07_CPU_Branch/07_CPU_Branch.runs/synth_1/board_cpu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file board_cpu_utilization_synth.rpt -pb board_cpu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 30 20:13:16 2021...

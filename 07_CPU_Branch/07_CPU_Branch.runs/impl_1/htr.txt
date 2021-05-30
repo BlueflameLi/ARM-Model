@@ -6,4 +6,4 @@ REM          to be invoked for Vivado to track run status.
 REM Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 REM
 
-vivado -log CPU.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source CPU.tcl -notrace
+vivado -log board_cpu.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source board_cpu.tcl -notrace
