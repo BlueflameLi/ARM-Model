@@ -1,0 +1,13 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/vivado/07_CPU_Branch/07_CPU_Branch.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/vivado/07_CPU_Branch/ALU.v,1621692717,verilog,,D:/vivado/07_CPU_Branch/ALU_Shift.v,,ALU,,,,,,,,
+D:/vivado/07_CPU_Branch/ALU_Shift.v,1622362670,verilog,,D:/vivado/07_CPU_Branch/CPU.v,,ALU_Shift,,,,,,,,
+D:/vivado/07_CPU_Branch/CPU.v,1622360931,verilog,,D:/vivado/07_CPU_Branch/Inst.v,,CPU,,,,,,,,
+D:/vivado/07_CPU_Branch/Inst.v,1621776680,verilog,,D:/vivado/07_CPU_Branch/RegFile.v,,Inst,,,,,,,,
+D:/vivado/07_CPU_Branch/Inst_ROM/sim/Inst_ROM.v,1621140259,verilog,,D:/vivado/07_CPU_Branch/ALU.v,,Inst_ROM,,,,,,,,
+D:/vivado/07_CPU_Branch/RegFile.v,1621665079,verilog,,D:/vivado/07_CPU_Branch/Shift.v,,RegFile,,,,,,,,
+D:/vivado/07_CPU_Branch/Shift.v,1621161639,verilog,,D:/vivado/07_CPU_Branch/testcpu.v,,Shift,,,,,,,,
+D:/vivado/07_CPU_Branch/testcpu.v,1622360651,verilog,,,,testcpu,,,,,,,,

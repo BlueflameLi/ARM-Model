@@ -33,13 +33,14 @@ module ALU_Shift(clk,
     
     wire Shift_Carry_Out;
     wire [3:0] NZCV_New;
-    wire [31:0] F_New,A;
+    wire [31:0] F_New,A,B;
     
     Shift Shift_Instance(.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.Carry_flag(CF),.Shift_Out(Shift_Out),.Shift_Carry_Out(Shift_Carry_Out));
-    ALU ALU_Instance(.ALU_OP(ALU_OP),.A(A),.B(Shift_Out),.Shift_Carry_Out(Shift_Carry_Out),.CF(CF),.VF(VF),.NZCV(NZCV_New),.F(F_New));
+    ALU ALU_Instance(.ALU_OP(ALU_OP),.A(A),.B(B),.Shift_Carry_Out(Shift_Carry_Out),.CF(CF),.VF(VF),.NZCV(NZCV_New),.F(F_New));
     
     assign A = ALU_A_s?PC:A_New;
     assign B = ALU_B_s?{{6{imm24[23]}},imm24,2'b00}:Shift_Out;
+    
     
     always@(negedge clk or posedge Rst)
         if (Rst)

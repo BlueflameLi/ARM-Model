@@ -25,7 +25,10 @@ module CPU(clk,       //时钟信号
            PC_s,
            rd_s,
            ALU_A_s,
-           ALU_B_s);
+           ALU_B_s,
+           PC,
+           DP//调试用，可不使用
+           );
     
     input clk,Rst;
     output [31:0] I;
@@ -43,22 +46,22 @@ module CPU(clk,       //时钟信号
     wire flag;//条件判断结果
     wire[31:28] cond;//条件码
     wire [27:0] IR;
-    wire [31:0] PC;
+    output [31:0] PC;
     Inst Inst_Instance(.clk(clk),.Rst(Rst),.Write_IR(Write_IR),.Write_PC(Write_PC),.NZCV(NZCV),.flag(flag),.PC(PC),.condition_code(cond),.IR(IR),.B(B),.F(F),.PC_s(PC_s));
     
     assign Inst_addr = PC[7:2];
-    assign I    = {cond,IR};
+    assign I         = {cond,IR};
     
     //指令译码
     parameter DP0 = 3'd0;
     parameter DP1 = 3'd1;
     parameter DP2 = 3'd2;
-    parameter B1   = 3'd3;
+    parameter B1  = 3'd3;
     parameter BL  = 3'd4;
     parameter BX  = 3'd5;
     parameter Und = 3'd6;//未定义指令
     
-    reg [2:0] DP;//指令格式
+    output reg [2:0] DP;//指令格式
     wire [3:0] OP,rn,rd,rs,rm;
     wire [4:0] imm5;
     wire [1:0] type;
@@ -81,7 +84,7 @@ module CPU(clk,       //时钟信号
         case(IR[27:25])
             3'b000:
             begin
-                if (IR[24:4] ^ 21'b1_0010_1111_1111_1111_0001)
+                if (IR[24:4] == 21'b1_0010_1111_1111_1111_0001)
                     DP = BX;
                 else if (!IR[4])
                     DP = DP0;
@@ -121,7 +124,7 @@ module CPU(clk,       //时钟信号
     assign SHIFT_OP   = DP[1]?3'b111:{type,DP[0]};
     
     
-    ALU_Shift ALU_Shift_Instance(.clk(clk),.Rst(Rst),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A_New(A),.CF(NZCV[1]),.VF(NZCV[0]),.NZCV(NZCV),.F(F),.S(S),.LF(LF),.Shift_Out(Shift_Out),.PC(PC),.imm24(imm24));
+    ALU_Shift ALU_Shift_Instance(.clk(clk),.Rst(Rst),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A_New(A),.CF(NZCV[1]),.VF(NZCV[0]),.NZCV(NZCV),.F(F),.S(S),.LF(LF),.Shift_Out(Shift_Out),.ALU_A_s(ALU_A_s),.ALU_B_s(ALU_B_s),.PC(PC),.imm24(imm24));
     
     
     localparam Idle = 4'd0;
@@ -154,7 +157,7 @@ module CPU(clk,       //时钟信号
             begin
                 if (flag & !Und_Ins)
                     case(DP)
-                        B1:Next_ST       = S8;
+                        B1:Next_ST      = S8;
                         BL:Next_ST      = S10;
                         default:Next_ST = S1;
                     endcase

@@ -1,17 +1,19 @@
 `timescale 1ns / 1ps
 module testcpu();
-    wire [31:0] I,A,B,C,F;
+    wire [31:0] I,A,B,C,F,shift_Out;
     wire [3:0] NZCV;
     wire [5:0] Inst_addr;
-    wire LA,LB,LC,LF;
+    wire LA,LB,LC,LF,rd_s,ALU_A_s,ALU_B_s;
     wire Write_PC,Write_IR,Write_Reg,S;
     wire rm_imm_s;
-    wire [1:0] rs_imm_s;
+    wire [1:0] rs_imm_s,PC_s;
     wire [3:0] ALU_OP;
-    wire [2:0] SHIFT_OP;
+    wire [2:0] SHIFT_OP,DP;
+    wire [31:0] PC;
     reg clk;
     reg Rst;
-    CPU cpu(clk,Rst,
+    CPU cpu(clk,
+           Rst,
            I,
            A,
            B,
@@ -30,7 +32,14 @@ module testcpu();
            rs_imm_s,
            ALU_OP,
            SHIFT_OP,
-           S);
+           S,
+           shift_Out,
+           PC_s,
+           rd_s,
+           ALU_A_s,
+           ALU_B_s,
+           PC,
+           DP);
     initial
     begin
         clk=0; 

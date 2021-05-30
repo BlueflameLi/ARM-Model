@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/Inst_ROM/sim/Inst_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/ALU_Shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/Inst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/Shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/07_CPU_Branch/testcpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testcpu
