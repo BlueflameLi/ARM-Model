@@ -20,3 +20,7 @@
 ## 06_CPU_Data_Processing
 
 实现数据处理指令的CPU设计
+
+## 07_CPU_Branch
+
+实现分支跳转指令的CPU设计
