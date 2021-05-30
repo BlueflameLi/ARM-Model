@@ -26,9 +26,7 @@ module CPU(clk,       //时钟信号
            rd_s,
            ALU_A_s,
            ALU_B_s,
-           PC,
-           DP//调试用，可不使用
-           );
+           PC);
     
     input clk,Rst;
     output [31:0] I;
@@ -41,6 +39,7 @@ module CPU(clk,       //时钟信号
     output reg [3:0] ALU_OP;
     output [2:0] SHIFT_OP;
     output reg LA,LB,LC,LF,rd_s,ALU_A_s,ALU_B_s;
+    // output [31:0] test;//调试用
     
     //取指令
     wire flag;//条件判断结果
@@ -61,12 +60,12 @@ module CPU(clk,       //时钟信号
     parameter BX  = 3'd5;
     parameter Und = 3'd6;//未定义指令
     
-    output reg [2:0] DP;//指令格式
+    reg [2:0] DP;//指令格式
     wire [3:0] OP,rn,rd,rs,rm;
     wire [4:0] imm5;
     wire [1:0] type;
     wire [11:0] imm12;
-    wire [13:0] imm24;
+    wire [23:0] imm24;
     
     assign OP    = IR[24:21];
     assign rn    = IR[19:16];
@@ -99,7 +98,7 @@ module CPU(clk,       //时钟信号
             end
             3'b101:
             begin
-                DP = I[24]?BL:B1;
+                DP = IR[24]?BL:B1;
             end
             default: DP = Und;
         endcase

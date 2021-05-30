@@ -8,10 +8,11 @@ module testcpu();
     wire rm_imm_s;
     wire [1:0] rs_imm_s,PC_s;
     wire [3:0] ALU_OP;
-    wire [2:0] SHIFT_OP,DP;
+    wire [2:0] SHIFT_OP;
     wire [31:0] PC;
     reg clk;
     reg Rst;
+    // wire [31:0] test;
     CPU cpu(clk,
            Rst,
            I,
@@ -38,8 +39,7 @@ module testcpu();
            rd_s,
            ALU_A_s,
            ALU_B_s,
-           PC,
-           DP);
+           PC);
     initial
     begin
         clk=0; 
