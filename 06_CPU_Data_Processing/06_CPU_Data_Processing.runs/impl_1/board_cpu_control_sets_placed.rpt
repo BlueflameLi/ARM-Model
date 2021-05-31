@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May 22 15:04:30 2021
+| Date         : Mon May 31 23:18:33 2021
 | Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file board_cpu_control_sets_placed.rpt
 | Design       : board_cpu
@@ -72,23 +72,23 @@ Table of Contents
 |  clk_IBUF_BUFG    |                                        |                  |                3 |             11 |
 |  swb_IBUF_BUFG[1] | cpu/Inst_Instance/FSM_onehot_ST_reg[3] | swb_IBUF[2]      |                8 |             13 |
 | ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR0                  |                  |               10 |             28 |
-| ~swb_IBUF_BUFG[1] | cpu/led_OBUF[13]                       | swb_IBUF[2]      |               13 |             32 |
 | ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/E[0]                 | swb_IBUF[2]      |               21 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg[0]     | swb_IBUF[2]      |               23 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_2[0]      | swb_IBUF[2]      |               19 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[13]_1[0]      | swb_IBUF[2]      |               20 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_3[0]      | swb_IBUF[2]      |               21 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_4[0]      | swb_IBUF[2]      |               20 |             32 |
 | ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[13]_0[0]      | swb_IBUF[2]      |               21 |             32 |
 | ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[13]_2[0]      | swb_IBUF[2]      |               17 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_4[0]      | swb_IBUF[2]      |               20 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[16]_0[0]      | swb_IBUF[2]      |               23 |             32 |
 | ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_0[0]      | swb_IBUF[2]      |               19 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_7[0]      | swb_IBUF[2]      |               18 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[16]_2[0]      | swb_IBUF[2]      |               21 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[13]_1[0]      | swb_IBUF[2]      |               20 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_2[0]      | swb_IBUF[2]      |               19 |             32 |
 | ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_1[0]      | swb_IBUF[2]      |               19 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_3[0]      | swb_IBUF[2]      |               21 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_6[0]      | swb_IBUF[2]      |               20 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[16]_1[0]      | swb_IBUF[2]      |               21 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_7[0]      | swb_IBUF[2]      |               18 |             32 |
 | ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_5[0]      | swb_IBUF[2]      |               21 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[16]_0[0]      | swb_IBUF[2]      |               23 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[14]_6[0]      | swb_IBUF[2]      |               20 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[16]_2[0]      | swb_IBUF[2]      |               21 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR_reg[16]_1[0]      | swb_IBUF[2]      |               21 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg[0]     | swb_IBUF[2]      |               23 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/led_OBUF[13]                       | swb_IBUF[2]      |               13 |             32 |
 |  swb_IBUF_BUFG[6] |                                        |                  |               16 |             36 |
 | ~swb_IBUF_BUFG[1] | cpu/led_OBUF[12]                       | swb_IBUF[2]      |               96 |             96 |
 +-------------------+----------------------------------------+------------------+------------------+----------------+

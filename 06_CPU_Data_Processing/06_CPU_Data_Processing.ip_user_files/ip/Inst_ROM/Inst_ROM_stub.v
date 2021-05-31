@@ -3,7 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Sun May 16 12:45:28 2021
 // Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub D:/vivado/06_CPU_Data_Processing/Inst_ROM/Inst_ROM_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top Inst_ROM -prefix
+//               Inst_ROM_ Inst_ROM_stub.v
 // Design      : Inst_ROM
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tfgg484-2L

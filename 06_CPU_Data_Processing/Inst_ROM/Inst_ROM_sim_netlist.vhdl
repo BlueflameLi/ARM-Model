@@ -3,7 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Sun May 16 12:45:28 2021
 -- Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim D:/vivado/06_CPU_Data_Processing/Inst_ROM/Inst_ROM_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Inst_ROM -prefix
+--               Inst_ROM_ Inst_ROM_sim_netlist.vhdl
 -- Design      : Inst_ROM
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +20,6 @@ entity Inst_ROM_blk_mem_gen_prim_wrapper_init is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Inst_ROM_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end Inst_ROM_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of Inst_ROM_blk_mem_gen_prim_wrapper_init is
@@ -174,8 +173,6 @@ entity Inst_ROM_blk_mem_gen_prim_width is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Inst_ROM_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end Inst_ROM_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of Inst_ROM_blk_mem_gen_prim_width is
@@ -197,8 +194,6 @@ entity Inst_ROM_blk_mem_gen_generic_cstr is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Inst_ROM_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end Inst_ROM_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of Inst_ROM_blk_mem_gen_generic_cstr is
@@ -220,8 +215,6 @@ entity Inst_ROM_blk_mem_gen_top is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Inst_ROM_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end Inst_ROM_blk_mem_gen_top;
 
 architecture STRUCTURE of Inst_ROM_blk_mem_gen_top is
@@ -243,8 +236,6 @@ entity Inst_ROM_blk_mem_gen_v8_4_2_synth is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Inst_ROM_blk_mem_gen_v8_4_2_synth : entity is "blk_mem_gen_v8_4_2_synth";
 end Inst_ROM_blk_mem_gen_v8_4_2_synth;
 
 architecture STRUCTURE of Inst_ROM_blk_mem_gen_v8_4_2_synth is
@@ -476,8 +467,6 @@ entity Inst_ROM_blk_mem_gen_v8_4_2 is
   attribute C_WRITE_WIDTH_B of Inst_ROM_blk_mem_gen_v8_4_2 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of Inst_ROM_blk_mem_gen_v8_4_2 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Inst_ROM_blk_mem_gen_v8_4_2 : entity is "blk_mem_gen_v8_4_2";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Inst_ROM_blk_mem_gen_v8_4_2 : entity is "yes";
 end Inst_ROM_blk_mem_gen_v8_4_2;

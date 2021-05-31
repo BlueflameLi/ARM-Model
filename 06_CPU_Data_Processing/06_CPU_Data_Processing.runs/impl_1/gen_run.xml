@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1621667001">
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1622474241">
   <File Type="BITSTR-BMM" Name="board_cpu_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="board_cpu_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="board_cpu_timing_summary_init.rpt"/>
@@ -122,14 +122,6 @@
     </File>
     <File Path="$PPRDIR/board_cpu.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/wsl.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
