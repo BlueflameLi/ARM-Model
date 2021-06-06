@@ -1,0 +1,2 @@
+Inst_ROM.v,verilog,xil_defaultlib,../../../../Inst_ROM/sim/Inst_ROM.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
