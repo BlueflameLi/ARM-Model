@@ -30,8 +30,8 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files d:/vivado/08_CPU_memory_reference/test.coe
-add_files d:/vivado/08_CPU_memory_reference/data.coe
+add_files D:/vivado/08_CPU_memory_reference/test.coe
+add_files D:/vivado/08_CPU_memory_reference/data.coe
 read_verilog -library xil_defaultlib {
   D:/vivado/08_CPU_memory_reference/ALU.v
   D:/vivado/08_CPU_memory_reference/ALU_Shift.v
@@ -40,11 +40,11 @@ read_verilog -library xil_defaultlib {
   D:/vivado/08_CPU_memory_reference/Shift.v
   D:/vivado/08_CPU_memory_reference/CPU.v
 }
+read_ip -quiet D:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM.xci
+set_property used_in_implementation false [get_files -all d:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM_ooc.xdc]
+
 read_ip -quiet D:/vivado/08_CPU_memory_reference/Inst_ROM/Inst_ROM.xci
 set_property used_in_implementation false [get_files -all d:/vivado/08_CPU_memory_reference/Inst_ROM/Inst_ROM_ooc.xdc]
-
-read_ip -quiet d:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM.xci
-set_property used_in_implementation false [get_files -all d:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -57,8 +57,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc D:/vivado/08_CPU_memory_reference/Board.xdc
 set_property used_in_implementation false [get_files D:/vivado/08_CPU_memory_reference/Board.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

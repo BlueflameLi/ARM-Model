@@ -32,7 +32,9 @@ module CPU(clk,       //时钟信号
            Mem_W_s,
            Reg_C_s,
            M_R_Data,
-           M_W_Data);
+           M_W_Data,
+           DP
+           );
     
     input clk,Rst;
     output [31:0] I;
@@ -74,7 +76,7 @@ module CPU(clk,       //时钟信号
     parameter STR1 = 4'd11;//1011
     parameter Und  = 4'd0;//未定义指令
     
-    reg  [3:0] DP;//指令格式
+    output reg  [3:0] DP;//指令格式
     wire [3:0] OP,rn,rd,rs,rm;
     wire [4:0] imm5;
     wire [1:0] type;
@@ -119,18 +121,18 @@ module CPU(clk,       //时钟信号
             end
             3'b010:
             begin
-                if (I[22])
+                if (IR[22])
                     DP = Und;
-                else if (I[20])
+                else if (IR[20])
                     DP = LDR0;
                 else
                     DP = STR0;
             end
             3'b011:
             begin
-                if (I[22])
+                if (IR[22])
                     DP = Und;
-                else if (I[20])
+                else if (IR[20])
                     DP = LDR1;
                 else
                     DP = STR1;
@@ -155,7 +157,7 @@ module CPU(clk,       //时钟信号
             Und_Ins = 1;
         else if (DP == LDR0 && W && rn == rd)
             Und_Ins = 1;
-        else if (DP >= LDR1 && str_flag)
+        else if (DP >= LDR1 && !str_flag)
             Und_Ins = 1;
         else
             Und_Ins = 0;
@@ -295,6 +297,10 @@ module CPU(clk,       //时钟信号
             rd_s      <= 2'b00;
             ALU_A_s   <= 1'b0;
             ALU_B_s   <= 2'b00;
+            W_Rdata_s <= 0;
+            Reg_C_s   <= 1'b0;
+            Mem_Write <= 1'b0;
+            Mem_W_s   <= 1'b0;
         end
         else
         begin
@@ -308,11 +314,16 @@ module CPU(clk,       //时钟信号
                     LC        <= 1'b0;
                     LF        <= 1'b0;
                     S         <= 1'b0;
+                    rm_imm_s  <= 1'b0;
+                    rs_imm_s  <= 2'b00;
                     PC_s      <= 2'b00;
                     rd_s      <= 2'b00;
                     ALU_A_s   <= 1'b0;
                     ALU_B_s   <= 2'b00;
                     W_Rdata_s <= 0;
+                    Reg_C_s   <= 1'b0;
+                    Mem_Write <= 1'b0;
+                    Mem_W_s   <= 1'b0;
                 end
                 S1:begin
                     Write_PC    <= 1'b0;
@@ -491,9 +502,9 @@ module CPU(clk,       //时钟信号
                     // ALU_OP    <= U?4'b0100:4'b0010;
                     //SHIFT_OP   <= {type,1'b0};
                     W_Rdata_s    <= 1'b0;
-                    // Reg_C_s   <= 1'b1;
-                    // Mem_Write <= 1'b1;
-                    // Mem_W_s   <= 1'b1;
+                    Reg_C_s   <= 1'b0;
+                    Mem_Write <= 1'b0;
+                    Mem_W_s   <= 1'b0;
                 end
                 S15:begin
                     //Write_PC  <= 1'b0;
