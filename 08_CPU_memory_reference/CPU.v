@@ -146,18 +146,18 @@ module CPU(clk,       //时钟信号
     end
     
     wire str_flag;
-    assign str_flag = ~&rm || (W && (~&rn || rn == rd));
+    assign str_flag = &rm || (W && (&rn || rn == rd));
     
     reg Und_Ins;
     always@(*)
     begin
         if (DP == Und)
             Und_Ins = 1;
-        else if (DP == SWP && swp_flag)
+        else if (DP == SWP && !swp_flag)
             Und_Ins = 1;
         else if (DP == LDR0 && W && rn == rd)
             Und_Ins = 1;
-        else if (DP >= LDR1 && !str_flag)
+        else if (DP >= LDR1 && str_flag)
             Und_Ins = 1;
         else
             Und_Ins = 0;
@@ -489,10 +489,10 @@ module CPU(clk,       //时钟信号
                 S14:begin
                     //Write_PC   <= 1'b0;
                     //Write_IR   <= 1'b0;
-                    Write_Reg    <= W & !P;
+                    Write_Reg    <= W | !P;
                     //LA         <= 1'b0;
                     //LB         <= 1'b0;
-                    //LC         <= 1'b0;
+                    LC         <= 1'b0;
                     LF           <= 0;
                     //S          <= 1'b0;
                     //PC_s       <= 2'b00;
@@ -512,7 +512,7 @@ module CPU(clk,       //时钟信号
                     //Write_Reg <= 1'b0;
                     //LA        <= 1'b0;
                     //LB        <= 1'b0;
-                    //LC        <= 1'b0;
+                    LC        <= 1'b1;
                     LF          <= !P;
                     //S         <= 1'b0;
                     //PC_s      <= 2'b00;
