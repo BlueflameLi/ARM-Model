@@ -35,16 +35,18 @@ add_files D:/vivado/08_CPU_memory_reference/data.coe
 read_verilog -library xil_defaultlib {
   D:/vivado/08_CPU_memory_reference/ALU.v
   D:/vivado/08_CPU_memory_reference/ALU_Shift.v
+  D:/vivado/08_CPU_memory_reference/CPU.v
+  D:/vivado/08_CPU_memory_reference/Display.v
   D:/vivado/08_CPU_memory_reference/Inst.v
   D:/vivado/08_CPU_memory_reference/RegFile.v
   D:/vivado/08_CPU_memory_reference/Shift.v
-  D:/vivado/08_CPU_memory_reference/CPU.v
+  D:/vivado/08_CPU_memory_reference/board_cpu.v
 }
-read_ip -quiet D:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM.xci
-set_property used_in_implementation false [get_files -all d:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM_ooc.xdc]
-
 read_ip -quiet D:/vivado/08_CPU_memory_reference/Inst_ROM/Inst_ROM.xci
 set_property used_in_implementation false [get_files -all d:/vivado/08_CPU_memory_reference/Inst_ROM/Inst_ROM_ooc.xdc]
+
+read_ip -quiet D:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM.xci
+set_property used_in_implementation false [get_files -all d:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -57,15 +59,17 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc D:/vivado/08_CPU_memory_reference/Board.xdc
 set_property used_in_implementation false [get_files D:/vivado/08_CPU_memory_reference/Board.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top CPU -part xc7a100tfgg484-2L
+synth_design -top board_cpu -part xc7a100tfgg484-2L
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef CPU.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb"
+write_checkpoint -force -noxdef board_cpu.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file board_cpu_utilization_synth.rpt -pb board_cpu_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
