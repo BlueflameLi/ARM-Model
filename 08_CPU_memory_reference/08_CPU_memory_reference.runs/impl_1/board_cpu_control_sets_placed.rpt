@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Jun 13 20:45:00 2021
-| Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
+| Date         : Wed Jun 16 09:18:26 2021
+| Host         : Blueflame running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file board_cpu_control_sets_placed.rpt
 | Design       : board_cpu
 | Device       : xc7a100t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    30 |
-| Unused register locations in slices containing registers |    36 |
+| Number of unique control sets                            |    31 |
+| Unused register locations in slices containing registers |    41 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,10 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+|      1 |            1 |
 |      2 |            1 |
 |      3 |            2 |
-|      4 |            1 |
+|      7 |            1 |
 |      8 |            1 |
 |     11 |            1 |
 |    16+ |           24 |
@@ -49,11 +50,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              85 |           57 |
-| No           | No                    | Yes                    |              37 |           18 |
+| No           | No                    | No                     |              86 |           54 |
+| No           | No                    | Yes                    |              36 |           16 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              36 |            7 |
-| Yes          | No                    | Yes                    |             678 |          433 |
+| Yes          | No                    | No                     |              36 |            9 |
+| Yes          | No                    | Yes                    |             681 |          395 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -61,39 +62,40 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+-----------------------------------------+------------------+------------------+----------------+
-|    Clock Signal   |              Enable Signal              | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+-------------------+-----------------------------------------+------------------+------------------+----------------+
-|  swb_IBUF_BUFG[1] | cpu/Inst_Instance/FSM_onehot_ST_reg[12] | swb_IBUF[2]      |                2 |              2 |
-| ~clk_IBUF_BUFG    |                                         |                  |                1 |              3 |
-|  swb_IBUF_BUFG[1] |                                         |                  |                2 |              3 |
-| ~swb_IBUF_BUFG[1] | cpu/S_reg_n_1                           | swb_IBUF[2]      |                3 |              4 |
-|  swb_IBUF_BUFG[1] | cpu/Inst_Instance/E[0]                  |                  |                3 |              8 |
-|  clk_IBUF_BUFG    |                                         |                  |                3 |             11 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR0                   |                  |                4 |             28 |
-|  n_0_2141_BUFG    |                                         |                  |               21 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/PC[31]_i_1_n_1        | swb_IBUF[2]      |               19 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_11[0]   | swb_IBUF[2]      |               18 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_14[0]   | swb_IBUF[2]      |               16 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_8[0]    | swb_IBUF[2]      |               23 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_9[0]    | swb_IBUF[2]      |               22 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_2[0]    | swb_IBUF[2]      |               14 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_10[0]   | swb_IBUF[2]      |               19 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_6[0]    | swb_IBUF[2]      |               24 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_4[0]    | swb_IBUF[2]      |               19 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_0[0]    | swb_IBUF[2]      |               18 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_15[0]   | swb_IBUF[2]      |               22 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_1[0]    | swb_IBUF[2]      |               17 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_12[0]   | swb_IBUF[2]      |               16 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_3[0]    | swb_IBUF[2]      |               18 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_5[0]    | swb_IBUF[2]      |               16 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_13[0]   | swb_IBUF[2]      |               16 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_7[0]    | swb_IBUF[2]      |               21 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/LF_reg_n_1                          | swb_IBUF[2]      |               14 |             32 |
-| ~swb_IBUF_BUFG[1] | cpu/LC_reg_n_1                          | swb_IBUF[2]      |               32 |             32 |
-|  swb_IBUF_BUFG[6] |                                         |                  |               30 |             36 |
-|  swb_IBUF_BUFG[1] |                                         | swb_IBUF[2]      |               18 |             37 |
-| ~swb_IBUF_BUFG[1] | cpu/LA_reg_n_1                          | swb_IBUF[2]      |               64 |             64 |
-+-------------------+-----------------------------------------+------------------+------------------+----------------+
++-------------------+------------------------------------------+------------------+------------------+----------------+
+|    Clock Signal   |               Enable Signal              | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------+------------------------------------------+------------------+------------------+----------------+
+|  cpu/clk_tmp      |                                          |                  |                1 |              1 |
+|  swb_IBUF_BUFG[1] | cpu/Inst_Instance/FSM_onehot_ST_reg[6]_0 | swb_IBUF[2]      |                2 |              2 |
+|  swb_IBUF_BUFG[1] |                                          |                  |                1 |              3 |
+| ~clk_IBUF_BUFG    |                                          |                  |                1 |              3 |
+| ~swb_IBUF_BUFG[1] | cpu/S_reg_n_1                            | swb_IBUF[2]      |                4 |              7 |
+|  swb_IBUF_BUFG[1] | cpu/Inst_Instance/E[0]                   |                  |                2 |              8 |
+|  clk_IBUF_BUFG    |                                          |                  |                3 |             11 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/IR0                    |                  |                7 |             28 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/PC[31]_i_1_n_1         | swb_IBUF[2]      |               11 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_5[0]     | swb_IBUF[2]      |               17 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_9[0]     | swb_IBUF[2]      |               14 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_4[0]     | swb_IBUF[2]      |               19 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_14[0]    | swb_IBUF[2]      |               18 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_2[0]     | swb_IBUF[2]      |               21 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_11[0]    | swb_IBUF[2]      |               17 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_12[0]    | swb_IBUF[2]      |               17 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_1[0]     | swb_IBUF[2]      |               17 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_10[0]    | swb_IBUF[2]      |               19 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_15[0]    | swb_IBUF[2]      |               11 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_3[0]     | swb_IBUF[2]      |               15 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_6[0]     | swb_IBUF[2]      |               12 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_7[0]     | swb_IBUF[2]      |               17 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_0[0]     | swb_IBUF[2]      |               18 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_8[0]     | swb_IBUF[2]      |               18 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/Inst_Instance/Write_Reg_reg_13[0]    | swb_IBUF[2]      |               16 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/LC_reg_n_1                           | swb_IBUF[2]      |               32 |             32 |
+| ~swb_IBUF_BUFG[1] | cpu/LF_reg_n_1                           | swb_IBUF[2]      |               16 |             32 |
+|  n_0_2138_BUFG    |                                          |                  |               21 |             32 |
+|  swb_IBUF_BUFG[1] |                                          | swb_IBUF[2]      |               16 |             36 |
+|  swb_IBUF_BUFG[6] |                                          |                  |               27 |             36 |
+| ~swb_IBUF_BUFG[1] | cpu/LA_reg_n_1                           | swb_IBUF[2]      |               64 |             64 |
++-------------------+------------------------------------------+------------------+------------------+----------------+
 
 

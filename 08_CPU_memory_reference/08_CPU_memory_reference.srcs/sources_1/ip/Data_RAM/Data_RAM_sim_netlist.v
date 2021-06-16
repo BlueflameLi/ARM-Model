@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Sun Jun  6 23:38:05 2021
 // Host        : BLUEFLAMELEE running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.srcs/sources_1/ip/Data_RAM/Data_RAM_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Data_RAM -prefix
+//               Data_RAM_ Data_RAM_sim_netlist.v
 // Design      : Data_RAM
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -194,7 +194,6 @@ module Data_RAM
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module Data_RAM_blk_mem_gen_generic_cstr
    (douta,
     clka,
@@ -221,7 +220,6 @@ module Data_RAM_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Data_RAM_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -248,7 +246,6 @@ module Data_RAM_blk_mem_gen_prim_width
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module Data_RAM_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
@@ -397,7 +394,6 @@ module Data_RAM_blk_mem_gen_prim_wrapper_init
         .WEBWE({1'b0,1'b0,wea,wea}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module Data_RAM_blk_mem_gen_top
    (douta,
     clka,
@@ -449,7 +445,7 @@ endmodule
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "128" *) 
 (* C_WRITE_DEPTH_B = "128" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) (* C_XDEVICEFAMILY = "artix7" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Data_RAM_blk_mem_gen_v8_4_2
    (clka,
     rsta,
@@ -697,7 +693,6 @@ module Data_RAM_blk_mem_gen_v8_4_2
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
 module Data_RAM_blk_mem_gen_v8_4_2_synth
    (douta,
     clka,

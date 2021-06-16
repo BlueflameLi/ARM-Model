@@ -25,7 +25,8 @@ module board_cpu(sw,
     wire [1:0] rs_imm_s,PC_s,W_Rdata_s;
     wire [3:0] ALU_OP;
     wire [2:0] SHIFT_OP;
-    wire rd_s,ALU_A_s,ALU_B_s;
+    wire rd_s,ALU_A_s;
+    wire [1:0] ALU_B_s;
     wire Mem_Write,Mem_W_s,Reg_C_s;
     wire [1:0] test;
     wire [3:0] NZCV_New;
@@ -78,15 +79,16 @@ module board_cpu(sw,
 
     assign led[17:18] = PC_s;
     
+    assign led[13:16] = NZCV;
     
-    assign led[13] = Mem_Write;
-    assign led[12] = Mem_W_s;
-    assign led[11] = Reg_C_s;
+    assign led[11] = Mem_Write;
+    assign led[10] = Mem_W_s;
+    assign led[9] = Reg_C_s;
 
     assign led[5:8] = ALU_OP;
     assign led[4] = rd_s;
-    assign led[2] = ALU_A_s;
-    assign led[1] = ALU_B_s;
+    assign led[3] = ALU_A_s;
+    assign led[1:2] = ALU_B_s;
 
     Display Display_Instance(.clk(clk), .data(data),
     .which(which), .seg(seg));

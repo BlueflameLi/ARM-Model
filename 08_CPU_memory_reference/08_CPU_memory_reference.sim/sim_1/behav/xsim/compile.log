@@ -8,7 +8,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/08_CPU_memory_reference/A
 INFO: [VRFC 10-311] analyzing module ALU_Shift
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/08_CPU_memory_reference/CPU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CPU
-INFO: [VRFC 10-2458] undeclared symbol clk_temp, assumed default net type wire [D:/vivado/08_CPU_memory_reference/CPU.v:194]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/08_CPU_memory_reference/Inst.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Inst
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/08_CPU_memory_reference/RegFile.v" into library xil_defaultlib
@@ -17,5 +16,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/08_CPU_memory_reference/S
 INFO: [VRFC 10-311] analyzing module Shift
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/08_CPU_memory_reference/testcpu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testcpu
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/08_CPU_memory_reference/08_CPU_memory_reference.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

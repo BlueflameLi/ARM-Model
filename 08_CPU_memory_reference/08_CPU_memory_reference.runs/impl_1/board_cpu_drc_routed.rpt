@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Jun 13 20:45:32 2021
-| Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
+| Date         : Wed Jun 16 09:19:03 2021
+| Host         : Blueflame running 64-bit major release  (build 9200)
 | Command      : report_drc -file board_cpu_drc_routed.rpt -pb board_cpu_drc_routed.pb -rpx board_cpu_drc_routed.rpx
 | Design       : board_cpu
 | Device       : xc7a100tfgg484-2L
@@ -24,15 +24,17 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 23
-+-----------+----------+-----------------------------------------------------+------------+
-| Rule      | Severity | Description                                         | Violations |
-+-----------+----------+-----------------------------------------------------+------------+
-| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| CHECK-3   | Warning  | Report rule limit reached                           | 1          |
-| PLCK-12   | Warning  | Clock Placer Checks                                 | 1          |
-| REQP-1840 | Warning  | RAMB18 async control check                          | 20         |
-+-----------+----------+-----------------------------------------------------+------------+
+             Violations found: 25
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| CHECK-3     | Warning  | Report rule limit reached                                   | 1          |
+| PDRC-153    | Warning  | Gated clock check                                           | 1          |
+| PLCK-12     | Warning  | Clock Placer Checks                                         | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
+| REQP-1840   | Warning  | RAMB18 async control check                                  | 20         |
++-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -54,6 +56,11 @@ Report rule limit reached
 REQP-1840 rule limit reached: 20 violations have been found.
 Related violations: <none>
 
+PDRC-153#1 Warning
+Gated clock check  
+Net cpu/clk_tmp is a gated clock net sourced by a combinational pin cpu/Dataram_i_1/O, cell cpu/Dataram_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
 PLCK-12#1 Warning
 Clock Placer Checks  
 Poor placement for routing between an IO pin and BUFG. 
@@ -63,6 +70,12 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
 	swb_IBUF[6]_inst (IBUF.O) is locked to AA8
 	swb_IBUF_BUFG[6]_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y1
 
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT cpu/Dataram_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. Involved cells are:
+cpu/Dataram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram, cpu/d_out_reg
 Related violations: <none>
 
 REQP-1840#1 Warning

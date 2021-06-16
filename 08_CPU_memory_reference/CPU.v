@@ -191,7 +191,7 @@ module CPU(clk,       //时钟信号
     wire clk_tmp;
     wire d_outn;
     reg  d_out      = 0;
-    assign clk_temp = clk ^ d_out ;
+    assign clk_tmp = clk ^ d_out ;
     assign d_outn   = ~d_out ;
     
     always@(posedge clk_tmp)
@@ -199,7 +199,7 @@ module CPU(clk,       //时钟信号
     
     //数据存储器
     Data_RAM Dataram (
-    .clka(clk_temp),
+    .clka(clk_tmp),
     .wea(Mem_Write),
     .addra(F[6:0]),
     .dina(M_W_Data),
