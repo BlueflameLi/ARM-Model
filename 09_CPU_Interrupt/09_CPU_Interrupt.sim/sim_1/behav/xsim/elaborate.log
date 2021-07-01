@@ -1,0 +1,38 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 6ea0539dfdd34542953286d47c37b0e9 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testcpu_behav xil_defaultlib.testcpu xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'SPSR_New' [D:/vivado/09_CPU_Interrupt/CPU.v:225]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'CPSR_New' [D:/vivado/09_CPU_Interrupt/CPU.v:226]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
+Compiling module xil_defaultlib.Inst_ROM
+Compiling module xil_defaultlib.Inst
+Compiling module xil_defaultlib.register_pile
+Compiling module xil_defaultlib.Shift
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.ALU_Shift
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
+Compiling module xil_defaultlib.Data_RAM
+Compiling module xil_defaultlib.d_flip_flop_32
+Compiling module xil_defaultlib.d_flip_flop_8_2
+Compiling module xil_defaultlib.d_flip_flop_8
+Compiling module xil_defaultlib.d_flip_flop_4
+Compiling module xil_defaultlib.Reg_CPSR
+Compiling module xil_defaultlib.d_flip_flop
+Compiling module xil_defaultlib.request
+Compiling module xil_defaultlib.Stack
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.testcpu
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testcpu_behav

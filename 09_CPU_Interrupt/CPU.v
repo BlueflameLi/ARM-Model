@@ -27,7 +27,9 @@ module CPU(clk,        //时钟信号
            M_R_Data,
            M_W_Data,
            DP,
-           Change_M);
+           Change_M,
+            W_CPSR_s
+           );
     
     input clk, Rst, EX_irq;
     input  [31:0] INT_Vector;
@@ -46,7 +48,7 @@ module CPU(clk,        //时钟信号
     
     output reg [2:0] Change_M;
     reg W_SPSR_s,Write_SPSR,Write_CPSR,SP_in,SP_out;
-    reg [2:0] W_CPSR_s;
+    output reg [2:0] W_CPSR_s;
     reg [3:0] MASK = 0;
     output [31:0] CPSR;
     wire [31:0] W_Data;
@@ -59,7 +61,7 @@ module CPU(clk,        //时钟信号
     wire [27:0] IR;
     wire [31:0] PC;
     output [7:2] Inst_addr;
-    Inst Inst_Instance(.clk(clk),.Rst(Rst),.Write_IR(Write_IR),.Write_PC(Write_PC),.NZCV(NZCV),.flag(flag),.PC(PC),.condition_code(cond),.IR(IR),.B(B),.F(W_Data),.PC_s(PC_s),.INT_Vector(INT_Vector));
+    Inst Inst_Instance(.clk(clk),.Rst(Rst),.Write_IR(Write_IR),.Write_PC(Write_PC),.NZCV(CPSR[31:28]),.flag(flag),.PC(PC),.condition_code(cond),.IR(IR),.B(B),.F(W_Data),.PC_s(PC_s),.INT_Vector(INT_Vector));
     
     assign I = {cond,IR};
     assign Inst_addr = PC[7:2];
@@ -187,7 +189,7 @@ module CPU(clk,        //时钟信号
     
     
     
-    ALU_Shift ALU_Shift_Instance(.clk(clk),.Rst(Rst),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A_New(A),.CF(NZCV[1]),.VF(NZCV[0]),.NZCV(NZCV),.F(F),.S(S),.LF(LF),.Shift_Out(Shift_Out),.ALU_A_s(ALU_A_s),.ALU_B_s(ALU_B_s),.PC(PC),.imm24(imm24),.imm12(imm12));
+    ALU_Shift ALU_Shift_Instance(.clk(clk),.Rst(Rst),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A_New(A),.CF(CPSR[29]),.VF(CPSR[28]),.NZCV(NZCV),.F(F),.S(S),.LF(LF),.Shift_Out(Shift_Out),.ALU_A_s(ALU_A_s),.ALU_B_s(ALU_B_s),.PC(PC),.imm24(imm24),.imm12(imm12));
     
     
     
@@ -709,7 +711,7 @@ module CPU(clk,        //时钟信号
                     //W_SPSR_s   <= 1'b0;
                     SP_out       <= 1'b0;
                     SP_in        <= 1'b1;
-                    Change_M     <= 3'b000;
+                    // Change_M     <= 3'b000;
                     INTA_irq     <= 1'b0;
                 end
                 S28:begin
@@ -793,7 +795,7 @@ module CPU(clk,        //时钟信号
                     W_SPSR_s      <= 1'b1;
                     // SP_out     <= 1'b0;
                     // SP_in      <= 1'b0;
-                    Change_M      <= 3'b001;
+                    Change_M      <= 3'b010;
                 end
                 S31:begin
                     Write_PC      <= 1'b1;
@@ -821,7 +823,7 @@ module CPU(clk,        //时钟信号
                     W_SPSR_s      <= 1'b0;
                     SP_out        <= 1'b1;
                     // SP_in      <= 1'b0;
-                    // Change_M   <= 3'b001;
+                    Change_M   <= 3'b000;
                     INTA_irq      <= 1'b1;
                 end
             endcase

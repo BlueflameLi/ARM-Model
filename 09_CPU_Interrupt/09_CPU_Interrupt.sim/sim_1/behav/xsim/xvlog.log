@@ -1,0 +1,33 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/Data_RAM/sim/Data_RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/Inst_ROM/sim/Inst_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/ALU_Shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/CPSR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg_CPSR
+INFO: [VRFC 10-311] analyzing module d_flip_flop_32
+INFO: [VRFC 10-311] analyzing module d_flip_flop_4
+INFO: [VRFC 10-311] analyzing module d_flip_flop_8
+INFO: [VRFC 10-311] analyzing module d_flip_flop_8_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2458] undeclared symbol SPSR_New, assumed default net type wire [D:/vivado/09_CPU_Interrupt/CPU.v:225]
+INFO: [VRFC 10-2458] undeclared symbol CPSR_New, assumed default net type wire [D:/vivado/09_CPU_Interrupt/CPU.v:226]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/Inst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst
+WARNING: [VRFC 10-2379] empty port in module declaration [D:/vivado/09_CPU_Interrupt/Inst.v:16]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_pile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/Shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/Stack.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Stack
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'SP' is not allowed [D:/vivado/09_CPU_Interrupt/Stack.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/request.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_flip_flop
+INFO: [VRFC 10-311] analyzing module request
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/testcpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testcpu
