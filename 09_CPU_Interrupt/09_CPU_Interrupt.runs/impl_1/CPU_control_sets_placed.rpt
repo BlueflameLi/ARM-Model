@@ -1,0 +1,93 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Jul  1 19:54:58 2021
+| Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CPU_control_sets_placed.rpt
+| Design       : CPU
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    21 |
+| Unused register locations in slices containing registers |    77 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            5 |
+|      2 |            1 |
+|      3 |            2 |
+|      4 |            2 |
+|      6 |            1 |
+|      7 |            3 |
+|      8 |            1 |
+|      9 |            1 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              55 |           27 |
+| No           | No                    | Yes                    |              42 |           24 |
+| No           | Yes                   | No                     |               7 |            3 |
+| Yes          | No                    | No                     |              56 |           25 |
+| Yes          | No                    | Yes                    |             115 |           53 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------+---------------------------------------------+------------------+------------------+----------------+
+|               Clock Signal               |                Enable Signal                | Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------------------------------+---------------------------------------------+------------------+------------------+----------------+
+| ~CPSR_Instance/D_CPSR_7_0/q_reg[7]_1     |                                             | INTA_irq         |                1 |              1 |
+|  EX_irq_IBUF_BUFG                        |                                             | INTA_irq         |                1 |              1 |
+|  clk_tmp                                 |                                             |                  |                1 |              1 |
+|  clk_IBUF_BUFG                           | Inst_Instance/FSM_sequential_ST_reg[4]_0    | Rst_IBUF         |                1 |              1 |
+|  clk_IBUF_BUFG                           | Inst_Instance/FSM_sequential_ST_reg[2]      | Rst_IBUF         |                1 |              1 |
+|  clk_IBUF_BUFG                           | Inst_Instance/FSM_sequential_ST_reg[4]_2[0] | Rst_IBUF         |                1 |              2 |
+|  clk_IBUF_BUFG                           |                                             |                  |                1 |              3 |
+|  clk_IBUF_BUFG                           | Inst_Instance/FSM_sequential_ST_reg[0]_0    | Rst_IBUF         |                2 |              3 |
+|  CPSR_Instance/D_CPSR_31_28/q[3]_i_2_n_1 |                                             |                  |                1 |              4 |
+| ~clk_IBUF_BUFG                           | S_OBUF                                      | Rst_IBUF         |                3 |              4 |
+|  CPSR_Instance/D_CPSR_7_0/q[7]_i_1_n_1   |                                             |                  |                1 |              6 |
+|                                          |                                             | Rst_IBUF         |                3 |              7 |
+|  CPSR_Instance/D_SPSR_irq/q[31]_i_1_n_1  |                                             | Rst_IBUF         |                2 |              7 |
+|  CPSR_Instance/D_SPSR_fiq/q[31]_i_2_n_1  |                                             | Rst_IBUF         |                3 |              7 |
+|  clk_IBUF_BUFG                           | Inst_Instance/E[0]                          | Rst_IBUF         |                3 |              8 |
+|  CPSR_Instance/D_CPSR_7_0/E[0]           |                                             |                  |                5 |              9 |
+|  clk_IBUF_BUFG                           |                                             | Rst_IBUF         |               17 |             26 |
+| ~clk_IBUF_BUFG                           | Write_PC_OBUF                               | Rst_IBUF         |               14 |             32 |
+|  n_0_468_BUFG                            |                                             |                  |               18 |             32 |
+| ~clk_IBUF_BUFG                           | Inst_Instance/IR0                           |                  |               25 |             56 |
+| ~clk_IBUF_BUFG                           | LF_reg_n_1                                  | Rst_IBUF         |               28 |             64 |
++------------------------------------------+---------------------------------------------+------------------+------------------+----------------+
+
+
