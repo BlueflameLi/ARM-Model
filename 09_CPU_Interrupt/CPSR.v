@@ -86,43 +86,43 @@ module Reg_CPSR(input clk,
     //SPSR
     d_flip_flop_32 D_SPSR_fiq(
     .d(new_SPSR),
-    .clk(~clk * Write_SPSR * clk_m[0]),
+    .clk(~clk & Write_SPSR & clk_m[0]),
     .q(SPSR_fiq),
     .clr(rst)
     );
     d_flip_flop_32 D_SPSR_irq(
     .d(new_SPSR),
-    .clk(~clk * Write_SPSR * clk_m[1]),
+    .clk(~clk & Write_SPSR & clk_m[1]),
     .q(SPSR_irq),
     .clr(rst)
     );
     d_flip_flop_32 D_SPSR_svc(
     .d(new_SPSR),
-    .clk(~clk * Write_SPSR * clk_m[2]),
+    .clk(~clk & Write_SPSR & clk_m[2]),
     .q(SPSR_svc),
     .clr(rst)
     );
     d_flip_flop_32 D_SPSR_mon(
     .d(new_SPSR),
-    .clk(~clk * Write_SPSR * clk_m[3]),
+    .clk(~clk & Write_SPSR & clk_m[3]),
     .q(SPSR_mon),
     .clr(rst)
     );
     d_flip_flop_32 D_SPSR_abt(
     .d(new_SPSR),
-    .clk(~clk * Write_SPSR * clk_m[4]),
+    .clk(~clk & Write_SPSR & clk_m[4]),
     .q(SPSR_abt),
     .clr(rst)
     );
     d_flip_flop_32 D_SPSR_hyp(
     .d(new_SPSR),
-    .clk(~clk * Write_SPSR * clk_m[5]),
+    .clk(~clk & Write_SPSR & clk_m[5]),
     .q(SPSR_hyp),
     .clr(rst)
     );
     d_flip_flop_32 D_SPSR_und(
     .d(new_SPSR),
-    .clk(~clk * Write_SPSR * clk_m[6]),
+    .clk(~clk & Write_SPSR & clk_m[6]),
     .q(SPSR_und),
     .clr(rst)
     );
@@ -130,31 +130,31 @@ module Reg_CPSR(input clk,
     //CPSR
     d_flip_flop_8_2 D_CPSR_7_0(
     .d(CPSR_in[7:0]),
-    .clk(~clk * Write_CPSR * ~(W_CPSR_s[0] * ~MASK[0] * ~W_CPSR_s[1] * ~W_CPSR_s[2])),
+    .clk(~clk & Write_CPSR & ~(W_CPSR_s[0] & ~MASK[0] & ~W_CPSR_s[1] & ~W_CPSR_s[2])),
     .q(CPSR[7:0]),
     .clr(rst)
     );
     d_flip_flop_8 D_CPSR_15_8(
     .d(CPSR_in[15:8]),
-    .clk(~clk * Write_CPSR * ((~W_CPSR_s[0]*~W_CPSR_s[1]*~W_CPSR_s[2])+(~W_CPSR_s[1]*~W_CPSR_s[2]*MASK[1]))),
+    .clk(~clk & Write_CPSR & ((~W_CPSR_s[0] & ~W_CPSR_s[1] & ~W_CPSR_s[2]) | (~W_CPSR_s[1] & ~W_CPSR_s[2] & MASK[1]))),
     .q(CPSR[15:8]),
     .clr(rst)
     );
     d_flip_flop_8 D_CPSR_23_16(
     .d(CPSR_in[23:16]),
-    .clk(~clk * Write_CPSR * ((~W_CPSR_s[0]*~W_CPSR_s[1]*~W_CPSR_s[2])+(~W_CPSR_s[1]*~W_CPSR_s[2]*MASK[2]))),
+    .clk(~clk & Write_CPSR & ((~W_CPSR_s[0] & ~W_CPSR_s[1] & ~W_CPSR_s[2]) | (~W_CPSR_s[1] & ~W_CPSR_s[2] & MASK[2]))),
     .q(CPSR[23:16]),
     .clr(rst)
     );
     d_flip_flop_4 D_CPSR_27_24(
     .d(CPSR_in[27:24]),
-    .clk(~clk * Write_CPSR * ((~W_CPSR_s[0]*~W_CPSR_s[1]*~W_CPSR_s[2])+(~W_CPSR_s[1]*~W_CPSR_s[2]*MASK[3]))),
+    .clk(~clk & Write_CPSR & ((~W_CPSR_s[0] & ~W_CPSR_s[1] & ~W_CPSR_s[2]) | (~W_CPSR_s[1] & ~W_CPSR_s[2] & MASK[3]))),
     .q(CPSR[27:24]),
     .clr(rst)
     );
     d_flip_flop_4 D_CPSR_31_28(
     .d((S == 0)? CPSR_in[31:28] : NZCV),
-    .clk((~clk * Write_CPSR * ((~W_CPSR_s[0]*~W_CPSR_s[1]*~W_CPSR_s[2])+(~W_CPSR_s[1]*~W_CPSR_s[2]*MASK[3])))+(~clk  *  S)),
+    .clk((~clk & Write_CPSR & ((~W_CPSR_s[0] & ~W_CPSR_s[1] & ~W_CPSR_s[2]) | (~W_CPSR_s[1] & ~W_CPSR_s[2] & MASK[3]))) | (~clk  &  S)),
     .q(CPSR[31:28]),
     .clr(rst)
     );

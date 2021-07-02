@@ -6,11 +6,17 @@ module CPU(clk,        //时钟信号
            INT_Vector,
            I,          //指令机器码
            A,
+           B,
+           C,
            F,
            CPSR,
            Write_PC,
            Write_IR,
            Write_Reg,
+           Write_CPSR,
+           Write_SPSR,
+           SP_in,
+           SP_out,
            rm_imm_s,
            rs_imm_s,
            ALU_OP,
@@ -21,36 +27,34 @@ module CPU(clk,        //时钟信号
            ALU_B_s,
            Inst_addr,
            W_Rdata_s,
-           Mem_Write,
-           Mem_W_s,
+           W_CPSR_s,
+           W_SPSR_s,
            Reg_C_s,
-           M_R_Data,
-           M_W_Data,
+           INT_irq,
            DP,
-           Change_M,
-            W_CPSR_s
-           );
+           Change_M);
     
     input clk, Rst, EX_irq;
     input  [31:0] INT_Vector;
     output [31:0] I;
-    output [31:0] A,F,M_R_Data,M_W_Data;
-    wire [31:0] B,C;
+    output [31:0] A,B,C,F;
+    wire [31:0] M_R_Data,M_W_Data;
     wire [31:0] Shift_Out;
     output reg Write_PC,Write_IR,Write_Reg,S;
     output reg rm_imm_s;
     output reg [1:0] rs_imm_s,PC_s;
     output reg [3:0] ALU_OP;
     reg [2:0] SHIFT_OP;
-    output reg ALU_A_s,W_Rdata_s,Mem_W_s,Reg_C_s,Mem_Write;
-    reg LA,LB,LC,LF;
+    output reg ALU_A_s,W_Rdata_s,Reg_C_s;
+    reg LA,LB,LC,LF,Mem_W_s,Mem_Write;
     output reg [1:0] rd_s,ALU_B_s;
     
     output reg [2:0] Change_M;
-    reg W_SPSR_s,Write_SPSR,Write_CPSR,SP_in,SP_out;
+    output reg W_SPSR_s,Write_SPSR,Write_CPSR,SP_in,SP_out;
     output reg [2:0] W_CPSR_s;
     reg [3:0] MASK = 0;
     output [31:0] CPSR;
+    output INT_irq;
     wire [31:0] W_Data;
     
     wire [3:0] NZCV;
@@ -63,7 +67,7 @@ module CPU(clk,        //时钟信号
     output [7:2] Inst_addr;
     Inst Inst_Instance(.clk(clk),.Rst(Rst),.Write_IR(Write_IR),.Write_PC(Write_PC),.NZCV(CPSR[31:28]),.flag(flag),.PC(PC),.condition_code(cond),.IR(IR),.B(B),.F(W_Data),.PC_s(PC_s),.INT_Vector(INT_Vector));
     
-    assign I = {cond,IR};
+    assign I         = {cond,IR};
     assign Inst_addr = PC[7:2];
     
     //指令译码
@@ -232,7 +236,6 @@ module CPU(clk,        //时钟信号
     );
     
     reg INTA_irq;
-    wire INT_irq;
     
     //irq_request
     request request_Instance(
@@ -314,12 +317,12 @@ module CPU(clk,        //时钟信号
             begin
                 if (DP == BX)
                     Next_ST = S7;
+                else if (DP == MOVS)
+                    Next_ST = S28;
                 else if (DP[3])
                     Next_ST = S12;
                 else if (DP == SWP)
                     Next_ST = S16;
-                else if (DP == MOVS)
-                    Next_ST = S28;
                 else
                     Next_ST = S2;
             end
@@ -434,12 +437,12 @@ module CPU(clk,        //时钟信号
                     LC          <= 1'b0;
                     LF          <= 1'b1;
                     rm_imm_s    <= DP == DP2;
-                    rs_imm_s    <= DP[1:0]-2'b01;
-                    S           <= IR[20];
-                    //PC_s      <= 2'b00;
-                    //rd_s      <= 2'b00;
-                    // ALU_A_s  <= 1'b0;
-                    // ALU_B_s  <= 2'b00;
+                    rs_imm_s   <= DP[1:0]-2'b01;
+                    S          <= IR[20];
+                    //PC_s     <= 2'b00;
+                    //rd_s     <= 2'b00;
+                    // ALU_A_s <= 1'b0;
+                    // ALU_B_s <= 2'b00;
                     if (OP[3] & !OP[2])
                         ALU_OP <= 4'b1000>>(4-OP[1:0]);
                     else
@@ -711,7 +714,7 @@ module CPU(clk,        //时钟信号
                     //W_SPSR_s   <= 1'b0;
                     SP_out       <= 1'b0;
                     SP_in        <= 1'b1;
-                    // Change_M     <= 3'b000;
+                    // Change_M  <= 3'b000;
                     INTA_irq     <= 1'b0;
                 end
                 S28:begin
@@ -798,33 +801,33 @@ module CPU(clk,        //时钟信号
                     Change_M      <= 3'b010;
                 end
                 S31:begin
-                    Write_PC      <= 1'b1;
-                    // Write_IR   <= 1'b0;
-                    Write_Reg     <= 1'b0;
-                    // LA         <= 1'b0;
-                    // LB         <= 1'b0;
-                    // LC         <= 1'b0;
-                    // LF         <= 1'b0;
-                    // S          <= 1'b0;
-                    // rm_imm_s   <= 1'b0;
-                    // rs_imm_s   <= 2'b00;
-                    PC_s          <= 2'b11;
-                    rd_s          <= 2'b00;
-                    // ALU_A_s    <= 1'b0;
-                    // ALU_B_s    <= 2'b00;
-                    // W_Rdata_s  <= 1'b0;
-                    // Reg_C_s    <= 1'b0;
-                    // Mem_Write  <= 1'b0;
-                    // Mem_W_s    <= 1'b0;
-                    // Write_CPSR <= 1'b0;
-                    Write_SPSR    <= 1'b0;
-                    // ALU_OP     <= 4'b0000;
-                    W_CPSR_s      <= 2'b010;
-                    W_SPSR_s      <= 1'b0;
-                    SP_out        <= 1'b1;
-                    // SP_in      <= 1'b0;
-                    Change_M   <= 3'b000;
-                    INTA_irq      <= 1'b1;
+                    Write_PC     <= 1'b1;
+                    // Write_IR  <= 1'b0;
+                    Write_Reg    <= 1'b0;
+                    // LA        <= 1'b0;
+                    // LB        <= 1'b0;
+                    // LC        <= 1'b0;
+                    // LF        <= 1'b0;
+                    // S         <= 1'b0;
+                    // rm_imm_s  <= 1'b0;
+                    // rs_imm_s  <= 2'b00;
+                    PC_s         <= 2'b11;
+                    rd_s         <= 2'b00;
+                    // ALU_A_s   <= 1'b0;
+                    // ALU_B_s   <= 2'b00;
+                    // W_Rdata_s <= 1'b0;
+                    // Reg_C_s   <= 1'b0;
+                    // Mem_Write <= 1'b0;
+                    // Mem_W_s   <= 1'b0;
+                    Write_CPSR   <= 1'b1;
+                    Write_SPSR   <= 1'b0;
+                    // ALU_OP    <= 4'b0000;
+                    W_CPSR_s     <= 2'b010;
+                    W_SPSR_s     <= 1'b0;
+                    SP_out       <= 1'b1;
+                    // SP_in     <= 1'b0;
+                    Change_M     <= 3'b000;
+                    INTA_irq     <= 1'b1;
                 end
             endcase
         end

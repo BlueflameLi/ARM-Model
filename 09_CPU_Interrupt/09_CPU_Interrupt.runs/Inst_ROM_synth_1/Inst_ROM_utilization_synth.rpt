@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jul  1 19:10:53 2021
+| Date         : Fri Jul  2 14:12:06 2021
 | Host         : BLUEFLAMELEE running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Inst_ROM_utilization_synth.rpt -pb Inst_ROM_utilization_synth.pb
 | Design       : Inst_ROM

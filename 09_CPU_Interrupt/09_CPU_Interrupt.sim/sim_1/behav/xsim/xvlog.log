@@ -14,8 +14,8 @@ INFO: [VRFC 10-311] analyzing module d_flip_flop_8
 INFO: [VRFC 10-311] analyzing module d_flip_flop_8_2
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/CPU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CPU
-INFO: [VRFC 10-2458] undeclared symbol SPSR_New, assumed default net type wire [D:/vivado/09_CPU_Interrupt/CPU.v:225]
-INFO: [VRFC 10-2458] undeclared symbol CPSR_New, assumed default net type wire [D:/vivado/09_CPU_Interrupt/CPU.v:226]
+INFO: [VRFC 10-2458] undeclared symbol SPSR_New, assumed default net type wire [D:/vivado/09_CPU_Interrupt/CPU.v:229]
+INFO: [VRFC 10-2458] undeclared symbol CPSR_New, assumed default net type wire [D:/vivado/09_CPU_Interrupt/CPU.v:230]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/09_CPU_Interrupt/Inst.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Inst
 WARNING: [VRFC 10-2379] empty port in module declaration [D:/vivado/09_CPU_Interrupt/Inst.v:16]
