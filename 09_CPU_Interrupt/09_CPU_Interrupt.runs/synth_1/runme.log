@@ -14,14 +14,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20332 
+INFO: Helper process launched with PID 11348 
 WARNING: [Synth 8-1935] empty port in module declaration [D:/vivado/09_CPU_Interrupt/Inst.v:15]
 WARNING: [Synth 8-2611] redeclaration of ansi port SP is not allowed [D:/vivado/09_CPU_Interrupt/Stack.v:10]
 WARNING: [Synth 8-976] SP has already been declared [D:/vivado/09_CPU_Interrupt/Stack.v:10]
 WARNING: [Synth 8-2654] second declaration of SP ignored [D:/vivado/09_CPU_Interrupt/Stack.v:10]
 INFO: [Synth 8-994] SP is declared here [D:/vivado/09_CPU_Interrupt/Stack.v:6]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 381.859 ; gain = 112.961
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 381.527 ; gain = 111.703
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/09_CPU_Interrupt/CPU.v:3]
 	Parameter DP0 bound to: 4'b0001 
@@ -68,11 +68,11 @@ INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/09_CPU_Interrupt/CPU.v
 	Parameter S30 bound to: 6'b011111 
 	Parameter S31 bound to: 6'b100000 
 INFO: [Synth 8-6157] synthesizing module 'Inst' [D:/vivado/09_CPU_Interrupt/Inst.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-25484-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-25484-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
 WARNING: [Synth 8-308] ignoring empty port [D:/vivado/09_CPU_Interrupt/Inst.v:16]
 INFO: [Synth 8-6155] done synthesizing module 'Inst' (2#1) [D:/vivado/09_CPU_Interrupt/Inst.v:3]
-WARNING: [Synth 8-350] instance 'Inst_Instance' of module 'Inst' requires 14 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:68]
+WARNING: [Synth 8-350] instance 'Inst_Instance' of module 'Inst' requires 14 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:69]
 INFO: [Synth 8-6157] synthesizing module 'register_pile' [D:/vivado/09_CPU_Interrupt/RegFile.v:3]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/RegFile.v:32]
 WARNING: [Synth 8-324] index 0 out of range [D:/vivado/09_CPU_Interrupt/RegFile.v:119]
@@ -172,7 +172,7 @@ WARNING: [Synth 8-324] index 15 out of range [D:/vivado/09_CPU_Interrupt/RegFile
 WARNING: [Synth 8-324] index 15 out of range [D:/vivado/09_CPU_Interrupt/RegFile.v:125]
 WARNING: [Synth 8-6014] Unused sequential element REG_File_user_reg[15] was removed.  [D:/vivado/09_CPU_Interrupt/RegFile.v:118]
 INFO: [Synth 8-6155] done synthesizing module 'register_pile' (3#1) [D:/vivado/09_CPU_Interrupt/RegFile.v:3]
-WARNING: [Synth 8-350] instance 'RegFile_Instance' of module 'register_pile' requires 19 connections, but only 16 given [D:/vivado/09_CPU_Interrupt/CPU.v:184]
+WARNING: [Synth 8-350] instance 'RegFile_Instance' of module 'register_pile' requires 19 connections, but only 16 given [D:/vivado/09_CPU_Interrupt/CPU.v:186]
 INFO: [Synth 8-6157] synthesizing module 'ALU_Shift' [D:/vivado/09_CPU_Interrupt/ALU_Shift.v:3]
 INFO: [Synth 8-6157] synthesizing module 'Shift' [D:/vivado/09_CPU_Interrupt/Shift.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'Shift' (4#1) [D:/vivado/09_CPU_Interrupt/Shift.v:2]
@@ -180,8 +180,8 @@ INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/vivado/09_CPU_Interrupt/ALU.v
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/ALU.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [D:/vivado/09_CPU_Interrupt/ALU.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'ALU_Shift' (6#1) [D:/vivado/09_CPU_Interrupt/ALU_Shift.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Data_RAM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-25484-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Data_RAM' (7#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-25484-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Data_RAM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Data_RAM' (7#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'Reg_CPSR' [D:/vivado/09_CPU_Interrupt/CPSR.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPSR.v:30]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPSR.v:40]
@@ -205,12 +205,12 @@ INFO: [Synth 8-6155] done synthesizing module 'd_flip_flop_8' (10#1) [D:/vivado/
 INFO: [Synth 8-6157] synthesizing module 'd_flip_flop_4' [D:/vivado/09_CPU_Interrupt/CPSR.v:181]
 INFO: [Synth 8-6155] done synthesizing module 'd_flip_flop_4' (11#1) [D:/vivado/09_CPU_Interrupt/CPSR.v:181]
 INFO: [Synth 8-6155] done synthesizing module 'Reg_CPSR' (12#1) [D:/vivado/09_CPU_Interrupt/CPSR.v:1]
-WARNING: [Synth 8-350] instance 'CPSR_Instance' of module 'Reg_CPSR' requires 20 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:222]
+WARNING: [Synth 8-350] instance 'CPSR_Instance' of module 'Reg_CPSR' requires 20 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:224]
 INFO: [Synth 8-6157] synthesizing module 'request' [D:/vivado/09_CPU_Interrupt/request.v:19]
 INFO: [Synth 8-6157] synthesizing module 'd_flip_flop' [D:/vivado/09_CPU_Interrupt/request.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'd_flip_flop' (13#1) [D:/vivado/09_CPU_Interrupt/request.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'request' (14#1) [D:/vivado/09_CPU_Interrupt/request.v:19]
-WARNING: [Synth 8-350] instance 'request_Instance' of module 'request' requires 5 connections, but only 4 given [D:/vivado/09_CPU_Interrupt/CPU.v:241]
+WARNING: [Synth 8-350] instance 'request_Instance' of module 'request' requires 5 connections, but only 4 given [D:/vivado/09_CPU_Interrupt/CPU.v:243]
 INFO: [Synth 8-6157] synthesizing module 'Stack' [D:/vivado/09_CPU_Interrupt/Stack.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/Stack.v:32]
 WARNING: [Synth 8-5788] Register SP_reg in module Stack is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/Stack.v:19]
@@ -222,10 +222,10 @@ WARNING: [Synth 8-5788] Register SP_abt_reg in module Stack is has both Set and 
 WARNING: [Synth 8-5788] Register SP_hyp_reg in module Stack is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/Stack.v:25]
 WARNING: [Synth 8-5788] Register SP_und_reg in module Stack is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/Stack.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'Stack' (15#1) [D:/vivado/09_CPU_Interrupt/Stack.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPU.v:387]
-WARNING: [Synth 8-5788] Register SHIFT_OP_reg in module CPU is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/CPU.v:196]
-WARNING: [Synth 8-3848] Net SPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:229]
-WARNING: [Synth 8-3848] Net CPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:230]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPU.v:389]
+WARNING: [Synth 8-5788] Register SHIFT_OP_reg in module CPU is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/CPU.v:198]
+WARNING: [Synth 8-3848] Net SPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:231]
+WARNING: [Synth 8-3848] Net CPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:232]
 INFO: [Synth 8-6155] done synthesizing module 'CPU' (16#1) [D:/vivado/09_CPU_Interrupt/CPU.v:3]
 WARNING: [Synth 8-3331] design ALU_Shift has unconnected port S
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[31]
@@ -256,7 +256,7 @@ WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[7]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[6]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.223 ; gain = 162.324
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.492 ; gain = 161.668
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -265,49 +265,49 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:Write_PC to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[31] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[30] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[29] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[28] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[27] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[26] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[25] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[24] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[23] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[22] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[21] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[20] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[19] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[18] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[17] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[16] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[15] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[14] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[13] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[12] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[11] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[10] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[9] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[8] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[7] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[6] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[5] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[4] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[3] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[2] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[1] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:SPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:222]
-WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:CPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:222]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:Write_PC to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[31] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[30] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[29] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[28] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[27] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[26] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[25] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[24] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[23] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[22] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[21] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[20] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[19] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[18] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[17] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[16] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[15] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[14] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[13] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[12] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[11] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[10] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[9] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[8] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[7] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[6] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[5] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[4] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[3] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[2] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[1] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:SPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:224]
+WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:CPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:224]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.223 ; gain = 162.324
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.492 ; gain = 161.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.223 ; gain = 162.324
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.492 ; gain = 161.668
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -419,24 +419,24 @@ Finished Parsing XDC File [D:/vivado/09_CPU_Interrupt/Board.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/vivado/09_CPU_Interrupt/Board.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/CPU_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/09_CPU_Interrupt/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CPU_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CPU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.992 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 788.992 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.488 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 789.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.992 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 788.992 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.488 ; gain = 520.590
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 788.992 ; gain = 519.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.488 ; gain = 520.590
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 788.992 ; gain = 519.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -444,7 +444,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for Dataram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Inst_Instance/Inst_ROM_Instance. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.488 ; gain = 520.590
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 788.992 ; gain = 519.168
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -462,9 +462,9 @@ INFO: [Synth 8-5544] ROM "REG_File_user_reg[12]" won't be mapped to Block RAM be
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "clk_m" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'LB_reg' into 'LA_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:184]
-INFO: [Synth 8-4471] merging register 'W_SPSR_s_reg' into 'Write_SPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:225]
-INFO: [Synth 8-4471] merging register 'SP_out_reg' into 'Write_CPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:252]
+INFO: [Synth 8-4471] merging register 'LB_reg' into 'LA_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+INFO: [Synth 8-4471] merging register 'W_SPSR_s_reg' into 'Write_SPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:227]
+INFO: [Synth 8-4471] merging register 'SP_out_reg' into 'Write_CPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:254]
 INFO: [Synth 8-802] inferred FSM for state register 'ST_reg' in module 'CPU'
 INFO: [Synth 8-5587] ROM size for "Write_PC" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "Write_IR" won't be mapped to RAM because it is too sparse
@@ -531,7 +531,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'Curr_SPSR_reg' [D:/vivado/0
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ST_reg' using encoding 'sequential' in module 'CPU'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 789.488 ; gain = 520.590
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 788.992 ; gain = 519.168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1073,7 +1073,7 @@ WARNING: [Synth 8-3332] Sequential element (M_reg[2]) is unused and will be remo
 WARNING: [Synth 8-3332] Sequential element (M_reg[1]) is unused and will be removed from module Reg_CPSR.
 WARNING: [Synth 8-3332] Sequential element (M_reg[0]) is unused and will be removed from module Reg_CPSR.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 789.488 ; gain = 520.590
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 788.992 ; gain = 519.168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1085,13 +1085,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 789.488 ; gain = 520.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 788.992 ; gain = 519.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 789.488 ; gain = 520.590
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 788.992 ; gain = 519.168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1131,7 +1131,7 @@ WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[6]) is u
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\CPSR_Instance/clk_m_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1155,7 +1155,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1168,7 +1168,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1180,25 +1180,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1221,11 +1221,11 @@ Report Cell Usage:
 |3     |BUFG     |     3|
 |4     |CARRY4   |    70|
 |5     |LUT1     |    14|
-|6     |LUT2     |   223|
-|7     |LUT3     |   202|
-|8     |LUT4     |    75|
-|9     |LUT5     |   186|
-|10    |LUT6     |   386|
+|6     |LUT2     |   221|
+|7     |LUT3     |   208|
+|8     |LUT4     |    72|
+|9     |LUT5     |   182|
+|10    |LUT6     |   403|
 |11    |MUXF7    |     1|
 |12    |FDCE     |   122|
 |13    |FDPE     |     1|
@@ -1239,31 +1239,31 @@ Report Instance Areas:
 +------+---------------------+-----------------+------+
 |      |Instance             |Module           |Cells |
 +------+---------------------+-----------------+------+
-|1     |top                  |                 |  1688|
+|1     |top                  |                 |  1702|
 |2     |  ALU_Shift_Instance |ALU_Shift        |   211|
 |3     |    ALU_Instance     |ALU              |   147|
-|4     |  CPSR_Instance      |Reg_CPSR         |    86|
+|4     |  CPSR_Instance      |Reg_CPSR         |    76|
 |5     |    D_CPSR_31_28     |d_flip_flop_4    |    30|
-|6     |    D_CPSR_7_0       |d_flip_flop_8_2  |    25|
+|6     |    D_CPSR_7_0       |d_flip_flop_8_2  |    15|
 |7     |    D_SPSR_fiq       |d_flip_flop_32   |    15|
 |8     |    D_SPSR_irq       |d_flip_flop_32_1 |     8|
-|9     |  Inst_Instance      |Inst             |  1016|
-|10    |  request_Instance   |request          |    14|
+|9     |  Inst_Instance      |Inst             |  1030|
+|10    |  request_Instance   |request          |    22|
 |11    |    D1               |d_flip_flop      |     1|
-|12    |    D2               |d_flip_flop_0    |    13|
+|12    |    D2               |d_flip_flop_0    |    21|
 +------+---------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 1440 critical warnings and 140 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 831.203 ; gain = 204.039
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 831.203 ; gain = 562.305
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 826.621 ; gain = 199.297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 831.203 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.621 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 40 instances were transformed.
   LD => LDCE: 40 instances
@@ -1271,10 +1271,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 143 Infos, 421 Warnings, 200 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 831.203 ; gain = 562.305
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 831.203 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 826.621 ; gain = 556.797
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.621 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/CPU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul  2 15:26:17 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  2 16:40:11 2021...

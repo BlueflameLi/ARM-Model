@@ -32,7 +32,8 @@ module CPU(clk,        //时钟信号
            Reg_C_s,
            INT_irq,
            DP,
-           Change_M);
+           Change_M
+           );
     
     input clk, Rst, EX_irq;
     input  [31:0] INT_Vector;
@@ -175,7 +176,8 @@ module CPU(clk,        //时钟信号
     
     
     //寄存器堆
-    wire [3:0] W_Addr,R_Addr_C;
+    wire [3:0] R_Addr_C;
+    wire [3:0] W_Addr;
     
     assign W_Addr   = rd_s[1]?rn:(rd_s[0]?4'b1110:rd);
     assign W_Data   = W_Rdata_s?M_R_Data:F;
@@ -736,7 +738,7 @@ module CPU(clk,        //时钟信号
                     //Mem_W_s    <= 1'b0;
                     //Write_CPSR <= 1'b0;
                     //Write_SPSR <= 1'b0;
-                    ALU_OP       <= 4'b1000;
+                    ALU_OP       <= 4'b1101;
                     //W_CPSR_s   <= 3'b000;
                     //W_SPSR_s   <= 1'b0;
                     //SP_out     <= 1'b0;
