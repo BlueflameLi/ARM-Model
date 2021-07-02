@@ -20,7 +20,7 @@ module board_cpu(sw,
     reg [2:0]cnt = 0;
     wire [31:0] I,A,B,C,F,PC,M_R_Data,M_W_Data;
     wire Write_PC,Write_IR,Write_Reg,S;
-    wire [31:0] CPSR;
+    wire [31:0] CPSR,SPSR;
     wire  W_SPSR_s,Write_SPSR,Write_CPSR,SP_in,SP_out;
     
     wire rm_imm_s,S;
@@ -35,14 +35,15 @@ module board_cpu(sw,
     wire Reg_C_s;
     
     wire [2:0] W_CPSR_s;
-    wire INT_irq;
+    wire INT_irq,INT_fiq;
     wire [3:0] DP;
     wire [2:0] Change_M;
     wire EX_irq;
     assign EX_irq=swb[3];
     CPU cpu(.clk(swb[1]),       //时钟信号
             .Rst(swb[2]),       //复位信号
-            .EX_irq(EX_irq),    //中断开关
+            .EX_irq(swb[3]),    //中断
+            .EX_fiq(swb[4]),
             .INT_Vector(sw),    //中断向量
             .I(I),              //指令机器码
             .A(A),
@@ -50,6 +51,7 @@ module board_cpu(sw,
             .C(C),
             .F(F),
             .CPSR(CPSR),        //程序状态寄存器
+            .SPSR(SPSR),
             .Write_PC(Write_PC),
             .Write_IR(Write_IR),
             .Write_Reg(Write_Reg),
@@ -71,6 +73,7 @@ module board_cpu(sw,
             .W_SPSR_s(W_SPSR_s),
             .Reg_C_s(Reg_C_s),
             .INT_irq(INT_irq),
+            .INT_fiq(INT_fiq),
             .DP(DP),
             .Change_M(Change_M)
             );
