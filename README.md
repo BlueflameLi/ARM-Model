@@ -24,3 +24,12 @@
 ## 07_CPU_Branch
 
 实现分支跳转指令的CPU设计
+
+##  08_CPU_memory_reference
+
+实现单数据访存指令的CPU设计
+
+## 09_CPU_Interrupt
+
+实现irq、fiq中断的CPU设计
+
