@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1625215178">
-  <File Type="PA-TCL" Name="CPU.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="CPU_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="CPU_reports.tcl"/>
-  <File Type="RDS-RDS" Name="CPU.vds"/>
-  <File Type="RDS-UTIL" Name="CPU_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="CPU_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="CPU.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="CPU_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="CPU_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1625229738">
+  <File Type="PA-TCL" Name="board_cpu.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="board_cpu_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="board_cpu_reports.tcl"/>
+  <File Type="RDS-RDS" Name="board_cpu.vds"/>
+  <File Type="RDS-UTIL" Name="board_cpu_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="board_cpu_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="board_cpu.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="board_cpu_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="board_cpu_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/ALU.v">
@@ -26,6 +26,20 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/CPSR.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CPU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Display.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -67,24 +81,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/CPU.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/Display.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/board_cpu.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -104,7 +102,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="CPU"/>
+      <Option Name="TopModule" Val="board_cpu"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -17,8 +17,10 @@ module Reg_CPSR(input clk,
                 output [31:0] SPSR_und,
                 output [31:0] SPSR_mon,
                 output [31:0] SPSR_hyp,
-                output [31:0] CPSR);
-    reg [31:0] Curr_SPSR,CPSR_in;
+                output [31:0] CPSR,
+                output reg [31:0] Curr_SPSR
+                );
+    reg [31:0] CPSR_in;
     wire [31:0] new_SPSR;
     reg [6:0] clk_m;
     reg [4:0] M;
@@ -36,7 +38,7 @@ module Reg_CPSR(input clk,
         endcase
     end
     
-    always@(W_CPSR_s)begin
+    always@(*)begin
         case(W_CPSR_s)
             3'd0: CPSR_in <= Curr_SPSR;
             3'd1: CPSR_in <= CPSR_New;

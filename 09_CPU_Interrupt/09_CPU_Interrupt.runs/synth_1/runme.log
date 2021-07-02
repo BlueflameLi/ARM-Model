@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log CPU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl
+    with args -log board_cpu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source board_cpu.tcl
 
 
 ****** Vivado v2018.3 (64-bit)
@@ -8,21 +8,25 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source CPU.tcl -notrace
-Command: synth_design -top CPU -part xc7a100tfgg484-2L
+source board_cpu.tcl -notrace
+Command: synth_design -top board_cpu -part xc7a100tfgg484-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11348 
+INFO: Helper process launched with PID 8116 
 WARNING: [Synth 8-1935] empty port in module declaration [D:/vivado/09_CPU_Interrupt/Inst.v:15]
 WARNING: [Synth 8-2611] redeclaration of ansi port SP is not allowed [D:/vivado/09_CPU_Interrupt/Stack.v:10]
 WARNING: [Synth 8-976] SP has already been declared [D:/vivado/09_CPU_Interrupt/Stack.v:10]
 WARNING: [Synth 8-2654] second declaration of SP ignored [D:/vivado/09_CPU_Interrupt/Stack.v:10]
 INFO: [Synth 8-994] SP is declared here [D:/vivado/09_CPU_Interrupt/Stack.v:6]
+WARNING: [Synth 8-976] S has already been declared [D:/vivado/09_CPU_Interrupt/board_cpu.v:26]
+WARNING: [Synth 8-2654] second declaration of S ignored [D:/vivado/09_CPU_Interrupt/board_cpu.v:26]
+INFO: [Synth 8-994] S is declared here [D:/vivado/09_CPU_Interrupt/board_cpu.v:22]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 381.527 ; gain = 111.703
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 380.688 ; gain = 112.340
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'board_cpu' [D:/vivado/09_CPU_Interrupt/board_cpu.v:2]
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/09_CPU_Interrupt/CPU.v:3]
 	Parameter DP0 bound to: 4'b0001 
 	Parameter DP1 bound to: 4'b0010 
@@ -68,11 +72,11 @@ INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/vivado/09_CPU_Interrupt/CPU.v
 	Parameter S30 bound to: 6'b011111 
 	Parameter S31 bound to: 6'b100000 
 INFO: [Synth 8-6157] synthesizing module 'Inst' [D:/vivado/09_CPU_Interrupt/Inst.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Inst_ROM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-4920-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Inst_ROM' (1#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-4920-BLUEFLAMELEE/realtime/Inst_ROM_stub.v:6]
 WARNING: [Synth 8-308] ignoring empty port [D:/vivado/09_CPU_Interrupt/Inst.v:16]
 INFO: [Synth 8-6155] done synthesizing module 'Inst' (2#1) [D:/vivado/09_CPU_Interrupt/Inst.v:3]
-WARNING: [Synth 8-350] instance 'Inst_Instance' of module 'Inst' requires 14 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:69]
+WARNING: [Synth 8-350] instance 'Inst_Instance' of module 'Inst' requires 14 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:71]
 INFO: [Synth 8-6157] synthesizing module 'register_pile' [D:/vivado/09_CPU_Interrupt/RegFile.v:3]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/RegFile.v:32]
 WARNING: [Synth 8-324] index 0 out of range [D:/vivado/09_CPU_Interrupt/RegFile.v:119]
@@ -172,7 +176,7 @@ WARNING: [Synth 8-324] index 15 out of range [D:/vivado/09_CPU_Interrupt/RegFile
 WARNING: [Synth 8-324] index 15 out of range [D:/vivado/09_CPU_Interrupt/RegFile.v:125]
 WARNING: [Synth 8-6014] Unused sequential element REG_File_user_reg[15] was removed.  [D:/vivado/09_CPU_Interrupt/RegFile.v:118]
 INFO: [Synth 8-6155] done synthesizing module 'register_pile' (3#1) [D:/vivado/09_CPU_Interrupt/RegFile.v:3]
-WARNING: [Synth 8-350] instance 'RegFile_Instance' of module 'register_pile' requires 19 connections, but only 16 given [D:/vivado/09_CPU_Interrupt/CPU.v:186]
+WARNING: [Synth 8-350] instance 'RegFile_Instance' of module 'register_pile' requires 19 connections, but only 16 given [D:/vivado/09_CPU_Interrupt/CPU.v:188]
 INFO: [Synth 8-6157] synthesizing module 'ALU_Shift' [D:/vivado/09_CPU_Interrupt/ALU_Shift.v:3]
 INFO: [Synth 8-6157] synthesizing module 'Shift' [D:/vivado/09_CPU_Interrupt/Shift.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'Shift' (4#1) [D:/vivado/09_CPU_Interrupt/Shift.v:2]
@@ -180,8 +184,8 @@ INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/vivado/09_CPU_Interrupt/ALU.v
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/ALU.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [D:/vivado/09_CPU_Interrupt/ALU.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'ALU_Shift' (6#1) [D:/vivado/09_CPU_Interrupt/ALU_Shift.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Data_RAM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Data_RAM' (7#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-1708-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Data_RAM' [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-4920-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Data_RAM' (7#1) [D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/.Xil/Vivado-4920-BLUEFLAMELEE/realtime/Data_RAM_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'Reg_CPSR' [D:/vivado/09_CPU_Interrupt/CPSR.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPSR.v:30]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPSR.v:40]
@@ -205,12 +209,11 @@ INFO: [Synth 8-6155] done synthesizing module 'd_flip_flop_8' (10#1) [D:/vivado/
 INFO: [Synth 8-6157] synthesizing module 'd_flip_flop_4' [D:/vivado/09_CPU_Interrupt/CPSR.v:181]
 INFO: [Synth 8-6155] done synthesizing module 'd_flip_flop_4' (11#1) [D:/vivado/09_CPU_Interrupt/CPSR.v:181]
 INFO: [Synth 8-6155] done synthesizing module 'Reg_CPSR' (12#1) [D:/vivado/09_CPU_Interrupt/CPSR.v:1]
-WARNING: [Synth 8-350] instance 'CPSR_Instance' of module 'Reg_CPSR' requires 20 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:224]
-INFO: [Synth 8-6157] synthesizing module 'request' [D:/vivado/09_CPU_Interrupt/request.v:19]
+WARNING: [Synth 8-350] instance 'CPSR_Instance' of module 'Reg_CPSR' requires 20 connections, but only 13 given [D:/vivado/09_CPU_Interrupt/CPU.v:226]
+INFO: [Synth 8-6157] synthesizing module 'request' [D:/vivado/09_CPU_Interrupt/request.v:20]
 INFO: [Synth 8-6157] synthesizing module 'd_flip_flop' [D:/vivado/09_CPU_Interrupt/request.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'd_flip_flop' (13#1) [D:/vivado/09_CPU_Interrupt/request.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'request' (14#1) [D:/vivado/09_CPU_Interrupt/request.v:19]
-WARNING: [Synth 8-350] instance 'request_Instance' of module 'request' requires 5 connections, but only 4 given [D:/vivado/09_CPU_Interrupt/CPU.v:243]
+INFO: [Synth 8-6155] done synthesizing module 'request' (14#1) [D:/vivado/09_CPU_Interrupt/request.v:20]
 INFO: [Synth 8-6157] synthesizing module 'Stack' [D:/vivado/09_CPU_Interrupt/Stack.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/Stack.v:32]
 WARNING: [Synth 8-5788] Register SP_reg in module Stack is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/Stack.v:19]
@@ -222,11 +225,20 @@ WARNING: [Synth 8-5788] Register SP_abt_reg in module Stack is has both Set and 
 WARNING: [Synth 8-5788] Register SP_hyp_reg in module Stack is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/Stack.v:25]
 WARNING: [Synth 8-5788] Register SP_und_reg in module Stack is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/Stack.v:26]
 INFO: [Synth 8-6155] done synthesizing module 'Stack' (15#1) [D:/vivado/09_CPU_Interrupt/Stack.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPU.v:389]
-WARNING: [Synth 8-5788] Register SHIFT_OP_reg in module CPU is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/CPU.v:198]
-WARNING: [Synth 8-3848] Net SPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:231]
-WARNING: [Synth 8-3848] Net CPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:232]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivado/09_CPU_Interrupt/CPU.v:408]
+WARNING: [Synth 8-5788] Register SHIFT_OP_reg in module CPU is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/09_CPU_Interrupt/CPU.v:200]
+WARNING: [Synth 8-3848] Net SPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:233]
+WARNING: [Synth 8-3848] Net CPSR_New in module/entity CPU does not have driver. [D:/vivado/09_CPU_Interrupt/CPU.v:234]
 INFO: [Synth 8-6155] done synthesizing module 'CPU' (16#1) [D:/vivado/09_CPU_Interrupt/CPU.v:3]
+WARNING: [Synth 8-689] width (1) of port connection 'rd_s' does not match port width (2) of module 'CPU' [D:/vivado/09_CPU_Interrupt/board_cpu.v:65]
+WARNING: [Synth 8-689] width (2) of port connection 'W_Rdata_s' does not match port width (1) of module 'CPU' [D:/vivado/09_CPU_Interrupt/board_cpu.v:69]
+WARNING: [Synth 8-350] instance 'cpu' of module 'CPU' requires 35 connections, but only 33 given [D:/vivado/09_CPU_Interrupt/board_cpu.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Display' [D:/vivado/09_CPU_Interrupt/Display.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Display' (17#1) [D:/vivado/09_CPU_Interrupt/Display.v:3]
+WARNING: [Synth 8-350] instance 'Display_Instance' of module 'Display' requires 6 connections, but only 4 given [D:/vivado/09_CPU_Interrupt/board_cpu.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'board_cpu' (18#1) [D:/vivado/09_CPU_Interrupt/board_cpu.v:2]
+WARNING: [Synth 8-3917] design board_cpu has port led[19] driven by constant 0
+WARNING: [Synth 8-3917] design board_cpu has port enable driven by constant 1
 WARNING: [Synth 8-3331] design ALU_Shift has unconnected port S
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[31]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[30]
@@ -255,8 +267,16 @@ WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[8]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[7]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[6]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[5]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[10]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[11]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[12]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[24]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[25]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[26]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.492 ; gain = 161.668
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 430.719 ; gain = 162.371
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -265,149 +285,61 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:Write_PC to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[31] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[30] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[29] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[28] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[27] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[26] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[25] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[24] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[23] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[22] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[21] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[20] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[19] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[18] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[17] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[16] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[15] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[14] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[13] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[12] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[11] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[10] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[9] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[8] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[7] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[6] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[5] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[4] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[3] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[2] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[1] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:SPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:224]
-WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:CPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:224]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:Write_PC to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[31] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[30] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[29] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[28] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[27] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[26] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[25] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[24] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[23] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[22] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[21] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[20] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[19] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[18] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[17] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[16] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[15] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[14] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[13] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[12] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[11] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[10] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[9] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[8] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[7] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[6] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[5] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[4] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[3] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[2] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[1] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin RegFile_Instance:PC_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:SPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:226]
+WARNING: [Synth 8-3295] tying undriven pin CPSR_Instance:CPSR_New[0] to constant 0 [D:/vivado/09_CPU_Interrupt/CPU.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cpu:EX_fiq to constant 0 [D:/vivado/09_CPU_Interrupt/board_cpu.v:43]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.492 ; gain = 161.668
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 430.719 ; gain = 162.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.492 ; gain = 161.668
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 430.719 ; gain = 162.371
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/vivado/09_CPU_Interrupt/Data_RAM/Data_RAM/Data_RAM_in_context.xdc] for cell 'Dataram'
-Finished Parsing XDC File [d:/vivado/09_CPU_Interrupt/Data_RAM/Data_RAM/Data_RAM_in_context.xdc] for cell 'Dataram'
-Parsing XDC File [d:/vivado/09_CPU_Interrupt/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'Inst_Instance/Inst_ROM_Instance'
-Finished Parsing XDC File [d:/vivado/09_CPU_Interrupt/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'Inst_Instance/Inst_ROM_Instance'
+Parsing XDC File [d:/vivado/09_CPU_Interrupt/Data_RAM/Data_RAM/Data_RAM_in_context.xdc] for cell 'cpu/Dataram'
+Finished Parsing XDC File [d:/vivado/09_CPU_Interrupt/Data_RAM/Data_RAM/Data_RAM_in_context.xdc] for cell 'cpu/Dataram'
+Parsing XDC File [d:/vivado/09_CPU_Interrupt/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'cpu/Inst_Instance/Inst_ROM_Instance'
+Finished Parsing XDC File [d:/vivado/09_CPU_Interrupt/Inst_ROM/Inst_ROM/Inst_ROM_in_context.xdc] for cell 'cpu/Inst_Instance/Inst_ROM_Instance'
 Parsing XDC File [D:/vivado/09_CPU_Interrupt/Board.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw'. [D:/vivado/09_CPU_Interrupt/Board.xdc:5]
-WARNING: [Vivado 12-584] No ports matched 'sw'. [D:/vivado/09_CPU_Interrupt/Board.xdc:6]
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:7]
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:8]
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:9]
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:10]
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:11]
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:12]
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:13]
-WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:14]
-WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:15]
-WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:16]
-WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:17]
-WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:18]
-WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:19]
-WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:20]
-WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:21]
-WARNING: [Vivado 12-584] No ports matched 'sw[16]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:22]
-WARNING: [Vivado 12-584] No ports matched 'sw[17]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'sw[18]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:24]
-WARNING: [Vivado 12-584] No ports matched 'sw[19]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:25]
-WARNING: [Vivado 12-584] No ports matched 'sw[20]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:26]
-WARNING: [Vivado 12-584] No ports matched 'sw[21]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:27]
-WARNING: [Vivado 12-584] No ports matched 'sw[22]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:28]
-WARNING: [Vivado 12-584] No ports matched 'sw[23]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:29]
-WARNING: [Vivado 12-584] No ports matched 'sw[24]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:30]
-WARNING: [Vivado 12-584] No ports matched 'sw[25]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:31]
-WARNING: [Vivado 12-584] No ports matched 'sw[26]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:32]
-WARNING: [Vivado 12-584] No ports matched 'sw[27]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:33]
-WARNING: [Vivado 12-584] No ports matched 'sw[28]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:34]
-WARNING: [Vivado 12-584] No ports matched 'sw[29]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:35]
-WARNING: [Vivado 12-584] No ports matched 'sw[30]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'sw[31]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:37]
-WARNING: [Vivado 12-584] No ports matched 'sw[32]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:38]
-WARNING: [Vivado 12-584] No ports matched 'swb'. [D:/vivado/09_CPU_Interrupt/Board.xdc:41]
-WARNING: [Vivado 12-584] No ports matched 'swb[1]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:42]
-WARNING: [Vivado 12-584] No ports matched 'swb[2]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:43]
-WARNING: [Vivado 12-584] No ports matched 'swb[3]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:44]
-WARNING: [Vivado 12-584] No ports matched 'swb[4]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:45]
-WARNING: [Vivado 12-584] No ports matched 'swb[5]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:46]
-WARNING: [Vivado 12-584] No ports matched 'swb[6]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:47]
-WARNING: [Vivado 12-584] No ports matched 'led'. [D:/vivado/09_CPU_Interrupt/Board.xdc:50]
-WARNING: [Vivado 12-584] No ports matched 'led'. [D:/vivado/09_CPU_Interrupt/Board.xdc:51]
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:52]
-WARNING: [Vivado 12-584] No ports matched 'led[2]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:53]
-WARNING: [Vivado 12-584] No ports matched 'led[3]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:54]
-WARNING: [Vivado 12-584] No ports matched 'led[4]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:55]
-WARNING: [Vivado 12-584] No ports matched 'led[5]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:56]
-WARNING: [Vivado 12-584] No ports matched 'led[6]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:57]
-WARNING: [Vivado 12-584] No ports matched 'led[7]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:58]
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:59]
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:60]
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:61]
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:62]
-WARNING: [Vivado 12-584] No ports matched 'led[12]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:63]
-WARNING: [Vivado 12-584] No ports matched 'led[13]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:64]
-WARNING: [Vivado 12-584] No ports matched 'led[14]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:65]
-WARNING: [Vivado 12-584] No ports matched 'led[15]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:66]
-WARNING: [Vivado 12-584] No ports matched 'led[16]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:67]
-WARNING: [Vivado 12-584] No ports matched 'led[17]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:68]
-WARNING: [Vivado 12-584] No ports matched 'led[18]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:69]
-WARNING: [Vivado 12-584] No ports matched 'led[19]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:70]
-WARNING: [Vivado 12-584] No ports matched 'led[20]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:71]
-WARNING: [Vivado 12-584] No ports matched 'led[21]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:72]
-WARNING: [Vivado 12-584] No ports matched 'led[22]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:73]
-WARNING: [Vivado 12-584] No ports matched 'led[23]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:74]
-WARNING: [Vivado 12-584] No ports matched 'led[24]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:75]
-WARNING: [Vivado 12-584] No ports matched 'led[25]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:76]
-WARNING: [Vivado 12-584] No ports matched 'led[26]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:77]
-WARNING: [Vivado 12-584] No ports matched 'led[27]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:78]
-WARNING: [Vivado 12-584] No ports matched 'led[28]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:79]
-WARNING: [Vivado 12-584] No ports matched 'led[29]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:80]
-WARNING: [Vivado 12-584] No ports matched 'led[30]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:81]
-WARNING: [Vivado 12-584] No ports matched 'led[31]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:82]
-WARNING: [Vivado 12-584] No ports matched 'led[32]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:83]
-WARNING: [Vivado 12-584] No ports matched 'seg'. [D:/vivado/09_CPU_Interrupt/Board.xdc:86]
-WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:87]
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:88]
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:89]
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:90]
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:91]
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:92]
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:93]
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:94]
-WARNING: [Vivado 12-584] No ports matched 'which'. [D:/vivado/09_CPU_Interrupt/Board.xdc:95]
-WARNING: [Vivado 12-584] No ports matched 'which[0]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:96]
-WARNING: [Vivado 12-584] No ports matched 'which[1]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:97]
-WARNING: [Vivado 12-584] No ports matched 'which[2]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:98]
-WARNING: [Vivado 12-584] No ports matched 'enable'. [D:/vivado/09_CPU_Interrupt/Board.xdc:99]
 WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [D:/vivado/09_CPU_Interrupt/Board.xdc:106]
 WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[1]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:107]
 WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[2]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:108]
@@ -416,35 +348,35 @@ WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[4]'. [D:/vivado/09_CPU_Interr
 WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[5]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:111]
 WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [D:/vivado/09_CPU_Interrupt/Board.xdc:112]
 Finished Parsing XDC File [D:/vivado/09_CPU_Interrupt/Board.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/vivado/09_CPU_Interrupt/Board.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/CPU_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/09_CPU_Interrupt/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CPU_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/CPU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.992 ; gain = 0.000
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/vivado/09_CPU_Interrupt/Board.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/board_cpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/09_CPU_Interrupt/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/board_cpu_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/board_cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.281 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 788.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 788.992 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 788.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 789.281 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 789.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 788.992 ; gain = 519.168
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.281 ; gain = 520.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 788.992 ; gain = 519.168
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.281 ; gain = 520.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for Dataram. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Inst_Instance/Inst_ROM_Instance. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cpu/Dataram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for cpu/Inst_Instance/Inst_ROM_Instance. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 788.992 ; gain = 519.168
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 789.281 ; gain = 520.934
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -462,9 +394,9 @@ INFO: [Synth 8-5544] ROM "REG_File_user_reg[12]" won't be mapped to Block RAM be
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "REG_File_user_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "clk_m" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'LB_reg' into 'LA_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:186]
-INFO: [Synth 8-4471] merging register 'W_SPSR_s_reg' into 'Write_SPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:227]
-INFO: [Synth 8-4471] merging register 'SP_out_reg' into 'Write_CPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:254]
+INFO: [Synth 8-4471] merging register 'LB_reg' into 'LA_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:188]
+INFO: [Synth 8-4471] merging register 'W_SPSR_s_reg' into 'Write_SPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:229]
+INFO: [Synth 8-4471] merging register 'SP_out_reg' into 'Write_CPSR_reg' [D:/vivado/09_CPU_Interrupt/CPU.v:272]
 INFO: [Synth 8-802] inferred FSM for state register 'ST_reg' in module 'CPU'
 INFO: [Synth 8-5587] ROM size for "Write_PC" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "Write_IR" won't be mapped to RAM because it is too sparse
@@ -531,7 +463,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'Curr_SPSR_reg' [D:/vivado/0
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ST_reg' using encoding 'sequential' in module 'CPU'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 788.992 ; gain = 519.168
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 789.281 ; gain = 520.934
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -549,21 +481,25 @@ Detailed RTL Component Info :
 	   4 Input     33 Bit       Adders := 2     
 	   2 Input     32 Bit       Adders := 1     
 	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 4     
 	   3 Input      1 Bit         XORs := 6     
 +---Registers : 
-	               32 Bit    Registers := 56    
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 57    
 	               28 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
 	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 3     
+	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 20    
+	                1 Bit    Registers := 23    
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 2     
 	   2 Input     32 Bit        Muxes := 23    
@@ -581,7 +517,7 @@ Detailed RTL Component Info :
 	   4 Input      4 Bit        Muxes := 1     
 	  23 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
 	  23 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 74    
 	  10 Input      1 Bit        Muxes := 40    
@@ -598,36 +534,13 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module CPU 
+Module board_cpu 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      3 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 18    
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
-	   2 Input      8 Bit        Muxes := 2     
-	  18 Input      6 Bit        Muxes := 1     
-	   5 Input      5 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 7     
-	  18 Input      5 Bit        Muxes := 1     
-	   3 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 7     
-	   3 Input      4 Bit        Muxes := 3     
-	   4 Input      4 Bit        Muxes := 1     
-	  23 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 1     
-	  23 Input      2 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 3     
-	  23 Input      1 Bit        Muxes := 36    
-	   4 Input      1 Bit        Muxes := 1     
+	               33 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 Module Inst 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -714,6 +627,45 @@ Detailed RTL Component Info :
 +---Muxes : 
 	  10 Input     32 Bit        Muxes := 1     
 	  10 Input      1 Bit        Muxes := 10    
+Module CPU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	  18 Input      6 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 7     
+	  18 Input      5 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 7     
+	   3 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	  23 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 2     
+	  23 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+	  23 Input      1 Bit        Muxes := 36    
+	   4 Input      1 Bit        Muxes := 1     
+Module Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -731,7 +683,9 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5544] ROM "clk_m" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "clk_m" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "CPSR_Instance/clk_m" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3917] design board_cpu has port led[19] driven by constant 0
+WARNING: [Synth 8-3917] design board_cpu has port enable driven by constant 1
 WARNING: [Synth 8-3331] design ALU_Shift has unconnected port S
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[31]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[30]
@@ -760,190 +714,201 @@ WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[8]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[7]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[6]
 WARNING: [Synth 8-3331] design register_pile has unconnected port CPSR[5]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (RegFile_Instance/\REG_Pile_reg[15][31] )
-INFO: [Synth 8-3886] merging instance 'Change_M_reg[0]' (FDCE) to 'Change_M_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Change_M_reg[2] )
-INFO: [Synth 8-3886] merging instance 'W_CPSR_s_reg[0]' (FDCE) to 'W_CPSR_s_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\W_CPSR_s_reg[2] )
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][31]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[10]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[11]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[12]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[24]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[25]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port led[26]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[4]
+WARNING: [Synth 8-3331] design board_cpu has unconnected port swb[5]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/RegFile_Instance/\REG_Pile_reg[15][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/\W_CPSR_s_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/\Change_M_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/INTA_fiq_reg)
+INFO: [Synth 8-3886] merging instance 'cpu/W_CPSR_s_reg[2]' (FDCE) to 'cpu/W_CPSR_s_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/\W_CPSR_s_reg[0] )
+INFO: [Synth 8-3886] merging instance 'cpu/Change_M_reg[2]' (FDCE) to 'cpu/Change_M_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cpu/\Change_M_reg[0] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][31]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][30]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][30]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][29]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][29]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][28]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][28]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][27]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][27]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][26]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][26]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][25]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][25]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][24]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][24]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][23]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][23]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][22]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][22]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][21]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][21]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][20]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][20]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][19]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][19]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][18]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][18]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][17]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][17]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][16]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][16]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][15]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][15]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][14]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][14]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][13]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][13]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][12]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][12]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][11]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][11]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][10]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][10]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][9]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][9]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][8]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][8]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][7]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][7]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][6]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][6]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][5]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][5]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][4]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][4]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][3]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][3]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][2]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][2]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][1]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][1]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[0][0]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[0][0]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][31]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][31]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][30]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][30]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][29]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][29]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][28]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][28]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][27]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][27]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][26]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][26]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][25]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][25]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][24]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][24]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][23]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][23]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][22]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][22]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][21]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][21]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][20]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][20]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][19]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][19]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][18]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][18]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][17]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][17]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][16]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][16]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][15]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][15]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'RegFile_Instance/REG_Pile_reg[1][14]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu/RegFile_Instance/REG_Pile_reg[1][14]/Q' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
 INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/vivado/09_CPU_Interrupt/RegFile.v:117]
@@ -1035,78 +1000,43 @@ WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[4]) is 
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[3]) is unused and will be removed from module ALU_Shift.
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[2]) is unused and will be removed from module ALU_Shift.
 WARNING: [Synth 8-3332] Sequential element (Shift_Instance/Shift_Out_reg[1]) is unused and will be removed from module ALU_Shift.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[31]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[30]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[29]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[28]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[27]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[26]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[25]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[24]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[23]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[22]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[21]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[20]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[19]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[18]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[17]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[16]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[15]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[14]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[13]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[12]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[11]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[10]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[9]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[8]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[7]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[6]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[5]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[4]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[3]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[2]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[1]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (CPSR_in_reg[0]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (M_reg[4]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (M_reg[3]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (M_reg[2]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (M_reg[1]) is unused and will be removed from module Reg_CPSR.
-WARNING: [Synth 8-3332] Sequential element (M_reg[0]) is unused and will be removed from module Reg_CPSR.
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 788.992 ; gain = 519.168
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 788.992 ; gain = 519.168
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 788.992 ; gain = 519.168
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/clk_m_reg[6]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/clk_m_reg[5]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/clk_m_reg[4]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/clk_m_reg[3]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/clk_m_reg[2]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[31]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[30]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[29]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[28]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[27]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[26]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[25]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[24]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[23]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[22]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[21]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[20]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[19]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[18]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[17]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[16]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[15]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[14]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[13]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[12]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[11]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[10]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[9]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[8]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[7]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[6]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[5]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[4]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[3]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[2]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[1]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/CPSR_in_reg[0]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/M_reg[4]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/M_reg[3]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/M_reg[2]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/M_reg[1]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/M_reg[0]) is unused and will be removed from module CPU.
 WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[27]) is unused and will be removed from module CPU.
 WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[26]) is unused and will be removed from module CPU.
 WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[25]) is unused and will be removed from module CPU.
@@ -1128,10 +1058,45 @@ WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[10]) is 
 WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[9]) is unused and will be removed from module CPU.
 WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[8]) is unused and will be removed from module CPU.
 WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[6]) is unused and will be removed from module CPU.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\CPSR_Instance/clk_m_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (CPSR_Instance/Curr_SPSR_reg[5]) is unused and will be removed from module CPU.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 789.281 ; gain = 520.934
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 789.281 ; gain = 520.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 789.281 ; gain = 520.934
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (cpu/CPSR_Instance/clk_m_reg[6]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/CPSR_Instance/clk_m_reg[5]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/CPSR_Instance/clk_m_reg[4]) is unused and will be removed from module board_cpu.
+WARNING: [Synth 8-3332] Sequential element (cpu/CPSR_Instance/clk_m_reg[3]) is unused and will be removed from module board_cpu.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\cpu/CPSR_Instance/clk_m_reg[1] )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1155,7 +1120,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1168,7 +1133,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1180,25 +1145,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1218,63 +1183,67 @@ Report Cell Usage:
 +------+---------+------+
 |1     |Data_RAM |     1|
 |2     |Inst_ROM |     1|
-|3     |BUFG     |     3|
+|3     |BUFG     |     6|
 |4     |CARRY4   |    70|
-|5     |LUT1     |    14|
-|6     |LUT2     |   221|
-|7     |LUT3     |   208|
-|8     |LUT4     |    72|
-|9     |LUT5     |   182|
-|10    |LUT6     |   403|
-|11    |MUXF7    |     1|
-|12    |FDCE     |   122|
+|5     |LUT1     |    15|
+|6     |LUT2     |   226|
+|7     |LUT3     |   212|
+|8     |LUT4     |    81|
+|9     |LUT5     |   217|
+|10    |LUT6     |   397|
+|11    |MUXF7    |     5|
+|12    |FDCE     |   151|
 |13    |FDPE     |     1|
-|14    |FDRE     |    32|
-|15    |LD       |    40|
-|16    |IBUF     |    35|
-|17    |OBUF     |   234|
+|14    |FDRE     |    81|
+|15    |FDSE     |     1|
+|16    |LD       |    40|
+|17    |IBUF     |    37|
+|18    |OBUF     |    38|
+|19    |OBUFT    |     6|
 +------+---------+------+
 
 Report Instance Areas: 
-+------+---------------------+-----------------+------+
-|      |Instance             |Module           |Cells |
-+------+---------------------+-----------------+------+
-|1     |top                  |                 |  1702|
-|2     |  ALU_Shift_Instance |ALU_Shift        |   211|
-|3     |    ALU_Instance     |ALU              |   147|
-|4     |  CPSR_Instance      |Reg_CPSR         |    76|
-|5     |    D_CPSR_31_28     |d_flip_flop_4    |    30|
-|6     |    D_CPSR_7_0       |d_flip_flop_8_2  |    15|
-|7     |    D_SPSR_fiq       |d_flip_flop_32   |    15|
-|8     |    D_SPSR_irq       |d_flip_flop_32_1 |     8|
-|9     |  Inst_Instance      |Inst             |  1030|
-|10    |  request_Instance   |request          |    22|
-|11    |    D1               |d_flip_flop      |     1|
-|12    |    D2               |d_flip_flop_0    |    21|
-+------+---------------------+-----------------+------+
++------+-----------------------+-----------------+------+
+|      |Instance               |Module           |Cells |
++------+-----------------------+-----------------+------+
+|1     |top                    |                 |  1648|
+|2     |  Display_Instance     |Display          |    49|
+|3     |  cpu                  |CPU              |  1470|
+|4     |    ALU_Shift_Instance |ALU_Shift        |   243|
+|5     |      ALU_Instance     |ALU              |   147|
+|6     |    CPSR_Instance      |Reg_CPSR         |    81|
+|7     |      D_CPSR_31_28     |d_flip_flop_4    |    30|
+|8     |      D_CPSR_7_0       |d_flip_flop_8_2  |    20|
+|9     |      D_SPSR_fiq       |d_flip_flop_32   |    15|
+|10    |      D_SPSR_irq       |d_flip_flop_32_1 |     8|
+|11    |    Inst_Instance      |Inst             |  1009|
+|12    |    request_Instance   |request          |    20|
+|13    |      D3               |d_flip_flop      |     1|
+|14    |      D4               |d_flip_flop_0    |    19|
++------+-----------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1440 critical warnings and 140 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 826.621 ; gain = 199.297
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 826.621 ; gain = 556.797
+Synthesis finished with 0 errors, 1440 critical warnings and 150 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 826.176 ; gain = 199.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 826.176 ; gain = 557.828
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 115 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.621 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 826.176 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 40 instances were transformed.
   LD => LDCE: 40 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-143 Infos, 421 Warnings, 200 Critical Warnings and 0 Errors encountered.
+151 Infos, 358 Warnings, 200 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 826.621 ; gain = 556.797
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.621 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 826.176 ; gain = 557.828
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 826.176 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/CPU.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul  2 16:40:11 2021...
+INFO: [Common 17-1381] The checkpoint 'D:/vivado/09_CPU_Interrupt/09_CPU_Interrupt.runs/synth_1/board_cpu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file board_cpu_utilization_synth.rpt -pb board_cpu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  2 20:42:53 2021...

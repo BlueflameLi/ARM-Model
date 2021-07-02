@@ -3,6 +3,7 @@
 module CPU(clk,        //时钟信号
            Rst,        //复位信号
            EX_irq,
+           EX_fiq,
            INT_Vector,
            I,          //指令机器码
            A,
@@ -10,6 +11,7 @@ module CPU(clk,        //时钟信号
            C,
            F,
            CPSR,
+           SPSR,
            Write_PC,
            Write_IR,
            Write_Reg,
@@ -31,11 +33,11 @@ module CPU(clk,        //时钟信号
            W_SPSR_s,
            Reg_C_s,
            INT_irq,
+           INT_fiq,
            DP,
-           Change_M
-           );
+           Change_M);
     
-    input clk, Rst, EX_irq;
+    input clk, Rst, EX_irq,EX_fiq;
     input  [31:0] INT_Vector;
     output [31:0] I;
     output [31:0] A,B,C,F;
@@ -54,11 +56,12 @@ module CPU(clk,        //时钟信号
     output reg W_SPSR_s,Write_SPSR,Write_CPSR,SP_in,SP_out;
     output reg [2:0] W_CPSR_s;
     reg [3:0] MASK = 0;
-    output [31:0] CPSR;
-    output INT_irq;
+    output [31:0] CPSR,SPSR;
+    output INT_irq,INT_fiq;
     wire [31:0] W_Data;
     
     wire [3:0] NZCV;
+    reg [31:0] INT_Data;
     
     //取指令
     wire flag;//条件判断结果
@@ -66,7 +69,7 @@ module CPU(clk,        //时钟信号
     wire [27:0] IR;
     wire [31:0] PC;
     output [7:2] Inst_addr;
-    Inst Inst_Instance(.clk(clk),.Rst(Rst),.Write_IR(Write_IR),.Write_PC(Write_PC),.NZCV(CPSR[31:28]),.flag(flag),.PC(PC),.condition_code(cond),.IR(IR),.B(B),.F(W_Data),.PC_s(PC_s),.INT_Vector(INT_Vector));
+    Inst Inst_Instance(.clk(clk),.Rst(Rst),.Write_IR(Write_IR),.Write_PC(Write_PC),.NZCV(CPSR[31:28]),.flag(flag),.PC(PC),.condition_code(cond),.IR(IR),.B(B),.F(W_Data),.PC_s(PC_s),.INT_Vector(INT_Data));
     
     assign I         = {cond,IR};
     assign Inst_addr = PC[7:2];
@@ -234,18 +237,35 @@ module CPU(clk,        //时钟信号
     .NZCV(NZCV),
     .Change_M(Change_M),
     .S(S),
-    .CPSR(CPSR)
+    .CPSR(CPSR),
+    .Curr_SPSR(SPSR)
     );
     
-    reg INTA_irq;
+    reg INTA_irq,INTA_fiq;
     
-    //irq_request
+    //中断请求处理
     request request_Instance(
+    .CPSR_6(CPSR[6]),
     .CPSR_7(CPSR[7]),
     .INTA_irq(INTA_irq),
+    .INTA_fiq(INTA_fiq),
     .EX_irq(EX_irq),
-    .INT_irq(INT_irq));
+    .EX_fiq(EX_fiq),
+    .Rst(Rst),
+    .INT_irq(INT_irq),
+    .INT_fiq(INT_fiq)
+    );
     
+    assign INTA = INTA_fiq | INTA_irq;
+    always@(posedge INTA or posedge Rst)
+    begin
+        if (Rst)
+            INT_Data <= 0;
+        else
+            INT_Data <= INT_Vector;
+    end
+    
+    //双堆栈指针
     wire [31:0] SP,MSP,PSP;
     Stack Stack_Instance(
     .clk(clk),
@@ -343,7 +363,7 @@ module CPU(clk,        //时钟信号
             S30:     Next_ST = S31;
             S31:     Next_ST = S27;
             default: begin
-                if (INT_irq & !CPSR[7])
+                if ((INT_irq & !CPSR[7])|(INT_fiq & !CPSR[6]))
                     Next_ST = S29;
                 else
                     Next_ST = S0;
@@ -383,6 +403,7 @@ module CPU(clk,        //时钟信号
             SP_in      <= 1'b0;
             Change_M   <= 3'b000;
             INTA_irq   <= 1'b0;
+            INTA_fiq   <= 1'b0;
         end
         else
         begin
@@ -415,6 +436,7 @@ module CPU(clk,        //时钟信号
                     SP_in      <= 1'b0;
                     Change_M   <= 3'b000;
                     INTA_irq   <= 1'b0;
+                    INTA_fiq   <= 1'b0;
                 end
                 S1:begin
                     Write_PC    <= 1'b0;
@@ -718,6 +740,7 @@ module CPU(clk,        //时钟信号
                     SP_in        <= 1'b1;
                     // Change_M  <= 3'b000;
                     INTA_irq     <= 1'b0;
+                    INTA_fiq     <= 1'b0;
                 end
                 S28:begin
                     // Write_PC  <= 1'b0;
@@ -773,6 +796,7 @@ module CPU(clk,        //时钟信号
                     SP_in       <= 1'b0;
                     // Change_M <= 3'b000;
                     INTA_irq    <= 1'b0;
+                    INTA_fiq    <= 1'b0;
                 end
                 S30:begin
                     // Write_PC   <= 1'b0;
@@ -800,7 +824,7 @@ module CPU(clk,        //时钟信号
                     W_SPSR_s      <= 1'b1;
                     // SP_out     <= 1'b0;
                     // SP_in      <= 1'b0;
-                    Change_M      <= 3'b010;
+                    Change_M      <= (INT_fiq & !CPSR[6])?3'b001:3'b010;
                 end
                 S31:begin
                     Write_PC     <= 1'b1;
@@ -824,12 +848,13 @@ module CPU(clk,        //时钟信号
                     Write_CPSR   <= 1'b1;
                     Write_SPSR   <= 1'b0;
                     // ALU_OP    <= 4'b0000;
-                    W_CPSR_s     <= 2'b010;
+                    W_CPSR_s     <= (INT_fiq & !CPSR[6])?3'b011:3'b010;
                     W_SPSR_s     <= 1'b0;
                     SP_out       <= 1'b1;
                     // SP_in     <= 1'b0;
                     Change_M     <= 3'b000;
-                    INTA_irq     <= 1'b1;
+                    INTA_irq     <= (INT_fiq & !CPSR[6])?1'b0:1'b1;
+                    INTA_fiq     <= (INT_fiq & !CPSR[6])?1'b1:1'b0;
                 end
             endcase
         end
