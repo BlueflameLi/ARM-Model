@@ -35,7 +35,7 @@ module Regfile_Board(sw,
         if (swb[2]) 
         begin
             case(cnt)
-            0:begin {R_Addr_A, R_Addr_B, R_Add6r_C} = sw[1:12]; M=sw[17:21]; W_Addr=sw[25:28]; Write_Reg=sw[31];Write_PC=sw[32]; end
+            0:begin {R_Addr_A, R_Addr_B, R_Addr_C} = sw[1:12]; M=sw[17:21]; W_Addr=sw[25:28]; Write_Reg=sw[31];Write_PC=sw[32]; end
             1:begin W_Data=sw; end
             2:begin PC_New=sw; end
             endcase

@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1619410104">
-  <File Type="PA-TCL" Name="RegFile_plus.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="RegFile_plus_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="RegFile_plus_reports.tcl"/>
-  <File Type="RDS-RDS" Name="RegFile_plus.vds"/>
-  <File Type="RDS-UTIL" Name="RegFile_plus_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="RegFile_plus_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="RegFile_plus.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RegFile_plus_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="RegFile_plus_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1619972238">
+  <File Type="PA-TCL" Name="Regfile_Board.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Regfile_Board_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Regfile_Board_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Regfile_Board.vds"/>
+  <File Type="RDS-UTIL" Name="Regfile_Board_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Regfile_Board_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Regfile_Board.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Regfile_Board_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Regfile_Board_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/Display.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/RegFile_plus.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -18,17 +25,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/Display.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/Regfile_Board.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -44,9 +42,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="RegFile_plus"/>
-      <Option Name="TopLib" Val="xil_defaultlib"/>
-      <Option Name="TopRTLFile" Val="$PPRDIR/RegFile_plus.v"/>
+      <Option Name="TopModule" Val="Regfile_Board"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -68,9 +64,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

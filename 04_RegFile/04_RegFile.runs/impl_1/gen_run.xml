@@ -1,76 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1619410105">
-  <File Type="BITSTR-BMM" Name="RegFile_plus_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="RegFile_plus_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="RegFile_plus_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="RegFile_plus_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="RegFile_plus.tcl"/>
-  <File Type="OPT-TIMING" Name="RegFile_plus_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="RegFile_plus_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="RegFile_plus_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="RegFile_plus_reports.tcl"/>
-  <File Type="OPT-DRC" Name="RegFile_plus_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="RegFile_plus.hwdef"/>
-  <File Type="PWROPT-DCP" Name="RegFile_plus_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="RegFile_plus_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="RegFile_plus_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="RegFile_plus_placed.dcp"/>
-  <File Type="PLACE-IO" Name="RegFile_plus_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="RegFile_plus_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="RegFile_plus_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="RegFile_plus_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="RegFile_plus_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="RegFile_plus_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="RegFile_plus_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="RegFile_plus.bgn"/>
-  <File Type="PLACE-TIMING" Name="RegFile_plus_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="RegFile_plus_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="RegFile_plus.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="RegFile_plus_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="RegFile_plus_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="RegFile_plus_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="RegFile_plus.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="RegFile_plus_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="RegFile_plus_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="RegFile_plus_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="RegFile_plus_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="RegFile_plus_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="RegFile_plus_drc_routed.pb"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1619972238">
+  <File Type="BITSTR-BMM" Name="Regfile_Board_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Regfile_Board_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Regfile_Board_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Regfile_Board_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Regfile_Board.tcl"/>
+  <File Type="OPT-TIMING" Name="Regfile_Board_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Regfile_Board_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Regfile_Board_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Regfile_Board_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Regfile_Board_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Regfile_Board.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Regfile_Board_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Regfile_Board_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Regfile_Board_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Regfile_Board_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Regfile_Board_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Regfile_Board_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Regfile_Board_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Regfile_Board_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Regfile_Board_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Regfile_Board_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Regfile_Board_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="Regfile_Board.bgn"/>
+  <File Type="PLACE-TIMING" Name="Regfile_Board_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Regfile_Board_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Regfile_Board.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Regfile_Board_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Regfile_Board_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Regfile_Board_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Regfile_Board.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Regfile_Board_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Regfile_Board_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Regfile_Board_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Regfile_Board_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Regfile_Board_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Regfile_Board_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="RegFile_plus.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="RegFile_plus_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="RegFile_plus.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="RegFile_plus_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="RegFile_plus_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="RegFile_plus.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="RegFile_plus_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="RegFile_plus_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="RegFile_plus_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="RegFile_plus_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="RegFile_plus_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="RegFile_plus_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="RegFile_plus_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="RegFile_plus_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="RegFile_plus_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="RegFile_plus_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="RegFile_plus_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="RegFile_plus_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="RegFile_plus_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="RegFile_plus_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="RegFile_plus_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="RegFile_plus_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="RegFile_plus_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="RegFile_plus_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="RegFile_plus_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="RegFile_plus.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="RegFile_plus_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="RegFile_plus.rbt"/>
-  <File Type="BITSTR-NKY" Name="RegFile_plus.nky"/>
-  <File Type="BG-DRC" Name="RegFile_plus.drc"/>
-  <File Type="RDI-RDI" Name="RegFile_plus.vdi"/>
+  <File Type="BITSTR-LTX" Name="Regfile_Board.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="Regfile_Board_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Regfile_Board.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Regfile_Board_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Regfile_Board_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="Regfile_Board.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Regfile_Board_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Regfile_Board_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Regfile_Board_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Regfile_Board_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Regfile_Board_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Regfile_Board_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Regfile_Board_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Regfile_Board_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Regfile_Board_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Regfile_Board_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Regfile_Board_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Regfile_Board_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Regfile_Board_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Regfile_Board_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Regfile_Board_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Regfile_Board_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Regfile_Board_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Regfile_Board_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Regfile_Board_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Regfile_Board.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Regfile_Board_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Regfile_Board.rbt"/>
+  <File Type="BITSTR-NKY" Name="Regfile_Board.nky"/>
+  <File Type="BG-DRC" Name="Regfile_Board.drc"/>
+  <File Type="RDI-RDI" Name="Regfile_Board.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/Display.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/RegFile_plus.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -78,17 +85,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/Display.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/Regfile_Board.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -104,9 +102,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="RegFile_plus"/>
-      <Option Name="TopLib" Val="xil_defaultlib"/>
-      <Option Name="TopRTLFile" Val="$PPRDIR/RegFile_plus.v"/>
+      <Option Name="TopModule" Val="Regfile_Board"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -128,9 +124,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
